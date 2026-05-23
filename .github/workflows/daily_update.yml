@@ -1,0 +1,67 @@
+name: Daily Twitter Ticker Update
+
+on:
+  schedule:
+    # Run once daily at 00:00 UTC (8:00 AM Singapore Time / 5:00 PM Pacific Time)
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+    # Allows manual triggering from the GitHub Actions tab
+
+permissions:
+  contents: write # Crucial permission to commit and push changes back to the repo
+
+jobs:
+  update-ticker-data:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0 # Fetch all history so git push works smoothly
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+        cache: 'pip'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run Twitter Scraping & Gemini Analysis
+      env:
+        # AI Credentials
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        GEMINI_MODEL: "gemini-2.5-flash"
+        
+        # Twitter Credentials (Official X API or RapidAPI)
+        X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+        RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+        X_TARGET_USERNAME: ${{ secrets.X_TARGET_USERNAME }}
+        X_API_KEY: ${{ secrets.X_API_KEY }}
+        X_API_SECRET: ${{ secrets.X_API_SECRET }}
+        X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+        X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
+      run: |
+        # Runs fetch_and_analyze.py. If API is not set, it will automatically
+        # utilize mock data so the job finishes successfully.
+        python fetch_and_analyze.py
+
+    - name: Commit and Push Updated Data
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        
+        # Check if there are any changes to commit
+        if git status --porcelain | grep -q "data/stock_data.json"; then
+          echo "🔄 New data generated. Committing changes..."
+          git add data/stock_data.json
+          git commit -m "auto: daily ticker analysis update [skip ci]"
+          git push
+          echo "✅ Changes pushed successfully."
+        else
+          echo "ℹ️ No changes to commit (data is identical or no new updates)."
+        fi
