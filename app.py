@@ -31,20 +31,22 @@ CUSTOM_CSS = """
         color: #1e293b; /* Deep slate gray for primary readability */
     }
     
-    /* Explicit high-visibility black styling for Streamlit widget labels */
-    label[data-baseweb="label"], div[data-testid="stWidgetLabel"] p {
-        color: #000000 !important; /* Pure black */
-        font-weight: 600 !important;
-        font-size: 0.98rem !important;
-        letter-spacing: 0.01rem;
-    }
-    
     /* Search Bar and Dropdown Backgrounds forced to Solid White */
     .stTextInput input {
         background-color: #ffffff !important;
         color: #000000 !important;
         border: 1px solid #cbd5e1 !important;
         border-radius: 8px !important;
+    }
+    
+    /* Force text input placeholder color to be a highly visible dark slate-gray */
+    .stTextInput input::placeholder {
+        color: #475569 !important;
+        opacity: 0.95 !important;
+    }
+    
+    .stTextInput input::-webkit-input-placeholder {
+        color: #475569 !important;
     }
     
     .stSelectbox div[data-baseweb="select"] > div {
@@ -479,10 +481,21 @@ search_col, sort_col = st.columns([3, 1])
 sorted_dates = sorted(list(data.keys()), reverse=True)
 
 with search_col:
-    search_query = st.text_input("🔍 Search stock ticker (e.g. AAPL, TSLA)", "").upper().strip()
+    # Use placeholder inside the input field and collapse the label to avoid browser theme clashes
+    search_query = st.text_input(
+        "Search stock ticker", 
+        value="", 
+        placeholder="🔍 Search stock ticker (e.g. AAPL, TSLA)", 
+        label_visibility="collapsed"
+    ).upper().strip()
     
 with sort_col:
-    date_filter = st.selectbox("📅 Filter by date", ["Show All Dates"] + sorted_dates)
+    # Collapse the label to avoid browser theme clashes
+    date_filter = st.selectbox(
+        "Filter by date", 
+        options=["Show All Dates"] + sorted_dates, 
+        label_visibility="collapsed"
+    )
 
 # Filter data based on search and selected date
 filtered_dates = sorted_dates
