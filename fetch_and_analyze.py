@@ -25,32 +25,61 @@ except ImportError:
 
 DATA_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "stock_data.json")
 
-# Define Pydantic schema for structured outputs
+# Define Pydantic schemas for structured outputs
+class TweetSource(BaseModel):
+    author: str = Field(description="The Twitter handle of the user who wrote the tweet, without the @ symbol.")
+    tweet_id: str = Field(description="The unique ID of the tweet, or the mock ID provided in the prompt.")
+    text: str = Field(description="The text content of the tweet.")
+
 class StockAnalysis(BaseModel):
     ticker: str = Field(description="The stock ticker code, e.g., AAPL, TSLA, NVDA. Must be uppercase. Do not include $ symbol.")
     action: Literal["BUY", "SELL"] = Field(description="Whether the sentiment/action is to BUY (bullish/holding long) or SELL (bearish/shorting/taking profits).")
     summary: str = Field(description="A concise 1-2 sentence professional summary explaining the market context or reasons mentioned in the tweets.")
-    tweets: List[str] = Field(description="List of raw tweet texts that support this ticker's sentiment and analysis.")
+    tweets: List[TweetSource] = Field(description="List of tweet source objects that contributed to this analysis.")
 
 class DailyReport(BaseModel):
     analyses: List[StockAnalysis] = Field(description="List of analyzed stock tickers from the input tweets.")
 
 
-def get_mock_tweets() -> List[str]:
-    """Returns realistic mock tweets for testing and demo purposes."""
+def get_mock_tweets() -> List[Dict[str, str]]:
+    """Returns realistic mock tweets with metadata for testing and demo purposes."""
     print("ℹ️ Using realistic mock tweets for analysis...")
     return [
-        "Just added to my $PLTR position. Palantir's new government contract is massive. Long PLTR for the next 3 years!",
-        "Selling all my $BABA. Chinese consumer recovery is just too slow. Rotating funds to US tech. Bye Alibaba.",
-        "Blackwell chip demand is insane. Spoke to a contact at TSMC - NVDA is taking all available capacity. Heavy buying on NVIDIA here.",
-        "Taking profits on $NFLX today. Great stock but subscriber growth is hitting a wall in North America.",
-        "Buying $TSLA leaps. Full Self Driving v12.5 is a game changer. The market is pricing Robotaxi as a car company when it's an AI giant.",
-        "Shorting $COIN. Regulatory scrutiny increasing on stablecoins. Technical double top on the daily chart."
+        {
+            "id": "1882000000000000001",
+            "author": "TechInvestor",
+            "text": "Just added to my $PLTR position. Palantir's new government contract is massive. Long PLTR for the next 3 years!"
+        },
+        {
+            "id": "1882000000000000002",
+            "author": "MacroWhale",
+            "text": "Selling all my $BABA. Chinese consumer recovery is just too slow. Rotating funds to US tech. Bye Alibaba."
+        },
+        {
+            "id": "1882000000000000003",
+            "author": "ChipBull",
+            "text": "Blackwell chip demand is insane. Spoke to a contact at TSMC - NVDA is taking all available capacity. Heavy buying on NVIDIA here."
+        },
+        {
+            "id": "1882000000000000004",
+            "author": "ValueSeeker",
+            "text": "Taking profits on $NFLX today. Great stock but subscriber growth is hitting a wall in North America."
+        },
+        {
+            "id": "1882000000000000005",
+            "author": "TeslaFanatic",
+            "text": "Buying $TSLA leaps. Full Self Driving v12.5 is a game changer. The market is pricing Robotaxi as a car company when it's an AI giant."
+        },
+        {
+            "id": "1882000000000000006",
+            "author": "CryptoBear",
+            "text": "Shorting $COIN. Regulatory scrutiny increasing on stablecoins. Technical double top on the daily chart."
+        }
     ]
 
 
-def fetch_tweets_from_x() -> List[str]:
-    """Fetches tweets from the official X API or RapidAPI depending on environment keys."""
+def fetch_tweets_from_x() -> List[Dict[str, str]]:
+    """Fetches tweets with metadata from X API or RapidAPI depending on environment keys."""
     # Read environment variables
     bearer_token = os.environ.get("X_BEARER_TOKEN")
     consumer_key = os.environ.get("X_API_KEY")
@@ -58,13 +87,13 @@ def fetch_tweets_from_x() -> List[str]:
     access_token = os.environ.get("X_ACCESS_TOKEN")
     access_token_secret = os.environ.get("X_ACCESS_TOKEN_SECRET")
     
-    # Try RapidAPI Twitter Scraper first if configured (much cheaper/often free)
     rapidapi_key = os.environ.get("RAPIDAPI_KEY")
-    target_username = os.environ.get("X_TARGET_USERNAME") # The user whose timeline we want to read
+    target_username = os.environ.get("X_TARGET_USERNAME", "me")
     
-    if rapidapi_key and target_username:
+    # Try RapidAPI Twitter Scraper first (highly cost-effective)
+    if rapidapi_key:
         print(f"🔗 Attempting to fetch tweets via RapidAPI for user: {target_username}...")
-        url = f"https://twitter-api45.p.rapidapi.com/user/tweets.php"
+        url = "https://twitter-api45.p.rapidapi.com/user/tweets.php"
         headers = {
             "x-rapidapi-key": rapidapi_key,
             "x-rapidapi-host": "twitter-api45.p.rapidapi.com"
@@ -75,12 +104,17 @@ def fetch_tweets_from_x() -> List[str]:
             if response.status_code == 200:
                 data = response.json()
                 tweets = []
-                # Handle standard scraper structures
                 timeline = data.get("timeline", [])
                 for item in timeline:
                     text = item.get("text")
-                    if text:
-                        tweets.append(text)
+                    tweet_id = item.get("id_str") or str(item.get("id"))
+                    author = item.get("user", {}).get("screen_name") or target_username
+                    if text and tweet_id:
+                        tweets.append({
+                            "id": tweet_id,
+                            "author": author,
+                            "text": text
+                        })
                 if tweets:
                     print(f"✅ Successfully fetched {len(tweets)} tweets via RapidAPI.")
                     return tweets
@@ -88,30 +122,46 @@ def fetch_tweets_from_x() -> List[str]:
         except Exception as e:
             print(f"⚠️ RapidAPI fetch failed: {e}. Falling back to standard X API.")
 
-    # Try standard Tweepy Client (X API v2)
+    # Try standard Tweepy Client (X API v2) with expansions to get author username
     if bearer_token:
         print("🔗 Authenticating with X API Bearer Token...")
         try:
             client = tweepy.Client(bearer_token=bearer_token)
-            # Fetch own or target user tweets
-            # Note: We first need the user ID. If target_username is provided, resolve it
             user_id = "me"
-            if target_username:
+            if target_username and target_username != "me":
                 user = client.get_user(username=target_username)
                 if user.data:
                     user_id = user.data.id
             
-            # Fetch user timeline
-            response = client.get_users_tweets(id=user_id, max_results=20, tweet_fields=["text"])
+            # Fetch user timeline with author username expansion
+            response = client.get_users_tweets(
+                id=user_id,
+                max_results=20,
+                tweet_fields=["text", "author_id"],
+                expansions=["author_id"]
+            )
+            
             if response.data:
-                tweets = [tweet.text for tweet in response.data]
+                # Map author IDs to usernames
+                users_map = {}
+                if response.includes and "users" in response.includes:
+                    users_map = {str(u.id): u.username for u in response.includes["users"]}
+                
+                tweets = []
+                for tweet in response.data:
+                    author_name = users_map.get(str(tweet.author_id), target_username)
+                    tweets.append({
+                        "id": str(tweet.id),
+                        "author": author_name,
+                        "text": tweet.text
+                    })
                 print(f"✅ Successfully fetched {len(tweets)} tweets via X API.")
                 return tweets
             print("⚠️ No tweets returned from X API.")
         except Exception as e:
             print(f"⚠️ X API Bearer Token fetch failed: {e}")
 
-    # Try OAuth 1.0a User Context if credentials exist
+    # Try OAuth 1.0a User Context
     if consumer_key and consumer_secret and access_token and access_token_secret:
         print("🔗 Authenticating with X API OAuth 1.0a (User Context)...")
         try:
@@ -121,9 +171,25 @@ def fetch_tweets_from_x() -> List[str]:
                 access_token=access_token,
                 access_token_secret=access_token_secret
             )
-            response = client.get_users_tweets(id="me", max_results=20, tweet_fields=["text"])
+            response = client.get_users_tweets(
+                id="me",
+                max_results=20,
+                tweet_fields=["text", "author_id"],
+                expansions=["author_id"]
+            )
             if response.data:
-                tweets = [tweet.text for tweet in response.data]
+                users_map = {}
+                if response.includes and "users" in response.includes:
+                    users_map = {str(u.id): u.username for u in response.includes["users"]}
+                
+                tweets = []
+                for tweet in response.data:
+                    author_name = users_map.get(str(tweet.author_id), target_username)
+                    tweets.append({
+                        "id": str(tweet.id),
+                        "author": author_name,
+                        "text": tweet.text
+                    })
                 print(f"✅ Successfully fetched {len(tweets)} tweets via X API (OAuth 1.0a).")
                 return tweets
         except Exception as e:
@@ -133,8 +199,8 @@ def fetch_tweets_from_x() -> List[str]:
     return []
 
 
-def analyze_tweets_with_gemini(tweets: List[str]) -> Optional[DailyReport]:
-    """Uses Google GenAI SDK with structured output to analyze tweets."""
+def analyze_tweets_with_gemini(tweets: List[Dict[str, str]]) -> Optional[DailyReport]:
+    """Uses Google GenAI SDK with structured output to analyze tweets and retain author metadata."""
     if not tweets:
         print("⚠️ No tweets to analyze.")
         return None
@@ -154,8 +220,14 @@ def analyze_tweets_with_gemini(tweets: List[str]) -> Optional[DailyReport]:
     # Initialize SDK Client
     client = genai.Client(api_key=api_key)
 
-    # Prepare Prompt
-    tweets_formatted = "\n\n".join([f"Tweet {i+1}:\n{tweet}" for i, tweet in enumerate(tweets)])
+    # Format tweets as high-quality inputs including their metadata
+    tweets_formatted = ""
+    for i, t in enumerate(tweets):
+        tweets_formatted += f"--- TWEET {i+1} ---\n"
+        tweets_formatted += f"ID: {t['id']}\n"
+        tweets_formatted += f"Author: {t['author']}\n"
+        tweets_formatted += f"Text:\n{t['text']}\n\n"
+
     prompt = f"""
     You are a high-caliber stock market analyst and data processing engine.
     Analyze the following list of tweets. Perform the following steps:
@@ -165,7 +237,7 @@ def analyze_tweets_with_gemini(tweets: List[str]) -> Optional[DailyReport]:
        - SELL: The user is selling, trimming, highly bearish, shorting, or recommending short.
        Ignore tickers that only have neutral mentions or spam.
     3. For each ticker, generate a professional, high-quality, concise 1-2 sentence summary explaining *why* it was mentioned, synthesizing the core catalyst or technical reason from all relevant tweets.
-    4. Group and attach the exact raw tweet texts that mention this ticker.
+    4. Link the relevant tweets that contributed to this analysis. Populate the 'tweets' list in the output schema with the EXACT metadata (author, tweet_id, text) from the matching source tweets.
 
     Here are the tweets to analyze:
     ---
@@ -180,7 +252,7 @@ def analyze_tweets_with_gemini(tweets: List[str]) -> Optional[DailyReport]:
             config=types.GenerateContentConfig(
                 response_mime_type="application/json",
                 response_schema=DailyReport,
-                system_instruction="You are an expert financial analyst. Always return a perfectly structured JSON following the schema, extracting tickers, actions, summaries, and tweets.",
+                system_instruction="You are an expert financial analyst. Always return a perfectly structured JSON following the schema, extracting tickers, actions, summaries, and associated tweet metadata (author, tweet_id, text).",
                 temperature=0.1
             )
         )
@@ -190,7 +262,6 @@ def analyze_tweets_with_gemini(tweets: List[str]) -> Optional[DailyReport]:
         return report
     except Exception as e:
         print(f"❌ Gemini analysis failed: {e}")
-        # Try to display raw text for debugging if response failed validation
         try:
             print("Raw response text was:", response.text)
         except:
@@ -218,10 +289,19 @@ def update_data_store(report: DailyReport, target_date: str) -> None:
     sell_list = []
 
     for item in report.analyses:
+        # Convert Pydantic TweetSource back to dict
+        formatted_tweets = []
+        for tweet_src in item.tweets:
+            formatted_tweets.append({
+                "author": tweet_src.author,
+                "tweet_id": tweet_src.tweet_id,
+                "text": tweet_src.text
+            })
+
         formatted_item = {
             "ticker": item.ticker.upper(),
             "summary": item.summary,
-            "tweets": item.tweets
+            "tweets": formatted_tweets
         }
         if item.action == "BUY":
             buy_list.append(formatted_item)
@@ -265,9 +345,17 @@ def main():
         print(f"📂 Reading manual text file: {args.manual_text}...")
         if os.path.exists(args.manual_text):
             with open(args.manual_text, "r", encoding="utf-8") as f:
-                # Split tweets by double newline or read lines
                 content = f.read().strip()
-                tweets = [t.strip() for t in content.split("\n\n") if t.strip()]
+                # Split tweets by double newline or read lines
+                raw_segments = [t.strip() for t in content.split("\n\n") if t.strip()]
+                
+                # Format segments into structured dicts with mock metadata
+                for idx, text in enumerate(raw_segments):
+                    tweets.append({
+                        "id": f"manual_{idx}_{datetime.now().strftime('%M%S')}",
+                        "author": "ManualInput",
+                        "text": text
+                    })
             print(f"📂 Loaded {len(tweets)} tweets from file.")
         else:
             print(f"❌ File not found: {args.manual_text}")

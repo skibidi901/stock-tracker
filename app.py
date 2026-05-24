@@ -1,6 +1,5 @@
 import os
 import json
-import subprocess
 from datetime import datetime
 import streamlit as st
 import pandas as pd
@@ -14,7 +13,7 @@ st.set_page_config(
     page_title="Twitter Ticker Tracker",
     page_icon="📈",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="collapsed" # Starts with sidebar collapsed (clean dashboard)
 )
 
 # Custom High-End Dark Glassmorphism CSS
@@ -32,27 +31,35 @@ CUSTOM_CSS = """
         color: #e2e8f0;
     }
     
+    /* Header layout styling */
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+    }
+    
     /* Title Accent */
     .title-gradient {
         background: linear-gradient(90deg, #38bdf8 0%, #34d399 50%, #f472b6 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: 800;
-        font-size: 3rem;
-        margin-bottom: 0.5rem;
+        font-size: 2.8rem;
+        margin-bottom: 0.3rem;
         letter-spacing: -0.05rem;
     }
     
     .subtitle-text {
         color: #94a3b8;
-        font-size: 1.1rem;
-        margin-bottom: 2rem;
+        font-size: 1.05rem;
         font-weight: 300;
+        margin-bottom: 0;
     }
 
     /* Modern Table Container */
     .table-container {
-        margin-bottom: 3.5rem;
+        margin-bottom: 3rem;
         border-radius: 16px;
         overflow: hidden;
         border: 1px solid #1e293b;
@@ -64,7 +71,7 @@ CUSTOM_CSS = """
     .date-header {
         background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
         padding: 16px 24px;
-        font-size: 1.3rem;
+        font-size: 1.25rem;
         font-weight: 700;
         color: #f8fafc;
         border-bottom: 1px solid #334155;
@@ -87,7 +94,7 @@ CUSTOM_CSS = """
     .ticker-table th {
         padding: 14px 20px;
         font-weight: 600;
-        font-size: 1rem;
+        font-size: 0.95rem;
         text-transform: uppercase;
         letter-spacing: 0.05rem;
         border-bottom: 1px solid #334155;
@@ -180,9 +187,34 @@ CUSTOM_CSS = """
     /* Summary Text */
     .summary-text {
         font-size: 0.95rem;
-        line-height: 1.5;
+        line-height: 1.55;
         color: #cbd5e1;
         margin-bottom: 8px;
+    }
+    
+    /* Tweet Source Mentions Section */
+    .author-section {
+        margin-top: 12px;
+        font-size: 0.82rem;
+        color: #94a3b8;
+        border-top: 1px dashed rgba(255, 255, 255, 0.08);
+        padding-top: 8px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px;
+    }
+    
+    .author-link {
+        color: #38bdf8;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.2s ease;
+    }
+    
+    .author-link:hover {
+        color: #34d399;
+        text-decoration: underline;
     }
     
     /* Empty Placeholder */
@@ -194,30 +226,33 @@ CUSTOM_CSS = """
         padding: 30px 10px;
     }
     
-    /* Sidebar premium tweaks */
-    div[data-testid="stSidebar"] {
-        background-color: #0b0d11;
-        border-right: 1px solid #1e293b;
+    /* Stats Layout for Header */
+    .stats-header-container {
+        display: flex;
+        gap: 12px;
     }
     
-    /* Highlight Cards for stats */
-    .stat-card {
-        background: rgba(30, 41, 59, 0.5);
+    .stat-card-small {
+        background: rgba(30, 41, 59, 0.4);
         border: 1px solid #1e293b;
         border-radius: 12px;
-        padding: 16px;
+        padding: 10px 18px;
         text-align: center;
-        margin-bottom: 16px;
+        min-width: 105px;
     }
-    .stat-val {
-        font-size: 1.8rem;
+    
+    .stat-val-small {
+        font-size: 1.4rem;
         font-weight: 800;
         color: #38bdf8;
+        line-height: 1.1;
     }
-    .stat-lbl {
-        font-size: 0.8rem;
+    
+    .stat-lbl-small {
+        font-size: 0.72rem;
         color: #94a3b8;
         text-transform: uppercase;
+        letter-spacing: 0.02rem;
     }
 </style>
 """
@@ -234,12 +269,12 @@ def load_data() -> dict:
         with open(DATA_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
     except Exception as e:
-        st.sidebar.error(f"Failed to load database: {e}")
+        st.error(f"Failed to load database: {e}")
         return {}
 
 
 def render_html_table(date_str: str, date_data: dict) -> str:
-    """Generates premium custom HTML layout for the Buy/Sell columns."""
+    """Generates premium custom HTML layout for the Buy/Sell columns with author links."""
     buy_items = date_data.get("buy", [])
     sell_items = date_data.get("sell", [])
     
@@ -282,10 +317,29 @@ def render_html_table(date_str: str, date_data: dict) -> str:
             html += '<td class="td-buy">'
             if i < len(buy_items):
                 item = buy_items[i]
+                
+                # Format authors mentions
+                mentions = []
+                for tweet_src in item.get("tweets", []):
+                    author = tweet_src.get("author", "unknown")
+                    tid = tweet_src.get("tweet_id")
+                    
+                    # Generate real Twitter link if ID is valid
+                    if tid and not str(tid).startswith("manual_"):
+                        link = f"https://x.com/{author}/status/{tid}"
+                    else:
+                        link = f"https://x.com/{author}"
+                        
+                    mentions.append(f'<a href="{link}" target="_blank" class="author-link">@{author}</a>')
+                mentions_html = ", ".join(mentions) if mentions else "Unknown"
+                
                 html += f"""
                 <div class="cell-card buy-card">
                     <span class="ticker-badge badge-buy">${item['ticker']}</span>
                     <div class="summary-text">{item['summary']}</div>
+                    <div class="author-section">
+                        <span>🗣️ Mentions:</span> {mentions_html}
+                    </div>
                 </div>
                 """
             else:
@@ -297,10 +351,28 @@ def render_html_table(date_str: str, date_data: dict) -> str:
             html += '<td class="td-sell">'
             if i < len(sell_items):
                 item = sell_items[i]
+                
+                # Format authors mentions
+                mentions = []
+                for tweet_src in item.get("tweets", []):
+                    author = tweet_src.get("author", "unknown")
+                    tid = tweet_src.get("tweet_id")
+                    
+                    if tid and not str(tid).startswith("manual_"):
+                        link = f"https://x.com/{author}/status/{tid}"
+                    else:
+                        link = f"https://x.com/{author}"
+                        
+                    mentions.append(f'<a href="{link}" target="_blank" class="author-link">@{author}</a>')
+                mentions_html = ", ".join(mentions) if mentions else "Unknown"
+                
                 html += f"""
                 <div class="cell-card sell-card">
                     <span class="ticker-badge badge-sell">${item['ticker']}</span>
                     <div class="summary-text">{item['summary']}</div>
+                    <div class="author-section">
+                        <span>🗣️ Mentions:</span> {mentions_html}
+                    </div>
                 </div>
                 """
             else:
@@ -320,7 +392,6 @@ def render_html_table(date_str: str, date_data: dict) -> str:
 
 def calculate_statistics(data: dict) -> dict:
     """Computes global metrics for stats panel."""
-    total_dates = len(data)
     all_buys = []
     all_sells = []
     
@@ -330,139 +401,45 @@ def calculate_statistics(data: dict) -> dict:
         for s in date_data.get("sell", []):
             all_sells.append(s["ticker"])
             
-    total_buys = len(all_buys)
-    total_sells = len(all_sells)
-    
-    # Calculate top ticker
-    all_tickers = all_buys + all_sells
-    top_ticker = "N/A"
-    if all_tickers:
-        top_ticker = max(set(all_tickers), key=all_tickers.count)
-        
     return {
-        "total_days": total_dates,
-        "total_buys": total_buys,
-        "total_sells": total_sells,
-        "top_ticker": top_ticker
+        "total_buys": len(all_buys),
+        "total_sells": len(all_sells)
     }
-
-
-def run_pipeline(args_list: list) -> tuple:
-    """Helper to run the scraper backend in a subprocess."""
-    script_path = os.path.join(CURRENT_DIR, "fetch_and_analyze.py")
-    cmd = ["python", script_path] + args_list
-    
-    try:
-        # Run and capture output
-        res = subprocess.run(cmd, capture_output=True, text=True, check=True)
-        return True, res.stdout
-    except subprocess.CalledProcessError as e:
-        return False, f"Error: {e.stderr}\nStdout: {e.stdout}"
-    except Exception as e:
-        return False, str(e)
 
 
 # ==========================================
 # MAIN APP BODY
 # ==========================================
 
-# Sidebar
-st.sidebar.markdown("<h2 style='text-align: center; color: #38bdf8;'>🔧 Dashboard Admin</h2>", unsafe_allow_html=True)
-
 # App Data Loading
 data = load_data()
 stats = calculate_statistics(data)
 
-# Stats Displays
-st.sidebar.markdown("---")
-st.sidebar.subheader("📈 Quick Statistics")
-stat_cols = st.sidebar.columns(2)
-with stat_cols[0]:
-    st.markdown(f'<div class="stat-card"><div class="stat-val">{stats["total_buys"]}</div><div class="stat-lbl">Total Buys</div></div>', unsafe_allow_html=True)
-with stat_cols[1]:
-    st.markdown(f'<div class="stat-card"><div class="stat-val">{stats["total_sells"]}</div><div class="stat-lbl">Total Sells</div></div>', unsafe_allow_html=True)
+# Header Row with Integrated Small Metrics
+header_col, stats_col = st.columns([3, 1])
 
-st.markdown(f'<div class="stat-card" style="margin-top: 10px;"><div class="stat-val" style="color: #34d399;">${stats["top_ticker"]}</div><div class="stat-lbl">Most Active Ticker</div></div>', unsafe_allow_html=True)
+with header_col:
+    st.markdown('<div class="title-gradient">Twitter Stock Ticker Tracker</div>', unsafe_allow_html=True)
+    st.markdown('<div class="subtitle-text">Synthesizing and classifying stock market signals from your Twitter timeline in real-time with Gemini 2.5 Flash</div>', unsafe_allow_html=True)
 
-# Admin Console for AI Extraction (Instant Run)
-st.sidebar.markdown("---")
-st.sidebar.subheader("🤖 Trigger Gemini Extraction")
-run_mode = st.sidebar.radio("Run Mode", ["Demo Data Mode", "Manual Input Mode", "X API Live Fetch"])
+with stats_col:
+    st.markdown(
+        f"""
+        <div class="stats-header-container">
+            <div class="stat-card-small">
+                <div class="stat-val-small" style="color: #34d399;">{stats["total_buys"]}</div>
+                <div class="stat-lbl-small">Total Buys</div>
+            </div>
+            <div class="stat-card-small">
+                <div class="stat-val-small" style="color: #f87171;">{stats["total_sells"]}</div>
+                <div class="stat-lbl-small">Total Sells</div>
+            </div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
 
-# Environment state checker
-gemini_key_set = "GEMINI_API_KEY" in os.environ
-
-if not gemini_key_set:
-    st.sidebar.warning("⚠️ GEMINI_API_KEY environment variable is missing. Live AI triggers will fail. Set it in your environment or secrets.")
-
-# Inputs based on run mode
-if run_mode == "Demo Data Mode":
-    st.sidebar.info("Generates mock financial tweets and runs them through Gemini API.")
-    selected_date = st.sidebar.date_input("Target Date for Data", datetime.today())
-    
-    if st.sidebar.button("⚡ Run Demo Simulation", type="primary"):
-        with st.spinner("AI is analyzing tweets..."):
-            success, log = run_pipeline(["--mock", "--date", selected_date.strftime("%Y-%m-%d")])
-            if success:
-                st.sidebar.success("Simulation Complete! Refreshing...")
-                st.rerun()
-            else:
-                st.sidebar.error("Execution failed.")
-                st.sidebar.code(log)
-
-elif run_mode == "Manual Input Mode":
-    st.sidebar.info("Paste custom tweets or articles below. Gemini will instantly categorize tickers, buy/sell, and write them to database.")
-    manual_tweets = st.sidebar.text_area("Paste Tweets here (separate multiple tweets with 2 blank lines)", 
-        placeholder="AAPL is breaking out to all-time highs on high volume. Long AAPL.\n\nTrimmed my NVDA today, feels overbought in the short term.")
-    selected_date = st.sidebar.date_input("Target Date for Analysis", datetime.today())
-    
-    if st.sidebar.button("⚡ Run AI Analysis", type="primary"):
-        if not manual_tweets.strip():
-            st.sidebar.error("Please enter some text first.")
-        else:
-            with st.spinner("AI parsing text..."):
-                # Save input to a temporary text file
-                temp_file = os.path.join(CURRENT_DIR, "data", "temp_tweets.txt")
-                os.makedirs(os.path.dirname(temp_file), exist_ok=True)
-                with open(temp_file, "w", encoding="utf-8") as f:
-                    f.write(manual_tweets)
-                
-                success, log = run_pipeline(["--manual-text", temp_file, "--date", selected_date.strftime("%Y-%m-%d")])
-                
-                # Cleanup
-                if os.path.exists(temp_file):
-                    os.remove(temp_file)
-                    
-                if success:
-                    st.sidebar.success("Success! Database Updated.")
-                    st.rerun()
-                else:
-                    st.sidebar.error("AI Analysis failed.")
-                    st.sidebar.code(log)
-
-elif run_mode == "X API Live Fetch":
-    st.sidebar.info("Calls standard X API or RapidAPI to fetch target timeline and run analysis.")
-    target_user = st.sidebar.text_input("Target Twitter Username", placeholder="e.g. ElonMusk")
-    selected_date = st.sidebar.date_input("Target Date", datetime.today())
-    
-    if st.sidebar.button("⚡ Fetch & Analyze", type="primary"):
-        with st.spinner("Fetching X timeline & running Gemini..."):
-            env_args = ["--date", selected_date.strftime("%Y-%m-%d")]
-            if target_user:
-                os.environ["X_TARGET_USERNAME"] = target_user
-            
-            success, log = run_pipeline(env_args)
-            if success:
-                st.sidebar.success("API Pull Complete!")
-                st.rerun()
-            else:
-                st.sidebar.error("API Call/Analysis failed.")
-                st.sidebar.code(log)
-
-
-# Main Content Area
-st.markdown('<div class="title-gradient">Twitter Stock Ticker Tracker</div>', unsafe_allow_html=True)
-st.markdown('<div class="subtitle-text">Synthesizing and classifying stock market signals from your Twitter timeline in real-time with Gemini 1.5/2.5 Flash</div>', unsafe_allow_html=True)
+st.markdown("<br>", unsafe_allow_html=True)
 
 # Search & Filters
 search_col, sort_col = st.columns([3, 1])
@@ -508,4 +485,4 @@ for date_key in filtered_dates:
     rendered_count += 1
 
 if rendered_count == 0:
-    st.info("💡 No matching tickers found in the database. Try searching for another ticker or add some data in the sidebar Admin Panel!")
+    st.info("💡 No matching tickers found in the database. When you post new analyses on Twitter, they will automatically appear here after the daily cycle!")
