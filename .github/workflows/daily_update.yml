@@ -2,8 +2,8 @@ name: Daily Twitter Ticker Update
 
 on:
   schedule:
-    # Run once daily at 00:00 UTC (8:00 AM Singapore Time / 5:00 PM Pacific Time)
-    - cron: '0 0 * * *'
+    # Run once daily at 8:00 PM PST / 9:00 PM PDT (which is 04:00 UTC standard time)
+    - cron: '0 4 * * *'
   workflow_dispatch:
     # Allows manual triggering from the GitHub Actions tab
 

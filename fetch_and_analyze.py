@@ -78,8 +78,8 @@ def get_mock_tweets() -> List[Dict[str, str]]:
     ]
 
 
-def fetch_tweets_from_x() -> List[Dict[str, str]]:
-    """Fetches tweets from a specific Twitter List for the current day starting from 00:00 PST/PDT (or custom offset)."""
+def fetch_tweets_from_x(target_date: str) -> List[Dict[str, str]]:
+    """Fetches tweets from a specific Twitter List for the 24-hour window from 8:00 PM of the previous day to 8:00 PM of the target_date (PST/PDT)."""
     # Read environment variables
     bearer_token = os.environ.get("X_BEARER_TOKEN")
     list_id = os.environ.get("X_LIST_ID", "1620537983349964800")
@@ -95,19 +95,30 @@ def fetch_tweets_from_x() -> List[Dict[str, str]]:
             
     from datetime import timedelta
     user_tz = timezone(timedelta(hours=offset_hours))
-    now_user = datetime.now(user_tz)
     
-    # 00:00 AM today in user's local timezone (PST/PDT)
-    start_time_user_dt = now_user.replace(hour=0, minute=0, second=0, microsecond=0)
+    # Parse target date string YYYY-MM-DD
+    try:
+        target_dt = datetime.strptime(target_date, "%Y-%m-%d")
+    except Exception:
+        target_dt = datetime.now(user_tz)
+        
+    # Construct 24h window (End: 8:00 PM of target_date; Start: 8:00 PM of previous day)
+    end_time_user_dt = datetime(target_dt.year, target_dt.month, target_dt.day, 20, 0, 0, tzinfo=user_tz)
+    start_time_user_dt = end_time_user_dt - timedelta(days=1)
     
-    # Convert to UTC for X API query
+    # Convert to UTC for X API query and filtering
     start_time_dt = start_time_user_dt.astimezone(timezone.utc)
+    end_time_dt = end_time_user_dt.astimezone(timezone.utc)
+    
     start_time_str = start_time_dt.isoformat().replace("+00:00", "Z")
+    end_time_str = end_time_dt.isoformat().replace("+00:00", "Z")
     
     print(f"🕒 Target Twitter List ID: {list_id}")
     print(f"🕒 Timezone offset config: {offset_hours} hours.")
-    print(f"🕒 Local today 00:00 AM: {start_time_user_dt.isoformat()}")
-    print(f"🕒 X API UTC start_time: {start_time_str}")
+    print(f"🕒 24h Window Start (PST/PDT): {start_time_user_dt.isoformat()}")
+    print(f"🕒 24h Window End (PST/PDT): {end_time_user_dt.isoformat()}")
+    print(f"🕒 UTC Start (tweepy cutoff): {start_time_str}")
+    print(f"🕒 UTC End (tweepy cutoff): {end_time_str}")
     
     # Fetch from standard X API v2 Lists Endpoint
     if bearer_token:
@@ -138,10 +149,13 @@ def fetch_tweets_from_x() -> List[Dict[str, str]]:
                     users_map = {str(u.id): u.username for u in response.includes["users"]}
                 
                 for tweet in response.data:
-                    # Time filter check
-                    if tweet.created_at and tweet.created_at < start_time_dt:
-                        reached_cutoff = True
-                        continue
+                    # Time filter check (must fall within the 24-hour window from 8pm yesterday to 8pm target_date)
+                    if tweet.created_at:
+                        if tweet.created_at < start_time_dt:
+                            reached_cutoff = True
+                            continue
+                        if tweet.created_at > end_time_dt:
+                            continue
                         
                     author_name = users_map.get(str(tweet.author_id), "unknown")
                     tweets.append({
@@ -189,7 +203,7 @@ def fetch_tweets_from_x() -> List[Dict[str, str]]:
                     if created_at_raw:
                         try:
                             dt = datetime.strptime(created_at_raw, "%a %b %d %H:%M:%S %z %Y")
-                            if dt < start_time_dt:
+                            if dt < start_time_dt or dt > end_time_dt:
                                 is_today = False
                         except Exception:
                             pass
@@ -371,7 +385,7 @@ def main():
             return
     else:
         # Try fetching from X API
-        tweets = fetch_tweets_from_x()
+        tweets = fetch_tweets_from_x(target_date)
         if not tweets:
             print("⚠️ No tweets retrieved from API. Exiting without updates.")
             return
