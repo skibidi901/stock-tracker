@@ -10,7 +10,7 @@ DATA_FILE = os.path.join(CURRENT_DIR, "data", "stock_data.json")
 
 # Set Page Config with high-end dark title
 st.set_page_config(
-    page_title="Twitter Ticker Tracker",
+    page_title="CL's Tickers",
     page_icon="📈",
     layout="wide",
     initial_sidebar_state="collapsed" # Starts with sidebar collapsed (clean dashboard)
@@ -415,30 +415,8 @@ def calculate_statistics(data: dict) -> dict:
 data = load_data()
 stats = calculate_statistics(data)
 
-# Header Row with Integrated Small Metrics
-header_col, stats_col = st.columns([3, 1])
-
-with header_col:
-    st.markdown('<div class="title-gradient">Twitter Stock Ticker Tracker</div>', unsafe_allow_html=True)
-    st.markdown('<div class="subtitle-text">Synthesizing and classifying stock market signals from your Twitter timeline in real-time with Gemini 2.5 Flash</div>', unsafe_allow_html=True)
-
-with stats_col:
-    st.markdown(
-        f"""
-        <div class="stats-header-container">
-            <div class="stat-card-small">
-                <div class="stat-val-small" style="color: #34d399;">{stats["total_buys"]}</div>
-                <div class="stat-lbl-small">Total Buys</div>
-            </div>
-            <div class="stat-card-small">
-                <div class="stat-val-small" style="color: #f87171;">{stats["total_sells"]}</div>
-                <div class="stat-lbl-small">Total Sells</div>
-            </div>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
-
+# Header Row
+st.markdown('<div class="title-gradient">CL\'s Tickers</div>', unsafe_allow_html=True)
 st.markdown("<br>", unsafe_allow_html=True)
 
 # Search & Filters
