@@ -116,22 +116,31 @@ def fetch_tweets_from_x() -> List[Dict[str, str]]:
             client = tweepy.Client(bearer_token=bearer_token)
             
             print(f"📥 Pulling tweets from Twitter List ID: {list_id}...")
-            response = client.get_list_tweets(
+            # Using Paginator to handle fetching tweets until we reach the start of the day
+            tweets = []
+            paginator = tweepy.Paginator(
+                client.get_list_tweets,
                 id=list_id,
                 max_results=100,
                 tweet_fields=["text", "author_id", "created_at"],
                 expansions=["author_id"]
             )
             
-            if response.data:
+            reached_cutoff = False
+            page_count = 0
+            for response in paginator:
+                page_count += 1
+                if not response.data:
+                    break
+                
                 users_map = {}
                 if response.includes and "users" in response.includes:
                     users_map = {str(u.id): u.username for u in response.includes["users"]}
                 
-                tweets = []
                 for tweet in response.data:
                     # Time filter check
                     if tweet.created_at and tweet.created_at < start_time_dt:
+                        reached_cutoff = True
                         continue
                         
                     author_name = users_map.get(str(tweet.author_id), "unknown")
@@ -140,10 +149,17 @@ def fetch_tweets_from_x() -> List[Dict[str, str]]:
                         "author": author_name,
                         "text": tweet.text
                     })
+                
+                if reached_cutoff or page_count >= 5:
+                    # List tweets are in reverse chronological order. Once we hit a tweet older than 
+                    # start_time_dt, or we've fetched 5 pages (500 tweets) as a rate-limit safety net, stop.
+                    break
+            
+            if tweets:
                 print(f"✅ Successfully fetched {len(tweets)} today's list tweets via Bearer Token.")
                 return tweets
             else:
-                print("⚠️ List returned empty. No tweets today so far in this list.")
+                print("⚠️ List returned empty or no tweets today so far in this list.")
         except Exception as e:
             print(f"⚠️ X API List Tweets fetch failed: {e}")
 
