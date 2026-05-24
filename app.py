@@ -27,8 +27,8 @@ CUSTOM_CSS = """
     }
     
     .stApp {
-        background-color: #0f1115;
-        color: #e2e8f0;
+        background-color: #1e222b; /* Sleek charcoal dark-gray, lighter than before */
+        color: #f1f5f9; /* High-contrast white/slate */
     }
     
     /* Header layout styling */
@@ -51,7 +51,7 @@ CUSTOM_CSS = """
     }
     
     .subtitle-text {
-        color: #94a3b8;
+        color: #cbd5e1;
         font-size: 1.05rem;
         font-weight: 300;
         margin-bottom: 0;
@@ -62,10 +62,10 @@ CUSTOM_CSS = """
         margin-bottom: 3rem;
         border-radius: 16px;
         overflow: hidden;
-        border: 1px solid #1e293b;
-        background: rgba(30, 41, 59, 0.4);
+        border: 1px solid #334155;
+        background: rgba(30, 41, 59, 0.7);
         backdrop-filter: blur(12px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     }
     
     .date-header {
@@ -74,7 +74,7 @@ CUSTOM_CSS = """
         font-size: 1.25rem;
         font-weight: 700;
         color: #f8fafc;
-        border-bottom: 1px solid #334155;
+        border-bottom: 1px solid #475569;
         display: flex;
         align-items: center;
         gap: 10px;
@@ -97,18 +97,18 @@ CUSTOM_CSS = """
         font-size: 0.95rem;
         text-transform: uppercase;
         letter-spacing: 0.05rem;
-        border-bottom: 1px solid #334155;
+        border-bottom: 1px solid #475569;
     }
     
     .th-buy {
-        background-color: rgba(16, 185, 129, 0.08);
+        background-color: rgba(16, 185, 129, 0.12);
         color: #34d399;
         text-align: left;
-        border-right: 1px solid #334155;
+        border-right: 1px solid #475569;
     }
     
     .th-sell {
-        background-color: rgba(239, 68, 68, 0.08);
+        background-color: rgba(239, 68, 68, 0.12);
         color: #f87171;
         text-align: left;
     }
@@ -116,31 +116,31 @@ CUSTOM_CSS = """
     .ticker-table td {
         padding: 20px;
         vertical-align: top;
-        border-bottom: 1px solid #1e293b;
+        border-bottom: 1px solid #334155;
     }
     
     .td-buy {
-        border-right: 1px solid #334155;
-        background-color: rgba(16, 185, 129, 0.01);
+        border-right: 1px solid #475569;
+        background-color: rgba(16, 185, 129, 0.02);
     }
     
     .td-sell {
-        background-color: rgba(239, 68, 68, 0.01);
+        background-color: rgba(239, 68, 68, 0.02);
     }
     
     /* Cards inside Table Cells */
     .cell-card {
         padding: 16px;
         border-radius: 12px;
-        background: rgba(15, 23, 42, 0.6);
-        border: 1px solid #1e293b;
+        background: rgba(15, 23, 42, 0.85); /* Darker contrast within the lighter grid */
+        border: 1px solid #334155;
         margin-bottom: 12px;
         transition: all 0.25s ease;
     }
     
     .cell-card:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
     }
     
     .buy-card {
@@ -149,7 +149,7 @@ CUSTOM_CSS = """
     
     .buy-card:hover {
         border-color: #34d399;
-        box-shadow: 0 0 15px rgba(52, 211, 153, 0.15);
+        box-shadow: 0 0 15px rgba(52, 211, 153, 0.25);
     }
     
     .sell-card {
@@ -158,7 +158,7 @@ CUSTOM_CSS = """
     
     .sell-card:hover {
         border-color: #f87171;
-        box-shadow: 0 0 15px rgba(248, 113, 113, 0.15);
+        box-shadow: 0 0 15px rgba(248, 113, 113, 0.25);
     }
     
     /* Badges */
@@ -173,31 +173,31 @@ CUSTOM_CSS = """
     }
     
     .badge-buy {
-        background-color: rgba(16, 185, 129, 0.2);
+        background-color: rgba(16, 185, 129, 0.25);
         color: #34d399;
-        border: 1px solid rgba(52, 211, 153, 0.3);
+        border: 1px solid rgba(52, 211, 153, 0.4);
     }
     
     .badge-sell {
-        background-color: rgba(239, 68, 68, 0.2);
+        background-color: rgba(239, 68, 68, 0.25);
         color: #f87171;
-        border: 1px solid rgba(248, 113, 113, 0.3);
+        border: 1px solid rgba(248, 113, 113, 0.4);
     }
     
     /* Summary Text */
     .summary-text {
-        font-size: 0.95rem;
+        font-size: 0.98rem;
         line-height: 1.55;
-        color: #cbd5e1;
+        color: #f1f5f9; /* Bright, highly readable slate text */
         margin-bottom: 8px;
     }
     
     /* Tweet Source Mentions Section */
     .author-section {
         margin-top: 12px;
-        font-size: 0.82rem;
-        color: #94a3b8;
-        border-top: 1px dashed rgba(255, 255, 255, 0.08);
+        font-size: 0.85rem;
+        color: #cbd5e1; /* Lighter, clear slate color */
+        border-top: 1px dashed rgba(255, 255, 255, 0.15);
         padding-top: 8px;
         display: flex;
         flex-wrap: wrap;
@@ -217,11 +217,11 @@ CUSTOM_CSS = """
         text-decoration: underline;
     }
     
-    /* Empty Placeholder */
+    /* Empty Placeholder with enhanced contrast */
     .empty-state {
-        color: #64748b;
+        color: #94a3b8; /* Lighter gray for readability */
         font-style: italic;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         text-align: center;
         padding: 30px 10px;
     }
@@ -234,7 +234,7 @@ CUSTOM_CSS = """
     
     .stat-card-small {
         background: rgba(30, 41, 59, 0.4);
-        border: 1px solid #1e293b;
+        border: 1px solid #334155;
         border-radius: 12px;
         padding: 10px 18px;
         text-align: center;
@@ -253,6 +253,20 @@ CUSTOM_CSS = """
         color: #94a3b8;
         text-transform: uppercase;
         letter-spacing: 0.02rem;
+    }
+
+    /* Streamlit Alert Glassmorphism Custom Overrides */
+    div[data-testid="stAlert"] {
+        background-color: rgba(56, 189, 248, 0.15) !important;
+        border: 1px solid rgba(56, 189, 248, 0.35) !important;
+        color: #f8fafc !important;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+    div[data-testid="stAlert"] p {
+        color: #f8fafc !important;
+        font-weight: 400;
+        font-size: 0.95rem;
     }
 </style>
 """
