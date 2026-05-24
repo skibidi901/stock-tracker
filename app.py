@@ -27,8 +27,16 @@ CUSTOM_CSS = """
     }
     
     .stApp {
-        background-color: #1e222b; /* Sleek charcoal dark-gray, lighter than before */
-        color: #f1f5f9; /* High-contrast white/slate */
+        background-color: #f1f5f9; /* Premium light grey background */
+        color: #1e293b; /* Deep slate gray for primary readability */
+    }
+    
+    /* Explicit high-visibility styling for Streamlit widget labels */
+    label[data-baseweb="label"], div[data-testid="stWidgetLabel"] p {
+        color: #0f172a !important; /* Extremely sharp deep slate color */
+        font-weight: 600 !important;
+        font-size: 0.98rem !important;
+        letter-spacing: 0.01rem;
     }
     
     /* Header layout styling */
@@ -39,9 +47,9 @@ CUSTOM_CSS = """
         margin-bottom: 2rem;
     }
     
-    /* Title Accent */
+    /* Rich Light-Theme Title Accent */
     .title-gradient {
-        background: linear-gradient(90deg, #38bdf8 0%, #34d399 50%, #f472b6 100%);
+        background: linear-gradient(90deg, #0284c7 0%, #059669 50%, #db2777 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-weight: 800;
@@ -51,37 +59,37 @@ CUSTOM_CSS = """
     }
     
     .subtitle-text {
-        color: #cbd5e1;
+        color: #475569;
         font-size: 1.05rem;
         font-weight: 300;
         margin-bottom: 0;
     }
 
-    /* Modern Table Container */
+    /* Modern Table Container (Light Mode) */
     .table-container {
         margin-bottom: 3rem;
         border-radius: 16px;
         overflow: hidden;
-        border: 1px solid #334155;
-        background: rgba(30, 41, 59, 0.7);
+        border: 1px solid #cbd5e1;
+        background: rgba(255, 255, 255, 0.7);
         backdrop-filter: blur(12px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
     }
     
     .date-header {
-        background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
         padding: 16px 24px;
         font-size: 1.25rem;
         font-weight: 700;
-        color: #f8fafc;
-        border-bottom: 1px solid #475569;
+        color: #0f172a;
+        border-bottom: 1px solid #cbd5e1;
         display: flex;
         align-items: center;
         gap: 10px;
     }
     
     .date-icon {
-        color: #38bdf8;
+        color: #0284c7;
     }
 
     /* Core Ticker Table Styling */
@@ -97,50 +105,51 @@ CUSTOM_CSS = """
         font-size: 0.95rem;
         text-transform: uppercase;
         letter-spacing: 0.05rem;
-        border-bottom: 1px solid #475569;
+        border-bottom: 1px solid #cbd5e1;
     }
     
     .th-buy {
-        background-color: rgba(16, 185, 129, 0.12);
-        color: #34d399;
+        background-color: rgba(16, 185, 129, 0.08);
+        color: #047857; /* Deep readable emerald green */
         text-align: left;
-        border-right: 1px solid #475569;
+        border-right: 1px solid #cbd5e1;
     }
     
     .th-sell {
-        background-color: rgba(239, 68, 68, 0.12);
-        color: #f87171;
+        background-color: rgba(239, 68, 68, 0.08);
+        color: #b91c1c; /* Deep readable dark red */
         text-align: left;
     }
     
     .ticker-table td {
         padding: 20px;
         vertical-align: top;
-        border-bottom: 1px solid #334155;
+        border-bottom: 1px solid #cbd5e1;
     }
     
     .td-buy {
-        border-right: 1px solid #475569;
-        background-color: rgba(16, 185, 129, 0.02);
+        border-right: 1px solid #cbd5e1;
+        background-color: rgba(16, 185, 129, 0.01);
     }
     
     .td-sell {
-        background-color: rgba(239, 68, 68, 0.02);
+        background-color: rgba(239, 68, 68, 0.01);
     }
     
-    /* Cards inside Table Cells */
+    /* White Card Blocks inside Grid Cells */
     .cell-card {
         padding: 16px;
         border-radius: 12px;
-        background: rgba(15, 23, 42, 0.85); /* Darker contrast within the lighter grid */
-        border: 1px solid #334155;
+        background: #ffffff; /* Crisp white card */
+        border: 1px solid #cbd5e1;
         margin-bottom: 12px;
         transition: all 0.25s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01);
     }
     
     .cell-card:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
     }
     
     .buy-card {
@@ -148,8 +157,8 @@ CUSTOM_CSS = """
     }
     
     .buy-card:hover {
-        border-color: #34d399;
-        box-shadow: 0 0 15px rgba(52, 211, 153, 0.25);
+        border-color: #059669;
+        box-shadow: 0 0 15px rgba(5, 150, 105, 0.08);
     }
     
     .sell-card {
@@ -157,8 +166,8 @@ CUSTOM_CSS = """
     }
     
     .sell-card:hover {
-        border-color: #f87171;
-        box-shadow: 0 0 15px rgba(248, 113, 113, 0.25);
+        border-color: #dc2626;
+        box-shadow: 0 0 15px rgba(220, 38, 38, 0.08);
     }
     
     /* Badges */
@@ -173,22 +182,22 @@ CUSTOM_CSS = """
     }
     
     .badge-buy {
-        background-color: rgba(16, 185, 129, 0.25);
-        color: #34d399;
-        border: 1px solid rgba(52, 211, 153, 0.4);
+        background-color: rgba(16, 185, 129, 0.12);
+        color: #047857;
+        border: 1px solid rgba(16, 185, 129, 0.25);
     }
     
     .badge-sell {
-        background-color: rgba(239, 68, 68, 0.25);
-        color: #f87171;
-        border: 1px solid rgba(248, 113, 113, 0.4);
+        background-color: rgba(239, 68, 68, 0.12);
+        color: #b91c1c;
+        border: 1px solid rgba(239, 68, 68, 0.25);
     }
     
     /* Summary Text */
     .summary-text {
         font-size: 0.98rem;
         line-height: 1.55;
-        color: #f1f5f9; /* Bright, highly readable slate text */
+        color: #334155; /* Sharp dark grey text */
         margin-bottom: 8px;
     }
     
@@ -196,8 +205,8 @@ CUSTOM_CSS = """
     .author-section {
         margin-top: 12px;
         font-size: 0.85rem;
-        color: #cbd5e1; /* Lighter, clear slate color */
-        border-top: 1px dashed rgba(255, 255, 255, 0.15);
+        color: #64748b; /* Soft grey text */
+        border-top: 1px dashed #e2e8f0;
         padding-top: 8px;
         display: flex;
         flex-wrap: wrap;
@@ -206,20 +215,20 @@ CUSTOM_CSS = """
     }
     
     .author-link {
-        color: #38bdf8;
+        color: #0284c7; /* Classic blue link */
         text-decoration: none;
         font-weight: 600;
         transition: color 0.2s ease;
     }
     
     .author-link:hover {
-        color: #34d399;
+        color: #059669;
         text-decoration: underline;
     }
     
     /* Empty Placeholder with enhanced contrast */
     .empty-state {
-        color: #94a3b8; /* Lighter gray for readability */
+        color: #64748b; /* Slate grey for readability */
         font-style: italic;
         font-size: 0.95rem;
         text-align: center;
@@ -255,17 +264,17 @@ CUSTOM_CSS = """
         letter-spacing: 0.02rem;
     }
 
-    /* Streamlit Alert Glassmorphism Custom Overrides */
+    /* Streamlit Alert Glassmorphism Custom Overrides (Light Mode) */
     div[data-testid="stAlert"] {
-        background-color: rgba(56, 189, 248, 0.15) !important;
-        border: 1px solid rgba(56, 189, 248, 0.35) !important;
-        color: #f8fafc !important;
+        background-color: rgba(14, 165, 233, 0.08) !important;
+        border: 1px solid rgba(14, 165, 233, 0.2) !important;
+        color: #0369a1 !important;
         border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
     }
     div[data-testid="stAlert"] p {
-        color: #f8fafc !important;
-        font-weight: 400;
+        color: #0369a1 !important;
+        font-weight: 500;
         font-size: 0.95rem;
     }
 </style>
