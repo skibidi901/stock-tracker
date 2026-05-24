@@ -2,17 +2,277 @@
   "2026-05-24": {
     "buy": [
       {
-        "ticker": "SIVE",
-        "summary": "SIVE is identified as a critical \"chokepoint\" within the photonics industry, indicating its strategic importance and potential for growth.",
+        "ticker": "AMD",
+        "summary": "Lisa Su's increased server CPU Total Addressable Market (TAM) forecast from $60B to over $120B by 2030 is a significant bullish catalyst for AMD. Additionally, AMD is identified as a semiconductor stock with further upside potential despite recent gains.",
         "tweets": [
           {
-            "author": "maggiezxq",
-            "tweet_id": "2058378558285009185",
-            "text": "RT @aleabitoreddit: Photonics is nuanced and using ChatGPT/Gemini makes you miss all of it: 1. $SIVE is actually a chokepoint and partial…"
+            "author": "TradexWhisperer",
+            "tweet_id": "2058403918854631794",
+            "text": "RT @TradexWhisperer: Lisa Su raised the server CPU TAM forecast from roughly $60B to over $120B by 2030, now\n\nCPU-to-GPU ratio: 1:8 → 1:1…"
+          },
+          {
+            "author": "TheProfInvestor",
+            "tweet_id": "2058386386164568188",
+            "text": "$INTC $DELL $MRVL $MU $AMD $TSEM all ran hard and people are getting carried away thinking semis are done, \n\nThere's a twist, there are stocks that nobody is talking about.   \n\nGoing to share 10 stocks which still have plenty more to go from current levels.   \n\n1. They are making https://t.co/KqUhouUsqk"
+          }
+        ]
+      },
+      {
+        "ticker": "ENPH",
+        "summary": "ENPH is identified as an obvious base breakout, with recommended buy dips between $53-57 and a stop at $45, suggesting significant upside potential.",
+        "tweets": [
+          {
+            "author": "TheProfInvestor",
+            "tweet_id": "2058387226615300210",
+            "text": "$ENPH A Stock which people will look back at 100 and talk about.\n\nIt will sound something like this:\n\n\"That was a very obvious base breakout, I should have bought it\"\n\nPutting it out there now: \n\n- Dips between 53-57 = Buys \n- Keep stop at 45 and let the plan do the work. https://t.co/mOYTM8jsoV"
+          }
+        ]
+      },
+      {
+        "ticker": "ON",
+        "summary": "ON Semiconductor is presented as a potential investment opportunity with significant upside, aligning with the author's broader bullish outlook on under-discussed stocks.",
+        "tweets": [
+          {
+            "author": "TheProfInvestor",
+            "tweet_id": "2058386392238248293",
+            "text": "$ON \n$OUST https://t.co/a2qRozkWeV"
+          },
+          {
+            "author": "TheProfInvestor",
+            "tweet_id": "2058384741100032043",
+            "text": "$ON\n$OUST https://t.co/uLE8HIG18x"
+          }
+        ]
+      },
+      {
+        "ticker": "OUST",
+        "summary": "Ouster (OUST) is presented as a potential investment opportunity with significant upside, aligning with the author's broader bullish outlook on under-discussed stocks.",
+        "tweets": [
+          {
+            "author": "TheProfInvestor",
+            "tweet_id": "2058386392238248293",
+            "text": "$ON \n$OUST https://t.co/a2qRozkWeV"
+          },
+          {
+            "author": "TheProfInvestor",
+            "tweet_id": "2058384741100032043",
+            "text": "$ON\n$OUST https://t.co/uLE8HIG18x"
+          }
+        ]
+      },
+      {
+        "ticker": "HIMX",
+        "summary": "Himax Technologies (HIMX) is presented as a potential investment opportunity with significant upside, aligning with the author's broader bullish outlook on under-discussed stocks.",
+        "tweets": [
+          {
+            "author": "TheProfInvestor",
+            "tweet_id": "2058386389734228266",
+            "text": "$HIMX $SYNA $GFS $NXPI https://t.co/RbrZG3U5ie"
+          },
+          {
+            "author": "TheProfInvestor",
+            "tweet_id": "2058384738516349247",
+            "text": "$HIMX\n$SYNA\n$GFS\n$NXPI https://t.co/89WUoD9Q4Q"
+          }
+        ]
+      },
+      {
+        "ticker": "SYNA",
+        "summary": "Synaptics (SYNA) is presented as a potential investment opportunity with significant upside, aligning with the author's broader bullish outlook on under-discussed stocks.",
+        "tweets": [
+          {
+            "author": "TheProfInvestor",
+            "tweet_id": "2058386389734228266",
+            "text": "$HIMX $SYNA $GFS $NXPI https://t.co/RbrZG3U5ie"
+          },
+          {
+            "author": "TheProfInvestor",
+            "tweet_id": "2058384738516349247",
+            "text": "$HIMX\n$SYNA\n$GFS\n$NXPI https://t.co/89WUoD9Q4Q"
+          }
+        ]
+      },
+      {
+        "ticker": "GFS",
+        "summary": "GlobalFoundries (GFS) is presented as a potential investment opportunity with significant upside, aligning with the author's broader bullish outlook on under-discussed stocks.",
+        "tweets": [
+          {
+            "author": "TheProfInvestor",
+            "tweet_id": "2058386389734228266",
+            "text": "$HIMX $SYNA $GFS $NXPI https://t.co/RbrZG3U5ie"
+          },
+          {
+            "author": "TheProfInvestor",
+            "tweet_id": "2058384738516349247",
+            "text": "$HIMX\n$SYNA\n$GFS\n$NXPI https://t.co/89WUoD9Q4Q"
+          }
+        ]
+      },
+      {
+        "ticker": "NXPI",
+        "summary": "NXP Semiconductors (NXPI) is presented as a potential investment opportunity with significant upside, aligning with the author's broader bullish outlook on under-discussed stocks.",
+        "tweets": [
+          {
+            "author": "TheProfInvestor",
+            "tweet_id": "2058386389734228266",
+            "text": "$HIMX $SYNA $GFS $NXPI https://t.co/RbrZG3U5ie"
+          },
+          {
+            "author": "TheProfInvestor",
+            "tweet_id": "2058384738516349247",
+            "text": "$HIMX\n$SYNA\n$GFS\n$NXPI https://t.co/89WUoD9Q4Q"
+          }
+        ]
+      },
+      {
+        "ticker": "INTC",
+        "summary": "Despite recent strong runs, Intel (INTC) is believed to have significant further upside, being among the \"10 stocks which still have plenty more to go\" according to the author.",
+        "tweets": [
+          {
+            "author": "TheProfInvestor",
+            "tweet_id": "2058386386164568188",
+            "text": "$INTC $DELL $MRVL $MU $AMD $TSEM all ran hard and people are getting carried away thinking semis are done, \n\nThere's a twist, there are stocks that nobody is talking about.   \n\nGoing to share 10 stocks which still have plenty more to go from current levels.   \n\n1. They are making https://t.co/KqUhouUsqk"
+          }
+        ]
+      },
+      {
+        "ticker": "DELL",
+        "summary": "Despite recent strong runs, Dell Technologies (DELL) is believed to have significant further upside, being among the \"10 stocks which still have plenty more to go\" according to the author.",
+        "tweets": [
+          {
+            "author": "TheProfInvestor",
+            "tweet_id": "2058386386164568188",
+            "text": "$INTC $DELL $MRVL $MU $AMD $TSEM all ran hard and people are getting carried away thinking semis are done, \n\nThere's a twist, there are stocks that nobody is talking about.   \n\nGoing to share 10 stocks which still have plenty more to go from current levels.   \n\n1. They are making https://t.co/KqUhouUsqk"
+          }
+        ]
+      },
+      {
+        "ticker": "MRVL",
+        "summary": "Despite recent strong runs, Marvell Technology (MRVL) is believed to have significant further upside, being among the \"10 stocks which still have plenty more to go\" according to the author.",
+        "tweets": [
+          {
+            "author": "TheProfInvestor",
+            "tweet_id": "2058386386164568188",
+            "text": "$INTC $DELL $MRVL $MU $AMD $TSEM all ran hard and people are getting carried away thinking semis are done, \n\nThere's a twist, there are stocks that nobody is talking about.   \n\nGoing to share 10 stocks which still have plenty more to go from current levels.   \n\n1. They are making https://t.co/KqUhouUsqk"
+          }
+        ]
+      },
+      {
+        "ticker": "MU",
+        "summary": "Micron (MU) is positioned for strong growth due to the dramatic increase in High Bandwidth Memory (HBM) per GPU, with requirements projected to grow 7.2x in five years, indicating robust demand for its products. It is also identified as a semiconductor stock with further upside potential despite recent gains.",
+        "tweets": [
+          {
+            "author": "TheProfInvestor",
+            "tweet_id": "2058386386164568188",
+            "text": "$INTC $DELL $MRVL $MU $AMD $TSEM all ran hard and people are getting carried away thinking semis are done, \n\nThere's a twist, there are stocks that nobody is talking about.   \n\nGoing to share 10 stocks which still have plenty more to go from current levels.   \n\n1. They are making https://t.co/KqUhouUsqk"
+          },
+          {
+            "author": "TradexWhisperer",
+            "tweet_id": "2058271397588447341",
+            "text": "$MU $DRAM HBM per GPU:\n\nH100: 80GB\nH200: 141GB\nB200: 192GB\nRubin: 288GB\nRubin Ultra: 576GB\n\nFrom 80GB to 576GB in five years. 7.2x more memory.\n\nAnd Rubin Ultra is not the destination. It is the next stop. https://t.co/huLeXGWH9Y https://t.co/JlNwTdUn7T"
+          }
+        ]
+      },
+      {
+        "ticker": "TSEM",
+        "summary": "Despite recent strong runs, Tower Semiconductor (TSEM) is believed to have significant further upside, being among the \"10 stocks which still have plenty more to go\" according to the author.",
+        "tweets": [
+          {
+            "author": "TheProfInvestor",
+            "tweet_id": "2058386386164568188",
+            "text": "$INTC $DELL $MRVL $MU $AMD $TSEM all ran hard and people are getting carried away thinking semis are done, \n\nThere's a twist, there are stocks that nobody is talking about.   \n\nGoing to share 10 stocks which still have plenty more to go from current levels.   \n\n1. They are making https://t.co/KqUhouUsqk"
+          }
+        ]
+      },
+      {
+        "ticker": "TSLA",
+        "summary": "The author expresses strong bullish sentiment for TSLA, praising its Full Self-Driving (FSD) technology as the \"best AI product on planet earth\" after a positive personal driving experience.",
+        "tweets": [
+          {
+            "author": "amitisinvesting",
+            "tweet_id": "2058355852067713134",
+            "text": "cannot express how much I love $TSLA FSD.\n\njust took a 25 min drive in the rain without any worries or fears about knowing how I was going to get to where I was going.\n\nlegit the best AI product on planet earth.\n\nonly thing I wish was available is the ability for me to be on my"
+          }
+        ]
+      },
+      {
+        "ticker": "SPX",
+        "summary": "The S&P 500 futures are showing a strong implied open, suggesting a bullish market reaction to news of a potential war resolution. The author also maintains a very bullish outlook on SPX for the entire year, despite anticipating a short-term bull trap.",
+        "tweets": [
+          {
+            "author": "amitisinvesting",
+            "tweet_id": "2058311945334186130",
+            "text": "looks like Trump missed his son’s wedding to end the war\n\nS&amp;P 500 $SPX PERPETUAL FUTURES IMPLY A $7600 OPEN \n\nmarket likes it https://t.co/EGxAV7xqiJ"
+          },
+          {
+            "author": "mat78704",
+            "tweet_id": "2058287297389572164",
+            "text": "粉丝们，再讲一遍，我对今年美股持非常bullish的看法。spy 732，soxx 476有可能被retest几次。一旦横盘结束，soxx就去1000了。所以第一，不要当一只熊。第二，你交易心态不好的话，很有可能你账户干不过定投soxx。听懂了？"
+          },
+          {
+            "author": "labubu_trader",
+            "tweet_id": "2058207486600167840",
+            "text": "Yes I’m still very bullish on SPX and SMH for the whole year.\nBut I think in the next 1-2 weeks, SPX will form a bull trap. The reason is simple:\nThe straits wouldn’t reopen as fast as the market expected.\nAlso June’s 1st half has so many macro events which would cause big https://t.co/jwNYSwIEHn"
+          }
+        ]
+      },
+      {
+        "ticker": "SPY",
+        "summary": "The author maintains a very bullish outlook on the US stock market for the year, specifically mentioning SPY, and advises against being bearish.",
+        "tweets": [
+          {
+            "author": "mat78704",
+            "tweet_id": "2058287297389572164",
+            "text": "粉丝们，再讲一遍，我对今年美股持非常bullish的看法。spy 732，soxx 476有可能被retest几次。一旦横盘结束，soxx就去1000了。所以第一，不要当一只熊。第二，你交易心态不好的话，很有可能你账户干不过定投soxx。听懂了？"
+          }
+        ]
+      },
+      {
+        "ticker": "SOXX",
+        "summary": "The author maintains a very bullish outlook on the US stock market for the year, specifically mentioning SOXX, and advises against being bearish, suggesting dollar-cost averaging into SOXX as it could reach 1000 after consolidation.",
+        "tweets": [
+          {
+            "author": "mat78704",
+            "tweet_id": "2058287297389572164",
+            "text": "粉丝们，再讲一遍，我对今年美股持非常bullish的看法。spy 732，soxx 476有可能被retest几次。一旦横盘结束，soxx就去1000了。所以第一，不要当一只熊。第二，你交易心态不好的话，很有可能你账户干不过定投soxx。听懂了？"
+          }
+        ]
+      },
+      {
+        "ticker": "CAR",
+        "summary": "CAR has shown strong positive momentum, with the author suggesting another upward move is imminent based on chart analysis after a +12% gain.",
+        "tweets": [
+          {
+            "author": "TradexWhisperer",
+            "tweet_id": "2058262210561048970",
+            "text": "$CAR Blue. Green. Then +12%\n\nIs another move coming? The candles will tell us before the crowd figures it out.\n\n300+ charts daily. Try it free:\nhttps://t.co/ZQDP5HCFyq https://t.co/Qtop6DObXK https://t.co/tRXu08s7t5"
+          }
+        ]
+      },
+      {
+        "ticker": "SMH",
+        "summary": "The author remains very bullish on SMH for the entire year, although a short-term bull trap is anticipated due to slower-than-expected straits reopening and upcoming macro events in June.",
+        "tweets": [
+          {
+            "author": "labubu_trader",
+            "tweet_id": "2058207486600167840",
+            "text": "Yes I’m still very bullish on SPX and SMH for the whole year.\nBut I think in the next 1-2 weeks, SPX will form a bull trap. The reason is simple:\nThe straits wouldn’t reopen as fast as the market expected.\nAlso June’s 1st half has so many macro events which would cause big https://t.co/jwNYSwIEHn"
           }
         ]
       }
     ],
-    "sell": []
+    "sell": [
+      {
+        "ticker": "TLT",
+        "summary": "The author plans to take profits on TLT calls, indicating a belief that the recent bullish move in TLT may be concluding or has reached a target.",
+        "tweets": [
+          {
+            "author": "labubu_trader",
+            "tweet_id": "2058317551852257649",
+            "text": "Will take profits on $tlt calls on Tuesday 😄 https://t.co/7SE2IEgqKV"
+          }
+        ]
+      }
+    ]
   }
 }
