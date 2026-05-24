@@ -79,7 +79,7 @@ def get_mock_tweets() -> List[Dict[str, str]]:
 
 
 def fetch_tweets_from_x() -> List[Dict[str, str]]:
-    """Fetches Home Timeline (x.com/home) tweets for the current day (00:00 UTC to now)."""
+    """Fetches Home Timeline (x.com/home) tweets for the current day starting from 00:00 PST/PDT (or custom offset)."""
     # Read environment variables
     bearer_token = os.environ.get("X_BEARER_TOKEN")
     consumer_key = os.environ.get("X_API_KEY")
@@ -90,12 +90,29 @@ def fetch_tweets_from_x() -> List[Dict[str, str]]:
     rapidapi_key = os.environ.get("RAPIDAPI_KEY")
     target_username = os.environ.get("X_TARGET_USERNAME", "me")
     
-    # Calculate start time for today (00:00 UTC)
-    now_utc = datetime.now(timezone.utc)
-    start_time_dt = now_utc.replace(hour=0, minute=0, second=0, microsecond=0)
+    # Calculate timezone offset (default to Pacific Time -7 hours for PDT)
+    offset_hours = -7
+    tz_env = os.environ.get("USER_TIMEZONE_OFFSET")
+    if tz_env:
+        try:
+            offset_hours = int(tz_env)
+        except ValueError:
+            pass
+            
+    from datetime import timedelta
+    user_tz = timezone(timedelta(hours=offset_hours))
+    now_user = datetime.now(user_tz)
+    
+    # 00:00 AM today in user's local timezone (PST/PDT)
+    start_time_user_dt = now_user.replace(hour=0, minute=0, second=0, microsecond=0)
+    
+    # Convert to UTC for X API query
+    start_time_dt = start_time_user_dt.astimezone(timezone.utc)
     start_time_str = start_time_dt.isoformat().replace("+00:00", "Z")
     
-    print(f"🕒 Filtering tweets starting from today 00:00 UTC ({start_time_str}) to now...")
+    print(f"🕒 Timezone offset config: {offset_hours} hours.")
+    print(f"🕒 Local today 00:00 AM: {start_time_user_dt.isoformat()}")
+    print(f"🕒 X API UTC start_time: {start_time_str}")
     
     # Try RapidAPI Twitter Scraper first
     if rapidapi_key:
@@ -116,13 +133,11 @@ def fetch_tweets_from_x() -> List[Dict[str, str]]:
                     text = item.get("text")
                     tweet_id = item.get("id_str") or str(item.get("id"))
                     author = item.get("user", {}).get("screen_name") or target_username
-                    created_at_raw = item.get("created_at") # e.g. "Sat May 24 01:23:45 +0000 2026"
+                    created_at_raw = item.get("created_at")
                     
-                    # Local time filter for RapidAPI
                     is_today = True
                     if created_at_raw:
                         try:
-                            # Twitter timestamp parsing: "Tue May 24 12:34:56 +0000 2026"
                             dt = datetime.strptime(created_at_raw, "%a %b %d %H:%M:%S %z %Y")
                             if dt < start_time_dt:
                                 is_today = False
@@ -158,7 +173,7 @@ def fetch_tweets_from_x() -> List[Dict[str, str]]:
             # Requires OAuth 1.0a User Context
             print("📥 Pulling home timeline (x.com/home)...")
             response = client.get_home_timeline(
-                id=user_id,
+                id="me", # 'me' is valid under OAuth 1.0a User Context
                 max_results=100,
                 start_time=start_time_str,
                 tweet_fields=["text", "author_id", "created_at"],
@@ -172,7 +187,6 @@ def fetch_tweets_from_x() -> List[Dict[str, str]]:
                 
                 tweets = []
                 for tweet in response.data:
-                    # Double insurance time check
                     if tweet.created_at and tweet.created_at < start_time_dt:
                         continue
                         
@@ -195,11 +209,17 @@ def fetch_tweets_from_x() -> List[Dict[str, str]]:
         print("🔗 Authenticating with Bearer Token (Fallback to Specific User's Timeline)...")
         try:
             client = tweepy.Client(bearer_token=bearer_token)
-            user_id = "me"
-            if target_username and target_username != "me":
-                user = client.get_user(username=target_username)
-                if user.data:
-                    user_id = user.data.id
+            
+            # Handle Bearer Token specific check: 'me' is not a valid ID for App-only credentials
+            if target_username == "me":
+                print("❌ Bearer Token (App-only) authentication does not support the 'me' shortcut.")
+                print("💡 Recommendation: Please add X_TARGET_USERNAME: <your_twitter_username> to your Secrets.")
+                return []
+                
+            user_id = target_username
+            user = client.get_user(username=target_username)
+            if user.data:
+                user_id = user.data.id
             
             print(f"📥 Pulling user timeline for ID: {user_id}...")
             response = client.get_users_tweets(
