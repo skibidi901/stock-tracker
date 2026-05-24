@@ -60,7 +60,10 @@ jobs:
           echo "🔄 New data generated. Committing changes..."
           git add data/stock_data.json
           git commit -m "auto: daily ticker analysis update [skip ci]"
-          git push
+          
+          # Pull latest remote changes to avoid non-fast-forward rejection
+          git pull --rebase origin main
+          git push origin main
           echo "✅ Changes pushed successfully."
         else
           echo "ℹ️ No changes to commit (data is identical or no new updates)."
