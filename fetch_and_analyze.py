@@ -119,7 +119,6 @@ def fetch_tweets_from_x() -> List[Dict[str, str]]:
             response = client.get_list_tweets(
                 id=list_id,
                 max_results=100,
-                start_time=start_time_str,
                 tweet_fields=["text", "author_id", "created_at"],
                 expansions=["author_id"]
             )
