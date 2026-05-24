@@ -31,12 +31,33 @@ CUSTOM_CSS = """
         color: #1e293b; /* Deep slate gray for primary readability */
     }
     
-    /* Explicit high-visibility styling for Streamlit widget labels */
+    /* Explicit high-visibility black styling for Streamlit widget labels */
     label[data-baseweb="label"], div[data-testid="stWidgetLabel"] p {
-        color: #0f172a !important; /* Extremely sharp deep slate color */
+        color: #000000 !important; /* Pure black */
         font-weight: 600 !important;
         font-size: 0.98rem !important;
         letter-spacing: 0.01rem;
+    }
+    
+    /* Search Bar and Dropdown Backgrounds forced to Solid White */
+    .stTextInput input {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        border: 1px solid #cbd5e1 !important;
+        border-radius: 8px !important;
+    }
+    
+    .stSelectbox div[data-baseweb="select"] > div {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        border: 1px solid #cbd5e1 !important;
+        border-radius: 8px !important;
+    }
+
+    /* Target nested containers to override default Streamlit themes */
+    div[data-baseweb="input"] {
+        background-color: #ffffff !important;
+        border-radius: 8px !important;
     }
     
     /* Header layout styling */
