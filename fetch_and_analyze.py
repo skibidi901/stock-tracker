@@ -398,8 +398,8 @@ def main():
         # Try fetching from X API
         tweets = fetch_tweets_from_x()
         if not tweets:
-            print("⚠️ No tweets retrieved from API. Defaulting to mock mode so you can see results.")
-            tweets = get_mock_tweets()
+            print("⚠️ No tweets retrieved from API. Exiting without updates.")
+            return
 
     # Analyze with Gemini
     report = analyze_tweets_with_gemini(tweets)
