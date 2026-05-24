@@ -86,31 +86,13 @@ CUSTOM_CSS = """
         margin-bottom: 0;
     }
 
-    /* Modern Table Container (Light Mode) */
+    /* Modern Table Container (Light Mode) with scrollable height */
     .table-container {
-        margin-bottom: 3rem;
-        border-radius: 16px;
-        overflow: hidden;
-        border: 1px solid #cbd5e1;
-        background: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(12px);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-    }
-    
-    .date-header {
-        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-        padding: 16px 24px;
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: #0f172a;
-        border-bottom: 1px solid #cbd5e1;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-    
-    .date-icon {
-        color: #0284c7;
+        margin-bottom: 0rem;
+        border-radius: 0 0 16px 16px;
+        overflow-y: auto; /* Vertically scrollable */
+        max-height: 480px; /* Fixed height to control page length */
+        position: relative;
     }
 
     /* Core Ticker Table Styling */
@@ -120,13 +102,18 @@ CUSTOM_CSS = """
         table-layout: fixed;
     }
     
+    /* Make table headers sticky when scrolling */
     .ticker-table th {
+        position: sticky;
+        top: 0;
+        z-index: 10;
         padding: 14px 20px;
         font-weight: 600;
         font-size: 0.95rem;
         text-transform: uppercase;
         letter-spacing: 0.05rem;
         border-bottom: 1px solid #cbd5e1;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
     }
     
     .th-buy {
@@ -298,6 +285,38 @@ CUSTOM_CSS = """
         font-weight: 500;
         font-size: 0.95rem;
     }
+
+    /* Expander styling to match premium date-header layout and fold/unfold */
+    div[data-testid="stExpander"] {
+        border: 1px solid #cbd5e1 !important;
+        border-radius: 16px !important;
+        background: rgba(255, 255, 255, 0.75) !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
+        margin-bottom: 2rem !important;
+        overflow: hidden !important;
+    }
+    
+    div[data-testid="stExpander"] details summary {
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
+        padding: 16px 24px !important;
+        font-size: 1.25rem !important;
+        font-weight: 700 !important;
+        color: #000000 !important;
+        border-bottom: 1px solid #cbd5e1 !important;
+    }
+    
+    div[data-testid="stExpander"] details summary:hover {
+        background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%) !important;
+    }
+    
+    div[data-testid="stExpander"] details[open] summary {
+        border-bottom: 1px solid #cbd5e1 !important;
+    }
+    
+    /* Remove default inner margins for smooth grid */
+    div[data-testid="stExpander"] div[data-testid="stExpanderDetails"] {
+        padding: 0 !important;
+    }
 </style>
 """
 
@@ -317,25 +336,15 @@ def load_data() -> dict:
         return {}
 
 
-def render_html_table(date_str: str, date_data: dict) -> str:
+def render_html_table(date_data: dict) -> str:
     """Generates premium custom HTML layout for the Buy/Sell columns with author links."""
     buy_items = date_data.get("buy", [])
     sell_items = date_data.get("sell", [])
     
     max_rows = max(len(buy_items), len(sell_items))
-    
-    # Parse date to human-readable form
-    try:
-        dt = datetime.strptime(date_str, "%Y-%m-%d")
-        formatted_date = dt.strftime("📅 %A, %B %d, %Y")
-    except Exception:
-        formatted_date = f"📅 {date_str}"
         
     html = f"""
     <div class="table-container">
-        <div class="date-header">
-            <span class="date-icon">⚡</span> {formatted_date}
-        </div>
         <table class="ticker-table">
             <thead>
                 <tr>
@@ -502,8 +511,18 @@ for date_key in filtered_dates:
     else:
         render_data = date_data
         
-    # Render table
-    st.markdown(render_html_table(date_key, render_data), unsafe_allow_html=True)
+    # Parse date to human-readable form for the expander label
+    try:
+        dt = datetime.strptime(date_key, "%Y-%m-%d")
+        formatted_date = dt.strftime("⚡ %A, %B %d, %Y")
+    except Exception:
+        formatted_date = f"⚡ {date_key}"
+        
+    # Keep only the very first visible row expanded by default, fold others
+    is_expanded = (rendered_count == 0)
+    with st.expander(formatted_date, expanded=is_expanded):
+        st.markdown(render_html_table(render_data), unsafe_allow_html=True)
+        
     rendered_count += 1
 
 if rendered_count == 0:
