@@ -28,6 +28,7 @@ DATA_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "st
 # Define Pydantic schemas for structured outputs
 class TweetSource(BaseModel):
     author: str = Field(description="The Twitter handle of the user who wrote the tweet, without the @ symbol.")
+    author_name: str = Field(description="The Display Name of the user who wrote the tweet.")
     tweet_id: str = Field(description="The unique ID of the tweet, or the mock ID provided in the prompt.")
     text: str = Field(description="The text content of the tweet.")
 
@@ -48,31 +49,37 @@ def get_mock_tweets() -> List[Dict[str, str]]:
         {
             "id": "1882000000000000001",
             "author": "TechInvestor",
+            "author_name": "Tech Investor",
             "text": "Just added to my $PLTR position. Palantir's new government contract is massive. Long PLTR for the next 3 years!"
         },
         {
             "id": "1882000000000000002",
             "author": "MacroWhale",
+            "author_name": "Macro Whale",
             "text": "Selling all my $BABA. Chinese consumer recovery is just too slow. Rotating funds to US tech. Bye Alibaba."
         },
         {
             "id": "1882000000000000003",
             "author": "ChipBull",
+            "author_name": "Chip Bull",
             "text": "Blackwell chip demand is insane. Spoke to a contact at TSMC - NVDA is taking all available capacity. Heavy buying on NVIDIA here."
         },
         {
             "id": "1882000000000000004",
             "author": "ValueSeeker",
+            "author_name": "Value Seeker",
             "text": "Taking profits on $NFLX today. Great stock but subscriber growth is hitting a wall in North America."
         },
         {
             "id": "1882000000000000005",
             "author": "TeslaFanatic",
+            "author_name": "Tesla Fanatic",
             "text": "Buying $TSLA leaps. Full Self Driving v12.5 is a game changer. The market is pricing Robotaxi as a car company when it's an AI giant."
         },
         {
             "id": "1882000000000000006",
             "author": "CryptoBear",
+            "author_name": "Crypto Bear",
             "text": "Shorting $COIN. Regulatory scrutiny increasing on stablecoins. Technical double top on the daily chart."
         }
     ]
@@ -146,7 +153,7 @@ def fetch_tweets_from_x(target_date: str) -> List[Dict[str, str]]:
                 
                 users_map = {}
                 if response.includes and "users" in response.includes:
-                    users_map = {str(u.id): u.username for u in response.includes["users"]}
+                    users_map = {str(u.id): {"username": u.username, "name": u.name} for u in response.includes["users"]}
                 
                 for tweet in response.data:
                     # Time filter check (must fall within the 24-hour window from 8pm yesterday to 8pm target_date)
@@ -157,10 +164,11 @@ def fetch_tweets_from_x(target_date: str) -> List[Dict[str, str]]:
                         if tweet.created_at > end_time_dt:
                             continue
                         
-                    author_name = users_map.get(str(tweet.author_id), "unknown")
+                    author_info = users_map.get(str(tweet.author_id), {})
                     tweets.append({
                         "id": str(tweet.id),
-                        "author": author_name,
+                        "author": author_info.get("username", "unknown"),
+                        "author_name": author_info.get("name", "unknown"),
                         "text": tweet.text
                     })
                 
@@ -197,6 +205,7 @@ def fetch_tweets_from_x(target_date: str) -> List[Dict[str, str]]:
                     text = item.get("text")
                     tweet_id = item.get("id_str") or str(item.get("id"))
                     author = item.get("user", {}).get("screen_name") or "unknown"
+                    author_display = item.get("user", {}).get("name") or author
                     created_at_raw = item.get("created_at")
                     
                     is_today = True
@@ -212,6 +221,7 @@ def fetch_tweets_from_x(target_date: str) -> List[Dict[str, str]]:
                         tweets.append({
                             "id": tweet_id,
                             "author": author,
+                            "author_name": author_display,
                             "text": text
                         })
                 if tweets:
@@ -249,7 +259,8 @@ def analyze_tweets_with_gemini(tweets: List[Dict[str, str]]) -> Optional[DailyRe
     for i, t in enumerate(tweets):
         tweets_formatted += f"--- TWEET {i+1} ---\n"
         tweets_formatted += f"ID: {t['id']}\n"
-        tweets_formatted += f"Author: {t['author']}\n"
+        tweets_formatted += f"Author Handle: {t['author']}\n"
+        tweets_formatted += f"Author Name: {t['author_name']}\n"
         tweets_formatted += f"Text:\n{t['text']}\n\n"
 
     prompt = f"""
@@ -261,7 +272,7 @@ def analyze_tweets_with_gemini(tweets: List[Dict[str, str]]) -> Optional[DailyRe
        - SELL: The user is selling, trimming, highly bearish, shorting, or recommending short.
        Ignore tickers that only have neutral mentions or spam.
     3. For each ticker, generate a professional, high-quality, concise 1-2 sentence summary explaining *why* it was mentioned, synthesizing the core catalyst or technical reason from all relevant tweets.
-    4. Link the relevant tweets that contributed to this analysis. Populate the 'tweets' list in the output schema with the EXACT metadata (author, tweet_id, text) from the matching source tweets.
+    4. Link the relevant tweets that contributed to this analysis. Populate the 'tweets' list in the output schema with the EXACT metadata (author, author_name, tweet_id, text) from the matching source tweets.
 
     Here are the tweets to analyze:
     ---
@@ -276,7 +287,7 @@ def analyze_tweets_with_gemini(tweets: List[Dict[str, str]]) -> Optional[DailyRe
             config=types.GenerateContentConfig(
                 response_mime_type="application/json",
                 response_schema=DailyReport,
-                system_instruction="You are an expert financial analyst. Always return a perfectly structured JSON following the schema, extracting tickers, actions, summaries, and associated tweet metadata (author, tweet_id, text).",
+                system_instruction="You are an expert financial analyst. Always return a perfectly structured JSON following the schema, extracting tickers, actions, summaries, and associated tweet metadata (author, author_name, tweet_id, text).",
                 temperature=0.1
             )
         )
@@ -318,6 +329,7 @@ def update_data_store(report: DailyReport, target_date: str) -> None:
         for tweet_src in item.tweets:
             formatted_tweets.append({
                 "author": tweet_src.author,
+                "author_name": tweet_src.author_name,
                 "tweet_id": tweet_src.tweet_id,
                 "text": tweet_src.text
             })

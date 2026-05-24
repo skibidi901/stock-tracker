@@ -377,6 +377,7 @@ def render_html_table(date_data: dict) -> str:
                 mentions = []
                 for tweet_src in item.get("tweets", []):
                     author = tweet_src.get("author", "unknown")
+                    author_name = tweet_src.get("author_name") or author
                     tid = tweet_src.get("tweet_id")
                     
                     # Generate real Twitter link if ID is valid
@@ -385,7 +386,7 @@ def render_html_table(date_data: dict) -> str:
                     else:
                         link = f"https://x.com/{author}"
                         
-                    mentions.append(f'<a href="{link}" target="_blank" class="author-link">@{author}</a>')
+                    mentions.append(f'<a href="{link}" target="_blank" class="author-link">{author_name}</a>')
                 mentions_html = ", ".join(mentions) if mentions else "Unknown"
                 
                 html += f"""
@@ -411,6 +412,7 @@ def render_html_table(date_data: dict) -> str:
                 mentions = []
                 for tweet_src in item.get("tweets", []):
                     author = tweet_src.get("author", "unknown")
+                    author_name = tweet_src.get("author_name") or author
                     tid = tweet_src.get("tweet_id")
                     
                     if tid and not str(tid).startswith("manual_"):
@@ -418,7 +420,7 @@ def render_html_table(date_data: dict) -> str:
                     else:
                         link = f"https://x.com/{author}"
                         
-                    mentions.append(f'<a href="{link}" target="_blank" class="author-link">@{author}</a>')
+                    mentions.append(f'<a href="{link}" target="_blank" class="author-link">{author_name}</a>')
                 mentions_html = ", ".join(mentions) if mentions else "Unknown"
                 
                 html += f"""
