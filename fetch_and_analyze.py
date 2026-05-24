@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
 Twitter Ticker Stock Tracker & Analyzer
-Fetches tweets, extracts stock tickers, classifies buy/sell, summarizes via Gemini,
-and updates data/stock_data.json.
+Fetches tweets from x.com/timeline (Home Timeline) for the current day (00:00 UTC to now),
+extracts stock tickers, classifies buy/sell, summarizes via Gemini, and updates data/stock_data.json.
 """
 
 import os
 import json
 import argparse
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import List, Dict, Any, Optional
 import requests
 import tweepy
@@ -79,7 +79,7 @@ def get_mock_tweets() -> List[Dict[str, str]]:
 
 
 def fetch_tweets_from_x() -> List[Dict[str, str]]:
-    """Fetches tweets with metadata from X API or RapidAPI depending on environment keys."""
+    """Fetches Home Timeline (x.com/home) tweets for the current day (00:00 UTC to now)."""
     # Read environment variables
     bearer_token = os.environ.get("X_BEARER_TOKEN")
     consumer_key = os.environ.get("X_API_KEY")
@@ -90,9 +90,16 @@ def fetch_tweets_from_x() -> List[Dict[str, str]]:
     rapidapi_key = os.environ.get("RAPIDAPI_KEY")
     target_username = os.environ.get("X_TARGET_USERNAME", "me")
     
-    # Try RapidAPI Twitter Scraper first (highly cost-effective)
+    # Calculate start time for today (00:00 UTC)
+    now_utc = datetime.now(timezone.utc)
+    start_time_dt = now_utc.replace(hour=0, minute=0, second=0, microsecond=0)
+    start_time_str = start_time_dt.isoformat().replace("+00:00", "Z")
+    
+    print(f"🕒 Filtering tweets starting from today 00:00 UTC ({start_time_str}) to now...")
+    
+    # Try RapidAPI Twitter Scraper first
     if rapidapi_key:
-        print(f"🔗 Attempting to fetch tweets via RapidAPI for user: {target_username}...")
+        print(f"🔗 Attempting to fetch timeline via RapidAPI for user: {target_username}...")
         url = "https://twitter-api45.p.rapidapi.com/user/tweets.php"
         headers = {
             "x-rapidapi-key": rapidapi_key,
@@ -109,22 +116,83 @@ def fetch_tweets_from_x() -> List[Dict[str, str]]:
                     text = item.get("text")
                     tweet_id = item.get("id_str") or str(item.get("id"))
                     author = item.get("user", {}).get("screen_name") or target_username
-                    if text and tweet_id:
+                    created_at_raw = item.get("created_at") # e.g. "Sat May 24 01:23:45 +0000 2026"
+                    
+                    # Local time filter for RapidAPI
+                    is_today = True
+                    if created_at_raw:
+                        try:
+                            # Twitter timestamp parsing: "Tue May 24 12:34:56 +0000 2026"
+                            dt = datetime.strptime(created_at_raw, "%a %b %d %H:%M:%S %z %Y")
+                            if dt < start_time_dt:
+                                is_today = False
+                        except Exception:
+                            pass
+                    
+                    if text and tweet_id and is_today:
                         tweets.append({
                             "id": tweet_id,
                             "author": author,
                             "text": text
                         })
                 if tweets:
-                    print(f"✅ Successfully fetched {len(tweets)} tweets via RapidAPI.")
+                    print(f"✅ Successfully fetched {len(tweets)} today's timeline tweets via RapidAPI.")
                     return tweets
             print(f"⚠️ RapidAPI returned status {response.status_code}. Falling back to standard X API.")
         except Exception as e:
             print(f"⚠️ RapidAPI fetch failed: {e}. Falling back to standard X API.")
 
-    # Try standard Tweepy Client (X API v2) with expansions to get author username
+    # Try standard Tweepy Client (X API v2)
+    # Home timeline reverse chronological requires User Context (OAuth 1.0a or OAuth 2.0 PKCE)
+    if consumer_key and consumer_secret and access_token and access_token_secret:
+        print("🔗 Authenticating with X API OAuth 1.0a (User Context for Home Timeline)...")
+        try:
+            client = tweepy.Client(
+                consumer_key=consumer_key,
+                consumer_secret=consumer_secret,
+                access_token=access_token,
+                access_token_secret=access_token_secret
+            )
+            
+            # Fetch Home Timeline (tweets of people the user follows)
+            # Requires OAuth 1.0a User Context
+            print("📥 Pulling home timeline (x.com/home)...")
+            response = client.get_home_timeline(
+                id=user_id,
+                max_results=100,
+                start_time=start_time_str,
+                tweet_fields=["text", "author_id", "created_at"],
+                expansions=["author_id"]
+            )
+            
+            if response.data:
+                users_map = {}
+                if response.includes and "users" in response.includes:
+                    users_map = {str(u.id): u.username for u in response.includes["users"]}
+                
+                tweets = []
+                for tweet in response.data:
+                    # Double insurance time check
+                    if tweet.created_at and tweet.created_at < start_time_dt:
+                        continue
+                        
+                    author_name = users_map.get(str(tweet.author_id), "unknown")
+                    tweets.append({
+                        "id": str(tweet.id),
+                        "author": author_name,
+                        "text": tweet.text
+                    })
+                print(f"✅ Successfully fetched {len(tweets)} today's home timeline tweets via OAuth 1.0a.")
+                return tweets
+            else:
+                print("⚠️ Home timeline returned empty. No tweets today so far.")
+        except Exception as e:
+            print(f"⚠️ X API Home Timeline OAuth 1.0a fetch failed: {e}")
+
+    # Fallback to User Timeline (User's own tweets) if only Bearer Token is set
+    # Bearer Token (App-only) doesn't support get_home_timeline, but supports user tweets
     if bearer_token:
-        print("🔗 Authenticating with X API Bearer Token...")
+        print("🔗 Authenticating with Bearer Token (Fallback to Specific User's Timeline)...")
         try:
             client = tweepy.Client(bearer_token=bearer_token)
             user_id = "me"
@@ -133,69 +201,36 @@ def fetch_tweets_from_x() -> List[Dict[str, str]]:
                 if user.data:
                     user_id = user.data.id
             
-            # Fetch user timeline with author username expansion
+            print(f"📥 Pulling user timeline for ID: {user_id}...")
             response = client.get_users_tweets(
                 id=user_id,
-                max_results=20,
-                tweet_fields=["text", "author_id"],
+                max_results=100,
+                start_time=start_time_str,
+                tweet_fields=["text", "author_id", "created_at"],
                 expansions=["author_id"]
             )
             
             if response.data:
-                # Map author IDs to usernames
                 users_map = {}
                 if response.includes and "users" in response.includes:
                     users_map = {str(u.id): u.username for u in response.includes["users"]}
                 
                 tweets = []
                 for tweet in response.data:
+                    if tweet.created_at and tweet.created_at < start_time_dt:
+                        continue
                     author_name = users_map.get(str(tweet.author_id), target_username)
                     tweets.append({
                         "id": str(tweet.id),
                         "author": author_name,
                         "text": tweet.text
                     })
-                print(f"✅ Successfully fetched {len(tweets)} tweets via X API.")
-                return tweets
-            print("⚠️ No tweets returned from X API.")
-        except Exception as e:
-            print(f"⚠️ X API Bearer Token fetch failed: {e}")
-
-    # Try OAuth 1.0a User Context
-    if consumer_key and consumer_secret and access_token and access_token_secret:
-        print("🔗 Authenticating with X API OAuth 1.0a (User Context)...")
-        try:
-            client = tweepy.Client(
-                consumer_key=consumer_key,
-                consumer_secret=consumer_secret,
-                access_token=access_token,
-                access_token_secret=access_token_secret
-            )
-            response = client.get_users_tweets(
-                id="me",
-                max_results=20,
-                tweet_fields=["text", "author_id"],
-                expansions=["author_id"]
-            )
-            if response.data:
-                users_map = {}
-                if response.includes and "users" in response.includes:
-                    users_map = {str(u.id): u.username for u in response.includes["users"]}
-                
-                tweets = []
-                for tweet in response.data:
-                    author_name = users_map.get(str(tweet.author_id), target_username)
-                    tweets.append({
-                        "id": str(tweet.id),
-                        "author": author_name,
-                        "text": tweet.text
-                    })
-                print(f"✅ Successfully fetched {len(tweets)} tweets via X API (OAuth 1.0a).")
+                print(f"✅ Successfully fetched {len(tweets)} today's user tweets via Bearer Token.")
                 return tweets
         except Exception as e:
-            print(f"⚠️ X API OAuth 1.0a fetch failed: {e}")
+            print(f"⚠️ Fallback User Timeline Bearer Token fetch failed: {e}")
 
-    print("⚠️ No Twitter API credentials found or connection failed.")
+    print("⚠️ No valid Twitter credentials found or connection failed.")
     return []
 
 
@@ -346,7 +381,6 @@ def main():
         if os.path.exists(args.manual_text):
             with open(args.manual_text, "r", encoding="utf-8") as f:
                 content = f.read().strip()
-                # Split tweets by double newline or read lines
                 raw_segments = [t.strip() for t in content.split("\n\n") if t.strip()]
                 
                 # Format segments into structured dicts with mock metadata
