@@ -1,1 +1,18 @@
-{}
+{
+  "2026-05-24": {
+    "buy": [
+      {
+        "ticker": "SIVE",
+        "summary": "SIVE is identified as a critical \"chokepoint\" within the photonics industry, indicating its strategic importance and potential for growth.",
+        "tweets": [
+          {
+            "author": "maggiezxq",
+            "tweet_id": "2058378558285009185",
+            "text": "RT @aleabitoreddit: Photonics is nuanced and using ChatGPT/Gemini makes you miss all of it: 1. $SIVE is actually a chokepoint and partial…"
+          }
+        ]
+      }
+    ],
+    "sell": []
+  }
+}
