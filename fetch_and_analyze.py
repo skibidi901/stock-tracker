@@ -151,7 +151,6 @@ def fetch_tweets_from_x(target_date: str) -> List[Dict[str, str]]:
                 expansions=["author_id"]
             )
             
-            reached_cutoff = False
             page_count = 0
             for response in paginator:
                 page_count += 1
@@ -165,10 +164,7 @@ def fetch_tweets_from_x(target_date: str) -> List[Dict[str, str]]:
                 for tweet in response.data:
                     # Time filter check (must fall within the 24-hour window from 8pm yesterday to 8pm target_date)
                     if tweet.created_at:
-                        if tweet.created_at < start_time_dt:
-                            reached_cutoff = True
-                            continue
-                        if tweet.created_at > end_time_dt:
+                        if tweet.created_at < start_time_dt or tweet.created_at > end_time_dt:
                             continue
                         
                     author_info = users_map.get(str(tweet.author_id), {})
@@ -180,9 +176,9 @@ def fetch_tweets_from_x(target_date: str) -> List[Dict[str, str]]:
                         "created_at": tweet.created_at.isoformat() if tweet.created_at else None
                     })
                 
-                if reached_cutoff or page_count >= 15:
-                    # List tweets are in reverse chronological order. Once we hit a tweet older than 
-                    # start_time_dt, or we've fetched 15 pages (1500 tweets) as a rate-limit safety net, stop.
+                if page_count >= 15:
+                    # Fetch up to 15 pages (1500 tweets maximum) to ensure we cover the backfill window,
+                    # avoiding premature cutoff from pinned tweets or retweets with older timestamps.
                     break
             
             if tweets:
