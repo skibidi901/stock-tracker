@@ -386,9 +386,21 @@ def main():
     parser.add_argument("--date", type=str, help="Specific date for the report (YYYY-MM-DD). Defaults to today.")
     args = parser.parse_args()
 
-    # Determine target date
-    target_date = args.date if args.date else datetime.now().strftime("%Y-%m-%d")
-    print(f"🕒 Target Date: {target_date}")
+    # Determine target date based on user's timezone offset (defaults to -7 for PST/PDT)
+    offset_hours = -7
+    tz_env = os.environ.get("USER_TIMEZONE_OFFSET")
+    if tz_env:
+        try:
+            offset_hours = int(tz_env)
+        except ValueError:
+            pass
+            
+    from datetime import timedelta, timezone
+    user_tz = timezone(timedelta(hours=offset_hours))
+    user_now = datetime.now(user_tz)
+    
+    target_date = args.date if args.date else user_now.strftime("%Y-%m-%d")
+    print(f"🕒 Target Date (aligned to local timezone): {target_date}")
 
     tweets = []
 

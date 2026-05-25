@@ -14,7 +14,7 @@
         {
           "ticker": "AMD",
           "action": "BUY",
-          "signal_date": "2026-05-24",
+          "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 0.0,
           "friday_close": 0.0,
@@ -25,7 +25,7 @@
         {
           "ticker": "ENPH",
           "action": "BUY",
-          "signal_date": "2026-05-24",
+          "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 0.0,
           "friday_close": 0.0,
@@ -36,7 +36,7 @@
         {
           "ticker": "ON",
           "action": "BUY",
-          "signal_date": "2026-05-24",
+          "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 0.0,
           "friday_close": 0.0,
@@ -47,7 +47,7 @@
         {
           "ticker": "OUST",
           "action": "BUY",
-          "signal_date": "2026-05-24",
+          "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 0.0,
           "friday_close": 0.0,
@@ -58,7 +58,7 @@
         {
           "ticker": "HIMX",
           "action": "BUY",
-          "signal_date": "2026-05-24",
+          "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 0.0,
           "friday_close": 0.0,
@@ -69,7 +69,7 @@
         {
           "ticker": "SYNA",
           "action": "BUY",
-          "signal_date": "2026-05-24",
+          "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 0.0,
           "friday_close": 0.0,
@@ -80,7 +80,7 @@
         {
           "ticker": "GFS",
           "action": "BUY",
-          "signal_date": "2026-05-24",
+          "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 0.0,
           "friday_close": 0.0,
@@ -91,7 +91,7 @@
         {
           "ticker": "NXPI",
           "action": "BUY",
-          "signal_date": "2026-05-24",
+          "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 0.0,
           "friday_close": 0.0,
@@ -102,7 +102,7 @@
         {
           "ticker": "INTC",
           "action": "BUY",
-          "signal_date": "2026-05-24",
+          "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 0.0,
           "friday_close": 0.0,
@@ -113,7 +113,7 @@
         {
           "ticker": "DELL",
           "action": "BUY",
-          "signal_date": "2026-05-24",
+          "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 0.0,
           "friday_close": 0.0,
@@ -124,7 +124,7 @@
         {
           "ticker": "MRVL",
           "action": "BUY",
-          "signal_date": "2026-05-24",
+          "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 0.0,
           "friday_close": 0.0,
@@ -135,7 +135,7 @@
         {
           "ticker": "MU",
           "action": "BUY",
-          "signal_date": "2026-05-24",
+          "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 0.0,
           "friday_close": 0.0,
@@ -146,7 +146,7 @@
         {
           "ticker": "TSEM",
           "action": "BUY",
-          "signal_date": "2026-05-24",
+          "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 0.0,
           "friday_close": 0.0,
@@ -157,7 +157,7 @@
         {
           "ticker": "TSLA",
           "action": "BUY",
-          "signal_date": "2026-05-24",
+          "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 0.0,
           "friday_close": 0.0,
@@ -168,7 +168,7 @@
         {
           "ticker": "SPX",
           "action": "BUY",
-          "signal_date": "2026-05-24",
+          "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 0.0,
           "friday_close": 0.0,
@@ -179,7 +179,7 @@
         {
           "ticker": "SPY",
           "action": "BUY",
-          "signal_date": "2026-05-24",
+          "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 0.0,
           "friday_close": 0.0,
@@ -190,7 +190,7 @@
         {
           "ticker": "SOXX",
           "action": "BUY",
-          "signal_date": "2026-05-24",
+          "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 0.0,
           "friday_close": 0.0,
@@ -201,7 +201,7 @@
         {
           "ticker": "CAR",
           "action": "BUY",
-          "signal_date": "2026-05-24",
+          "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 0.0,
           "friday_close": 0.0,
@@ -212,7 +212,7 @@
         {
           "ticker": "SMH",
           "action": "BUY",
-          "signal_date": "2026-05-24",
+          "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 0.0,
           "friday_close": 0.0,
@@ -223,7 +223,7 @@
         {
           "ticker": "TLT",
           "action": "SELL",
-          "signal_date": "2026-05-24",
+          "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 0.0,
           "friday_close": 0.0,
