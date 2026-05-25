@@ -525,6 +525,11 @@ def load_data() -> dict:
         return {}
 
 
+def clean_html(html_str: str) -> str:
+    """Removes all leading whitespace from each line to prevent Streamlit's markdown parser from treating HTML tags as code blocks."""
+    return "\n".join(line.lstrip() for line in html_str.split("\n"))
+
+
 def render_html_table(date_data: dict) -> str:
     """Generates premium custom HTML layout for the Buy/Sell columns with author links."""
     buy_items = date_data.get("buy", [])
@@ -631,7 +636,7 @@ def render_html_table(date_data: dict) -> str:
         </table>
     </div>
     """)
-    return html
+    return clean_html(html)
 
 
 def render_backtest_table(trades: list) -> str:
@@ -708,7 +713,8 @@ def render_backtest_table(trades: list) -> str:
         </table>
     </div>
     """)
-    return html
+    return clean_html(html)
+
 
 
 def calculate_statistics(data: dict) -> dict:
