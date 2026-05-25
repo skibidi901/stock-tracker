@@ -507,17 +507,17 @@ CUSTOM_CSS = """
         cursor: help;
     }
     
-    /* Direct Red Tab Labels & Indicators */
+    /* Direct Black Tab Labels & Indicators */
     div[data-testid="stTabs"] button[data-baseweb="tab"] {
-        color: #ef4444 !important;
+        color: #000000 !important;
     }
     div[data-testid="stTabs"] button[data-baseweb="tab"] p {
-        color: #ef4444 !important;
+        color: #000000 !important;
         font-weight: 800 !important;
         font-size: 1.1rem !important;
     }
     div[data-testid="stTabs"] button[aria-selected="true"] {
-        border-bottom-color: #ef4444 !important;
+        border-bottom-color: #000000 !important;
     }
 </style>
 """
