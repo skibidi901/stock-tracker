@@ -180,9 +180,9 @@ def fetch_tweets_from_x(target_date: str) -> List[Dict[str, str]]:
                         "created_at": tweet.created_at.isoformat() if tweet.created_at else None
                     })
                 
-                if reached_cutoff or page_count >= 5:
+                if reached_cutoff or page_count >= 15:
                     # List tweets are in reverse chronological order. Once we hit a tweet older than 
-                    # start_time_dt, or we've fetched 5 pages (500 tweets) as a rate-limit safety net, stop.
+                    # start_time_dt, or we've fetched 15 pages (1500 tweets) as a rate-limit safety net, stop.
                     break
             
             if tweets:
@@ -379,6 +379,34 @@ def update_data_store(report: DailyReport, target_date: str) -> None:
         print(f"❌ Failed to write database: {e}")
 
 
+def normalize_date_string(date_str: str, user_tz) -> str:
+    """Parses various date string formats and returns a normalized YYYY-MM-DD string."""
+    date_str = date_str.strip()
+    formats = [
+        "%Y-%m-%d",
+        "%Y/%m/%d",
+        "%m/%d/%Y",
+        "%m-%d-%Y",
+        "%m/%d",
+        "%m-%d",
+    ]
+    for fmt in formats:
+        try:
+            dt = datetime.strptime(date_str, fmt)
+            if "%Y" not in fmt:
+                # If year is omitted, assume current year in the user's timezone
+                current_year = datetime.now(user_tz).year
+                dt = dt.replace(year=current_year)
+            return dt.strftime("%Y-%m-%d")
+        except ValueError:
+            continue
+    
+    # If all formats fail, fallback to current date in user's timezone
+    fallback_date = datetime.now(user_tz).strftime("%Y-%m-%d")
+    print(f"⚠️ Could not parse date format for '{date_str}'. Falling back to today ({fallback_date}).")
+    return fallback_date
+
+
 def main():
     parser = argparse.ArgumentParser(description="Fetch and analyze tweets using Gemini.")
     parser.add_argument("--mock", action="store_true", help="Force run with mock tweets instead of fetching from X API.")
@@ -399,7 +427,11 @@ def main():
     user_tz = timezone(timedelta(hours=offset_hours))
     user_now = datetime.now(user_tz)
     
-    target_date = args.date if args.date else user_now.strftime("%Y-%m-%d")
+    if args.date:
+        target_date = normalize_date_string(args.date, user_tz)
+    else:
+        target_date = user_now.strftime("%Y-%m-%d")
+        
     print(f"🕒 Target Date (aligned to local timezone): {target_date}")
 
     tweets = []
