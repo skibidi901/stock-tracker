@@ -1,10 +1,10 @@
 {
   "summary": {
-    "total_signals": 6,
-    "wins": 5,
-    "losses": 1,
-    "win_rate": 83.33,
-    "average_return": 1.24
+    "total_signals": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_rate": 0.0,
+    "average_return": 0.0
   },
   "weeks": {
     "2026-W21": {
@@ -230,78 +230,6 @@
           "perf_pct": 0.0,
           "result": "PENDING",
           "finalized": false
-        }
-      ]
-    },
-    "2026-W20": {
-      "week_label": "Week 20 (May 18 - May 22, 2026)",
-      "friday_date": "2026-05-22",
-      "trades": [
-        {
-          "ticker": "PLTR",
-          "action": "BUY",
-          "signal_date": "2026-05-20",
-          "tweet_timestamp": "2026-05-20T14:30:00Z",
-          "entry_price": 135.49,
-          "friday_close": 136.88,
-          "perf_pct": 1.03,
-          "result": "WIN",
-          "finalized": true
-        },
-        {
-          "ticker": "NVDA",
-          "action": "BUY",
-          "signal_date": "2026-05-20",
-          "tweet_timestamp": "2026-05-20T18:00:00Z",
-          "entry_price": 224.26,
-          "friday_close": 215.33,
-          "perf_pct": -3.98,
-          "result": "LOSE",
-          "finalized": true
-        },
-        {
-          "ticker": "BABA",
-          "action": "SELL",
-          "signal_date": "2026-05-20",
-          "tweet_timestamp": "2026-05-20T16:15:00Z",
-          "entry_price": 134.27,
-          "friday_close": 130.0,
-          "perf_pct": 3.18,
-          "result": "WIN",
-          "finalized": true
-        },
-        {
-          "ticker": "TSLA",
-          "action": "BUY",
-          "signal_date": "2026-05-21",
-          "tweet_timestamp": "2026-05-21T19:30:00Z",
-          "entry_price": 418.15,
-          "friday_close": 426.01,
-          "perf_pct": 1.88,
-          "result": "WIN",
-          "finalized": true
-        },
-        {
-          "ticker": "NFLX",
-          "action": "SELL",
-          "signal_date": "2026-05-21",
-          "tweet_timestamp": "2026-05-21T15:00:00Z",
-          "entry_price": 89.39,
-          "friday_close": 88.6,
-          "perf_pct": 0.88,
-          "result": "WIN",
-          "finalized": true
-        },
-        {
-          "ticker": "COIN",
-          "action": "SELL",
-          "signal_date": "2026-05-21",
-          "tweet_timestamp": "2026-05-21T22:30:00Z",
-          "entry_price": 193.56,
-          "friday_close": 184.99,
-          "perf_pct": 4.43,
-          "result": "WIN",
-          "finalized": true
         }
       ]
     }
