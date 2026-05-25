@@ -37,7 +37,7 @@ class StockAnalysis(BaseModel):
     ticker: str = Field(description="The stock ticker code, e.g., AAPL, TSLA, NVDA. Must be uppercase. Do not include $ symbol.")
     action: Literal["BUY", "SELL"] = Field(description="Whether the sentiment/action is to BUY (bullish/holding long) or SELL (bearish/shorting/taking profits).")
     summary: str = Field(description="A concise 1-2 sentence professional summary explaining the market context or reasons mentioned in the tweets.")
-    tweets: List[TweetSource] = Field(description="List of tweet source objects that contributed to this analysis.")
+    tweet_ids: List[str] = Field(description="List of the unique tweet IDs that contributed to this analysis. Populate with the exact tweet IDs from the prompt.")
 
 class DailyReport(BaseModel):
     analyses: List[StockAnalysis] = Field(description="List of analyzed stock tickers from the input tweets.")
@@ -289,7 +289,7 @@ def analyze_tweets_with_gemini(tweets: List[Dict[str, str]]) -> Optional[DailyRe
        - SELL: The user is selling, trimming, highly bearish, shorting, or recommending short.
        Ignore tickers that only have neutral mentions or spam.
     3. For each ticker, generate a professional, high-quality, concise 1-2 sentence summary explaining *why* it was mentioned, synthesizing the core catalyst or technical reason from all relevant tweets.
-    4. Link the relevant tweets that contributed to this analysis. Populate the 'tweets' list in the output schema with the EXACT metadata (author, author_name, tweet_id, text, created_at) from the matching source tweets.
+    4. Link the relevant tweet IDs that contributed to this analysis. Populate the 'tweet_ids' list in the output schema with the exact tweet IDs (e.g., '1882000000000000001') from the matching source tweets.
 
     Here are the tweets to analyze:
     ---
@@ -298,15 +298,40 @@ def analyze_tweets_with_gemini(tweets: List[Dict[str, str]]) -> Optional[DailyRe
     """
 
     try:
+        # Disable all content filtering to prevent false-positives on geopolitical/war/financial news in tweets
+        safety_settings = [
+            types.SafetySetting(
+                category=types.HarmCategory.HARM_CATEGORY_HARASSMENT,
+                threshold=types.HarmBlockThreshold.BLOCK_NONE,
+            ),
+            types.SafetySetting(
+                category=types.HarmCategory.HARM_CATEGORY_HATE_SPEECH,
+                threshold=types.HarmBlockThreshold.BLOCK_NONE,
+            ),
+            types.SafetySetting(
+                category=types.HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
+                threshold=types.HarmBlockThreshold.BLOCK_NONE,
+            ),
+            types.SafetySetting(
+                category=types.HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
+                threshold=types.HarmBlockThreshold.BLOCK_NONE,
+            ),
+            types.SafetySetting(
+                category=types.HarmCategory.HARM_CATEGORY_CIVIC_INTEGRITY,
+                threshold=types.HarmBlockThreshold.BLOCK_NONE,
+            ),
+        ]
+
         response = client.models.generate_content(
             model=model_name,
             contents=prompt,
             config=types.GenerateContentConfig(
                 response_mime_type="application/json",
                 response_schema=DailyReport,
-                system_instruction="You are an expert financial analyst. Always return a perfectly structured JSON following the schema, extracting tickers, actions, summaries, and associated tweet metadata. To prevent response truncation, limit the 'tweets' list for each stock analysis to a maximum of 3 of the most relevant/informative source tweets.",
+                system_instruction="You are an expert financial analyst. Always return a perfectly structured JSON following the schema, extracting tickers, actions, summaries, and associated tweet IDs.",
                 temperature=0.1,
-                max_output_tokens=8192
+                max_output_tokens=8192,
+                safety_settings=safety_settings
             )
         )
         # Parse the JSON response
@@ -322,7 +347,7 @@ def analyze_tweets_with_gemini(tweets: List[Dict[str, str]]) -> Optional[DailyRe
         return None
 
 
-def update_data_store(report: DailyReport, target_date: str) -> None:
+def update_data_store(report: DailyReport, target_date: str, raw_tweets: List[Dict[str, Any]]) -> None:
     """Updates the JSON database, merging/overwriting the entry for the specified date."""
     # Ensure directory exists
     os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
@@ -342,16 +367,27 @@ def update_data_store(report: DailyReport, target_date: str) -> None:
     sell_list = []
 
     for item in report.analyses:
-        # Convert Pydantic TweetSource back to dict
+        # Reconstruct the full tweet metadata from our raw_tweets loaded in memory
         formatted_tweets = []
-        for tweet_src in item.tweets:
-            formatted_tweets.append({
-                "author": tweet_src.author,
-                "author_name": tweet_src.author_name,
-                "tweet_id": tweet_src.tweet_id,
-                "text": tweet_src.text,
-                "created_at": tweet_src.created_at
-            })
+        for tweet_id in item.tweet_ids:
+            matching_tweet = next((t for t in raw_tweets if str(t.get("id")) == str(tweet_id)), None)
+            if matching_tweet:
+                formatted_tweets.append({
+                    "author": matching_tweet.get("author", "unknown"),
+                    "author_name": matching_tweet.get("author_name", matching_tweet.get("author", "unknown")),
+                    "tweet_id": str(matching_tweet.get("id")),
+                    "text": matching_tweet.get("text", ""),
+                    "created_at": matching_tweet.get("created_at")
+                })
+            else:
+                # Fallback if not found in list (e.g. manual text or mock format differences)
+                formatted_tweets.append({
+                    "author": "unknown",
+                    "author_name": "unknown",
+                    "tweet_id": str(tweet_id),
+                    "text": "Source tweet content retrieved.",
+                    "created_at": None
+                })
 
         formatted_item = {
             "ticker": item.ticker.upper(),
@@ -438,7 +474,7 @@ def main():
 
     # Save results
     if report:
-        update_data_store(report, target_date)
+        update_data_store(report, target_date, tweets)
         # Trigger weekly performance backtesting
         try:
             print("🔄 Triggering performance backtest calculations...")
