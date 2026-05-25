@@ -31,6 +31,7 @@ class TweetSource(BaseModel):
     author_name: str = Field(description="The Display Name of the user who wrote the tweet.")
     tweet_id: str = Field(description="The unique ID of the tweet, or the mock ID provided in the prompt.")
     text: str = Field(description="The text content of the tweet.")
+    created_at: Optional[str] = Field(None, description="The ISO 8601 UTC timestamp of the tweet, or the mock timestamp provided in the prompt.")
 
 class StockAnalysis(BaseModel):
     ticker: str = Field(description="The stock ticker code, e.g., AAPL, TSLA, NVDA. Must be uppercase. Do not include $ symbol.")
@@ -50,37 +51,43 @@ def get_mock_tweets() -> List[Dict[str, str]]:
             "id": "1882000000000000001",
             "author": "TechInvestor",
             "author_name": "Tech Investor",
-            "text": "Just added to my $PLTR position. Palantir's new government contract is massive. Long PLTR for the next 3 years!"
+            "text": "Just added to my $PLTR position. Palantir's new government contract is massive. Long PLTR for the next 3 years!",
+            "created_at": "2026-05-20T14:30:00Z"
         },
         {
             "id": "1882000000000000002",
             "author": "MacroWhale",
             "author_name": "Macro Whale",
-            "text": "Selling all my $BABA. Chinese consumer recovery is just too slow. Rotating funds to US tech. Bye Alibaba."
+            "text": "Selling all my $BABA. Chinese consumer recovery is too slow. Rotating funds to US tech. Bye Alibaba.",
+            "created_at": "2026-05-20T16:15:00Z"
         },
         {
             "id": "1882000000000000003",
             "author": "ChipBull",
             "author_name": "Chip Bull",
-            "text": "Blackwell chip demand is insane. Spoke to a contact at TSMC - NVDA is taking all available capacity. Heavy buying on NVIDIA here."
+            "text": "Blackwell chip demand is insane. Spoke to a contact at TSMC - NVDA is taking all available capacity. Heavy buying on NVIDIA here.",
+            "created_at": "2026-05-20T18:00:00Z"
         },
         {
             "id": "1882000000000000004",
             "author": "ValueSeeker",
             "author_name": "Value Seeker",
-            "text": "Taking profits on $NFLX today. Great stock but subscriber growth is hitting a wall in North America."
+            "text": "Taking profits on $NFLX today. Great stock but subscriber growth is hitting a wall in North America.",
+            "created_at": "2026-05-21T15:00:00Z"
         },
         {
             "id": "1882000000000000005",
             "author": "TeslaFanatic",
             "author_name": "Tesla Fanatic",
-            "text": "Buying $TSLA leaps. Full Self Driving v12.5 is a game changer. The market is pricing Robotaxi as a car company when it's an AI giant."
+            "text": "Buying $TSLA leaps. Full Self Driving v12.5 is a game changer. The market is pricing Robotaxi as a car company when it's an AI giant.",
+            "created_at": "2026-05-21T19:30:00Z"
         },
         {
             "id": "1882000000000000006",
             "author": "CryptoBear",
             "author_name": "Crypto Bear",
-            "text": "Shorting $COIN. Regulatory scrutiny increasing on stablecoins. Technical double top on the daily chart."
+            "text": "Shorting $COIN. Regulatory scrutiny increasing on stablecoins. Technical double top on the daily chart.",
+            "created_at": "2026-05-21T22:30:00Z"
         }
     ]
 
@@ -169,7 +176,8 @@ def fetch_tweets_from_x(target_date: str) -> List[Dict[str, str]]:
                         "id": str(tweet.id),
                         "author": author_info.get("username", "unknown"),
                         "author_name": author_info.get("name", "unknown"),
-                        "text": tweet.text
+                        "text": tweet.text,
+                        "created_at": tweet.created_at.isoformat() if tweet.created_at else None
                     })
                 
                 if reached_cutoff or page_count >= 5:
@@ -218,11 +226,19 @@ def fetch_tweets_from_x(target_date: str) -> List[Dict[str, str]]:
                             pass
                     
                     if text and tweet_id and is_today:
+                        created_at_iso = None
+                        if created_at_raw:
+                            try:
+                                dt = datetime.strptime(created_at_raw, "%a %b %d %H:%M:%S %z %Y")
+                                created_at_iso = dt.isoformat()
+                            except Exception:
+                                pass
                         tweets.append({
                             "id": tweet_id,
                             "author": author,
                             "author_name": author_display,
-                            "text": text
+                            "text": text,
+                            "created_at": created_at_iso
                         })
                 if tweets:
                     print(f"✅ Successfully fetched {len(tweets)} today's list tweets via RapidAPI.")
@@ -261,6 +277,7 @@ def analyze_tweets_with_gemini(tweets: List[Dict[str, str]]) -> Optional[DailyRe
         tweets_formatted += f"ID: {t['id']}\n"
         tweets_formatted += f"Author Handle: {t['author']}\n"
         tweets_formatted += f"Author Name: {t['author_name']}\n"
+        tweets_formatted += f"Posted Time (UTC): {t.get('created_at', 'unknown')}\n"
         tweets_formatted += f"Text:\n{t['text']}\n\n"
 
     prompt = f"""
@@ -272,7 +289,7 @@ def analyze_tweets_with_gemini(tweets: List[Dict[str, str]]) -> Optional[DailyRe
        - SELL: The user is selling, trimming, highly bearish, shorting, or recommending short.
        Ignore tickers that only have neutral mentions or spam.
     3. For each ticker, generate a professional, high-quality, concise 1-2 sentence summary explaining *why* it was mentioned, synthesizing the core catalyst or technical reason from all relevant tweets.
-    4. Link the relevant tweets that contributed to this analysis. Populate the 'tweets' list in the output schema with the EXACT metadata (author, author_name, tweet_id, text) from the matching source tweets.
+    4. Link the relevant tweets that contributed to this analysis. Populate the 'tweets' list in the output schema with the EXACT metadata (author, author_name, tweet_id, text, created_at) from the matching source tweets.
 
     Here are the tweets to analyze:
     ---
@@ -287,7 +304,7 @@ def analyze_tweets_with_gemini(tweets: List[Dict[str, str]]) -> Optional[DailyRe
             config=types.GenerateContentConfig(
                 response_mime_type="application/json",
                 response_schema=DailyReport,
-                system_instruction="You are an expert financial analyst. Always return a perfectly structured JSON following the schema, extracting tickers, actions, summaries, and associated tweet metadata (author, author_name, tweet_id, text).",
+                system_instruction="You are an expert financial analyst. Always return a perfectly structured JSON following the schema, extracting tickers, actions, summaries, and associated tweet metadata (author, author_name, tweet_id, text, created_at).",
                 temperature=0.1
             )
         )
@@ -331,7 +348,8 @@ def update_data_store(report: DailyReport, target_date: str) -> None:
                 "author": tweet_src.author,
                 "author_name": tweet_src.author_name,
                 "tweet_id": tweet_src.tweet_id,
-                "text": tweet_src.text
+                "text": tweet_src.text,
+                "created_at": tweet_src.created_at
             })
 
         formatted_item = {
@@ -408,6 +426,14 @@ def main():
     # Save results
     if report:
         update_data_store(report, target_date)
+        # Trigger weekly performance backtesting
+        try:
+            print("🔄 Triggering performance backtest calculations...")
+            import subprocess
+            subprocess.run(["python3", "backtest.py"], check=True)
+            print("✅ Performance backtest updated successfully!")
+        except Exception as e:
+            print(f"⚠️ Backtest trigger failed: {e}")
     else:
         print("❌ Analysis aborted due to errors.")
 

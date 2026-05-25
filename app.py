@@ -319,6 +319,192 @@ CUSTOM_CSS = """
     div[data-testid="stExpander"] div[data-testid="stExpanderDetails"] {
         padding: 0 !important;
     }
+    
+    /* Backtest Specific CSS */
+    .backtest-summary-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+    }
+    
+    .backtest-stat-card {
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        border: 1px solid #cbd5e1;
+        border-radius: 16px;
+        padding: 20px;
+        flex: 1;
+        min-width: 180px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .backtest-stat-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    }
+    
+    .backtest-stat-val-winrate {
+        font-size: 2.2rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 1.1;
+        margin-bottom: 8px;
+    }
+    
+    .backtest-stat-val-generic {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #1e293b;
+        line-height: 1.1;
+        margin-bottom: 8px;
+    }
+    
+    .backtest-stat-lbl {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #64748b;
+        text-transform: uppercase;
+        letter-spacing: 0.05rem;
+    }
+    
+    /* Upsell Banner Card */
+    .pro-upsell-card {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        color: #ffffff;
+        border-radius: 16px;
+        padding: 24px 32px;
+        margin-bottom: 2rem;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #334155;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
+    }
+    
+    .pro-upsell-card::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -10%;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, rgba(0,0,0,0) 70%);
+        z-index: 1;
+    }
+    
+    .pro-upsell-content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .pro-upsell-text h3 {
+        margin: 0 0 8px 0;
+        font-size: 1.5rem;
+        font-weight: 800;
+        background: linear-gradient(90deg, #38bdf8 0%, #34d399 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .pro-upsell-text p {
+        margin: 0;
+        font-size: 0.95rem;
+        color: #94a3b8;
+        font-weight: 300;
+    }
+    
+    .pro-upsell-btn {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        color: #ffffff !important;
+        border: none;
+        border-radius: 8px;
+        padding: 12px 24px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-decoration: none !important;
+        box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+        transition: all 0.2s ease;
+        z-index: 2;
+    }
+    
+    .pro-upsell-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6);
+        background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    }
+    
+    /* Backtest Table Specifics */
+    .backtest-table th {
+        background-color: #f8fafc;
+        color: #475569;
+        font-weight: 600;
+        border-bottom: 2px solid #cbd5e1;
+        text-align: center !important;
+    }
+    
+    .backtest-table td {
+        text-align: center !important;
+        vertical-align: middle !important;
+        padding: 16px 12px !important;
+    }
+    
+    .backtest-badge-win {
+        background-color: rgba(16, 185, 129, 0.12);
+        color: #047857;
+        font-weight: 800;
+        padding: 6px 12px;
+        border-radius: 20px;
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        display: inline-block;
+        box-shadow: 0 2px 5px rgba(16, 185, 129, 0.05);
+    }
+    
+    .backtest-badge-lose {
+        background-color: rgba(239, 68, 68, 0.12);
+        color: #b91c1c;
+        font-weight: 800;
+        padding: 6px 12px;
+        border-radius: 20px;
+        border: 1px solid rgba(239, 68, 68, 0.3);
+        display: inline-block;
+        box-shadow: 0 2px 5px rgba(239, 68, 68, 0.05);
+    }
+    
+    .backtest-badge-pending {
+        background-color: rgba(245, 158, 11, 0.12);
+        color: #d97706;
+        font-weight: 800;
+        padding: 6px 12px;
+        border-radius: 20px;
+        border: 1px solid rgba(245, 158, 11, 0.3);
+        display: inline-block;
+    }
+    
+    .perf-positive {
+        color: #10b981;
+        font-weight: 800;
+    }
+    
+    .perf-negative {
+        color: #ef4444;
+        font-weight: 800;
+    }
+    
+    .intraday-clock {
+        color: #0284c7;
+        font-size: 0.8rem;
+        margin-left: 4px;
+        cursor: help;
+    }
 </style>
 """
 
@@ -447,6 +633,83 @@ def render_html_table(date_data: dict) -> str:
     return html
 
 
+def render_backtest_table(trades: list) -> str:
+    """Generates premium custom HTML table layout for weekly backtest results."""
+    html = """
+    <div class="table-container" style="max-height: 500px;">
+        <table class="ticker-table backtest-table">
+            <thead>
+                <tr>
+                    <th style="width: 14%;">Ticker</th>
+                    <th style="width: 16%;">Signal Date</th>
+                    <th style="width: 14%;">Direction</th>
+                    <th style="width: 16%;">Entry Price</th>
+                    <th style="width: 16%;">Friday Close</th>
+                    <th style="width: 14%;">Gain/Loss %</th>
+                    <th style="width: 14%;">Outcome</th>
+                </tr>
+            </thead>
+            <tbody>
+    """
+    for t in trades:
+        action = t["action"]
+        ticker = t["ticker"]
+        sig_date = t["signal_date"]
+        entry = t["entry_price"]
+        close = t["friday_close"]
+        perf = t["perf_pct"]
+        res = t["result"]
+        has_timestamp = t.get("tweet_timestamp") is not None
+        
+        # Style Ticker Badge
+        badge_cls = "badge-buy" if action == "BUY" else "badge-sell"
+        ticker_html = f'<span class="ticker-badge {badge_cls}">${ticker}</span>'
+        
+        # Style Direction
+        dir_html = '<span style="color: #10b981; font-weight: 800;">📈 BUY</span>' if action == "BUY" else '<span style="color: #ef4444; font-weight: 800;">📉 SELL</span>'
+        
+        # Entry Price styling with clock icon for intraday exact time matching
+        clock_icon = '<span class="intraday-clock" title="Exact price captured at the hour of the tweet">🕒</span>' if has_timestamp and entry > 0 else ''
+        entry_html = f"${entry:.2f} {clock_icon}" if entry > 0 else "$--.--"
+        
+        # Friday Close styling
+        close_html = f"${close:.2f}" if close > 0 else "$--.--"
+        
+        # Perf styling
+        if res == "PENDING":
+            perf_html = '<span style="color: #64748b; font-weight: 600;">--</span>'
+        else:
+            perf_sign = "+" if perf > 0 else ""
+            perf_cls = "perf-positive" if perf >= 0 else "perf-negative"
+            perf_html = f'<span class="{perf_cls}">{perf_sign}{perf:.2f}%</span>'
+            
+        # Outcome Badge styling
+        if res == "WIN":
+            outcome_html = '<span class="backtest-badge-win">✨ WIN</span>'
+        elif res == "LOSE":
+            outcome_html = '<span class="backtest-badge-lose">💀 LOSE</span>'
+        else:
+            outcome_html = '<span class="backtest-badge-pending">⏳ PENDING</span>'
+            
+        html += f"""
+                <tr>
+                    <td>{ticker_html}</td>
+                    <td style="font-weight: 600; color: #334155;">{sig_date}</td>
+                    <td>{dir_html}</td>
+                    <td style="font-family: monospace; font-size: 1rem; font-weight: 600; color: #1e293b;">{entry_html}</td>
+                    <td style="font-family: monospace; font-size: 1rem; font-weight: 600; color: #1e293b;">{close_html}</td>
+                    <td style="font-family: monospace; font-size: 1.05rem;">{perf_html}</td>
+                    <td>{outcome_html}</td>
+                </tr>
+        """
+    html += """
+            </tbody>
+        </table>
+    </div>
+    """
+    return html
+
+
 def calculate_statistics(data: dict) -> dict:
     """Computes global metrics for stats panel."""
     all_buys = []
@@ -468,6 +731,21 @@ def calculate_statistics(data: dict) -> dict:
 # MAIN APP BODY
 # ==========================================
 
+# Define Backtest File Path
+BACKTEST_FILE = os.path.join(CURRENT_DIR, "data", "backtest_results.json")
+
+def load_backtest_results() -> dict:
+    """Loads historical backtest performance results database."""
+    if not os.path.exists(BACKTEST_FILE):
+        return {}
+    try:
+        with open(BACKTEST_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        st.error(f"Failed to load backtest results: {e}")
+        return {}
+
+
 # App Data Loading
 data = load_data()
 stats = calculate_statistics(data)
@@ -476,69 +754,167 @@ stats = calculate_statistics(data)
 st.markdown('<div class="title-gradient">CL\'s Tickers</div>', unsafe_allow_html=True)
 st.markdown("<br>", unsafe_allow_html=True)
 
-# Search & Filters
-search_col, sort_col = st.columns([3, 1])
+# Create premium tabs at the top of the page
+tab_live, tab_hist = st.tabs(["📈 Live Signals Tracker", "📊 Historical Performance Analytics"])
 
-# Sorting dates
-sorted_dates = sorted(list(data.keys()), reverse=True)
-
-with search_col:
-    # Use placeholder inside the input field and collapse the label to avoid browser theme clashes
-    search_query = st.text_input(
-        "Search stock ticker", 
-        value="", 
-        placeholder="🔍 Search stock ticker (e.g. AAPL, TSLA)", 
-        label_visibility="collapsed"
-    ).upper().strip()
+with tab_live:
+    # Search & Filters
+    search_col, sort_col = st.columns([3, 1])
     
-with sort_col:
-    # Collapse the label to avoid browser theme clashes
-    date_filter = st.selectbox(
-        "Filter by date", 
-        options=["Show All Dates"] + sorted_dates, 
-        label_visibility="collapsed"
-    )
-
-# Filter data based on search and selected date
-filtered_dates = sorted_dates
-if date_filter != "Show All Dates":
-    filtered_dates = [date_filter]
-
-# Render Dashboard Tables
-rendered_count = 0
-for date_key in filtered_dates:
-    date_data = data[date_key]
+    # Sorting dates
+    sorted_dates = sorted(list(data.keys()), reverse=True)
     
-    # If search query is active, filter entries in buy/sell
-    if search_query:
-        buy_filtered = [b for b in date_data.get("buy", []) if search_query in b["ticker"]]
-        sell_filtered = [s for s in date_data.get("sell", []) if search_query in s["ticker"]]
+    with search_col:
+        # Use placeholder inside the input field and collapse the label to avoid browser theme clashes
+        search_query = st.text_input(
+            "Search stock ticker", 
+            value="", 
+            placeholder="🔍 Search stock ticker (e.g. AAPL, TSLA)", 
+            label_visibility="collapsed",
+            key="live_search"
+        ).upper().strip()
         
-        # Skip rendering this date if nothing matches search
-        if not buy_filtered and not sell_filtered:
-            continue
+    with sort_col:
+        # Collapse the label to avoid browser theme clashes
+        date_filter = st.selectbox(
+            "Filter by date", 
+            options=["Show All Dates"] + sorted_dates, 
+            label_visibility="collapsed",
+            key="live_date_filter"
+        )
+    
+    # Filter data based on search and selected date
+    filtered_dates = sorted_dates
+    if date_filter != "Show All Dates":
+        filtered_dates = [date_filter]
+    
+    # Render Dashboard Tables
+    rendered_count = 0
+    for date_key in filtered_dates:
+        date_data = data[date_key]
+        
+        # If search query is active, filter entries in buy/sell
+        if search_query:
+            buy_filtered = [b for b in date_data.get("buy", []) if search_query in b["ticker"]]
+            sell_filtered = [s for s in date_data.get("sell", []) if search_query in s["ticker"]]
             
-        # Create temp record for rendering
-        render_data = {
-            "buy": buy_filtered,
-            "sell": sell_filtered
-        }
-    else:
-        render_data = date_data
-        
-    # Parse date to human-readable form for the expander label
-    try:
-        dt = datetime.strptime(date_key, "%Y-%m-%d")
-        formatted_date = dt.strftime("⚡ %A, %B %d, %Y")
-    except Exception:
-        formatted_date = f"⚡ {date_key}"
-        
-    # Keep only the very first visible row expanded by default, fold others
-    is_expanded = (rendered_count == 0)
-    with st.expander(formatted_date, expanded=is_expanded):
-        st.markdown(render_html_table(render_data), unsafe_allow_html=True)
-        
-    rendered_count += 1
+            # Skip rendering this date if nothing matches search
+            if not buy_filtered and not sell_filtered:
+                continue
+                
+            # Create temp record for rendering
+            render_data = {
+                "buy": buy_filtered,
+                "sell": sell_filtered
+            }
+        else:
+            render_data = date_data
+            
+        # Parse date to human-readable form for the expander label
+        try:
+            dt = datetime.strptime(date_key, "%Y-%m-%d")
+            formatted_date = dt.strftime("⚡ %A, %B %d, %Y")
+        except Exception:
+            formatted_date = f"⚡ {date_key}"
+            
+        # Keep only the very first visible row expanded by default, fold others
+        is_expanded = (rendered_count == 0)
+        with st.expander(formatted_date, expanded=is_expanded):
+            st.markdown(render_html_table(render_data), unsafe_allow_html=True)
+            
+        rendered_count += 1
+    
+    if rendered_count == 0:
+        st.info("💡 No matching tickers found in the database. When you post new analyses on Twitter, they will automatically appear here after the daily cycle!")
 
-if rendered_count == 0:
-    st.info("💡 No matching tickers found in the database. When you post new analyses on Twitter, they will automatically appear here after the daily cycle!")
+with tab_hist:
+    # Load backtest database
+    bt_data = load_backtest_results()
+    
+    if not bt_data or not bt_data.get("weeks"):
+        st.info("💡 No historical performance analytics available yet. Once the weekly backtest runs, your weekly statistics and win-rates will appear here!")
+    else:
+        summary = bt_data.get("summary", {})
+        total_sig = summary.get("total_signals", 0)
+        win_rate = summary.get("win_rate", 0.0)
+        wins = summary.get("wins", 0)
+        losses = summary.get("losses", 0)
+        avg_ret = summary.get("average_return", 0.0)
+        
+        # 1. Premium Stats Dashboard Header
+        st.markdown(f"""
+        <div class="backtest-summary-container">
+            <div class="backtest-stat-card">
+                <div class="backtest-stat-val-winrate">{win_rate:.1f}%</div>
+                <div class="backtest-stat-lbl">Overall Win Rate</div>
+            </div>
+            <div class="backtest-stat-card">
+                <div class="backtest-stat-val-generic">{total_sig}</div>
+                <div class="backtest-stat-lbl">Total Tickers</div>
+            </div>
+            <div class="backtest-stat-card">
+                <div class="backtest-stat-val-generic">{wins}W - {losses}L</div>
+                <div class="backtest-stat-lbl">Wins vs Losses</div>
+            </div>
+            <div class="backtest-stat-card">
+                <div class="backtest-stat-val-generic" style="color: {'#10b981' if avg_ret >= 0 else '#ef4444'};">
+                    {'+' if avg_ret >= 0 else ''}{avg_ret:.2f}%
+                </div>
+                <div class="backtest-stat-lbl">Avg Weekly Gain</div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # 2. Premium PRO Upsell Card Banner
+        st.markdown("""
+        <div class="pro-upsell-card">
+            <div class="pro-upsell-content">
+                <div class="pro-upsell-text">
+                    <h3>🚀 Scale Your Portfolio with CL's Pro Tickers List</h3>
+                    <p>Unlock real-time SMS/Telegram alerts, detailed entry/stop-loss zones, private trade execution journals, and direct Q&A support.</p>
+                </div>
+                <a class="pro-upsell-btn" href="#" target="_blank">Upgrade to PRO - $49/mo</a>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # 3. Search Historical Tickers Filter
+        hist_search_col, hist_spacer = st.columns([2, 2])
+        with hist_search_col:
+            search_query_hist = st.text_input(
+                "Search historical ticker",
+                value="",
+                placeholder="🔍 Filter historical tickers (e.g. PLTR, TSLA)...",
+                label_visibility="collapsed",
+                key="hist_search"
+            ).upper().strip()
+            
+        # Get sorted weeks keys
+        sorted_weeks = sorted(list(bt_data["weeks"].keys()), reverse=True)
+        
+        # Render each week foldable expander
+        rendered_weeks = 0
+        for week_id in sorted_weeks:
+            week_info = bt_data["weeks"][week_id]
+            trades_list = week_info.get("trades", [])
+            
+            # Filter trades by search query if active
+            if search_query_hist:
+                trades_list = [t for t in trades_list if search_query_hist in t["ticker"]]
+                
+            if not trades_list:
+                continue
+                
+            week_label = week_info.get("week_label", week_id)
+            formatted_week_label = f"⚡ {week_label}"
+            
+            # First week expanded by default, others folded
+            is_week_expanded = (rendered_weeks == 0)
+            
+            with st.expander(formatted_week_label, expanded=is_week_expanded):
+                st.markdown(render_backtest_table(trades_list), unsafe_allow_html=True)
+                
+            rendered_weeks += 1
+            
+        if rendered_weeks == 0 and search_query_hist:
+            st.info(f"💡 No historical records found matching ticker: '{search_query_hist}'")
