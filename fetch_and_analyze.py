@@ -264,7 +264,7 @@ def analyze_tweets_with_gemini(tweets: List[Dict[str, str]]) -> Optional[DailyRe
         print("❌ Error: google-genai package is not installed correctly.")
         return None
 
-    model_name = os.environ.get("GEMINI_MODEL", "gemini-1.5-flash")
+    model_name = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash")
     print(f"🧠 Initiating Gemini Analysis ({model_name})...")
 
     # Initialize SDK Client with a generous HTTP timeout (120 seconds = 120,000 ms) to prevent premature cutoffs
