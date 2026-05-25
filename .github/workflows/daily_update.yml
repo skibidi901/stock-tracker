@@ -55,11 +55,20 @@ jobs:
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         
-        # Check if there are any changes to commit
+        # Check if there are any changes to commit (either stock_data.json or backtest_results.json)
+        CHANGES_EXIST=false
         if git status --porcelain | grep -q "data/stock_data.json"; then
-          echo "🔄 New data generated. Committing changes..."
           git add data/stock_data.json
-          git commit -m "auto: daily ticker analysis update [skip ci]"
+          CHANGES_EXIST=true
+        fi
+        if git status --porcelain | grep -q "data/backtest_results.json"; then
+          git add data/backtest_results.json
+          CHANGES_EXIST=true
+        fi
+        
+        if [ "$CHANGES_EXIST" = true ]; then
+          echo "🔄 New data or backtest results generated. Committing changes..."
+          git commit -m "auto: daily ticker analysis and backtest update [skip ci]"
           
           # Pull latest remote changes to avoid non-fast-forward rejection
           git pull --rebase origin main
@@ -68,3 +77,4 @@ jobs:
         else
           echo "ℹ️ No changes to commit (data is identical or no new updates)."
         fi
+

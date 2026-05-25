@@ -1,0 +1,58 @@
+name: Weekly Performance Backtest Update
+
+on:
+  schedule:
+    # Run once weekly on Friday at 8:05 PM PST (Saturday at 04:05 UTC)
+    # (Matches daily schedule format but runs only on Saturday UTC)
+    - cron: '5 4 * * 6'
+  workflow_dispatch:
+    # Allows manual triggering from the GitHub Actions tab
+
+permissions:
+  contents: write # Crucial permission to commit and push backtest_results.json
+
+jobs:
+  update-backtest-data:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0 # Fetch all history so git push works smoothly
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+        cache: 'pip'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run Performance Backtest
+      run: |
+        # Runs backtest.py directly. Pulls Yahoo Finance stock prices
+        # and updates backtest_results.json with weekly evaluations.
+        python backtest.py
+
+    - name: Commit and Push Updated Backtest Results
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        
+        # Check if there are any changes to commit in backtest_results.json
+        if git status --porcelain | grep -q "data/backtest_results.json"; then
+          echo "🔄 New backtest results generated. Committing changes..."
+          git add data/backtest_results.json
+          git commit -m "auto: weekly backtest performance update [skip ci]"
+          
+          # Pull latest remote changes to avoid non-fast-forward rejection
+          git pull --rebase origin main
+          git push origin main
+          echo "✅ Changes pushed successfully."
+        else
+          echo "ℹ️ No changes to commit in backtest_results."
+        fi
