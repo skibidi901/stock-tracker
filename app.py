@@ -872,20 +872,7 @@ with tab_hist:
         </div>
         """, unsafe_allow_html=True)
         
-        # 2. Premium PRO Upsell Card Banner
-        st.markdown("""
-        <div class="pro-upsell-card">
-            <div class="pro-upsell-content">
-                <div class="pro-upsell-text">
-                    <h3>🚀 Scale Your Portfolio with CL's Pro Tickers List</h3>
-                    <p>Unlock real-time SMS/Telegram alerts, detailed entry/stop-loss zones, private trade execution journals, and direct Q&A support.</p>
-                </div>
-                <a class="pro-upsell-btn" href="#" target="_blank">Upgrade to PRO - $49/mo</a>
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-        
-        # 3. Search Historical Tickers Filter
+        # 2. Search Historical Tickers Filter
         hist_search_col, hist_spacer = st.columns([2, 2])
         with hist_search_col:
             search_query_hist = st.text_input(
