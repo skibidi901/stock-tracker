@@ -34,7 +34,7 @@ jobs:
       env:
         # AI Credentials
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        GEMINI_MODEL: "gemini-2.5-flash"
+        GEMINI_MODEL: "gemini-1.5-flash"
         
         # Twitter Credentials (Official X API or RapidAPI)
         X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
