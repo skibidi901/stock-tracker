@@ -25,12 +25,12 @@ def get_trade_week_and_friday(date_str: str):
     dt = datetime.strptime(date_str, "%Y-%m-%d")
     weekday = dt.weekday() # 0 = Monday, 6 = Sunday
     
-    if weekday >= 5: # Saturday or Sunday
+    if weekday >= 4: # Friday, Saturday or Sunday
         # Signal belongs to the upcoming week, closing on the upcoming Friday
         days_to_friday = 4 + (7 - weekday)
         friday_dt = dt + timedelta(days=days_to_friday)
     else:
-        # Signal belongs to the current week, closing on this Friday
+        # Signal belongs to the current week (Monday to Thursday), closing on this Friday
         days_to_friday = 4 - weekday
         friday_dt = dt + timedelta(days=days_to_friday)
         
