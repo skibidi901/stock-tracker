@@ -1,6 +1,7 @@
 import os
 import json
 from datetime import datetime
+from textwrap import dedent
 import streamlit as st
 import pandas as pd
 
@@ -531,7 +532,7 @@ def render_html_table(date_data: dict) -> str:
     
     max_rows = max(len(buy_items), len(sell_items))
         
-    html = f"""
+    html = dedent(f"""
     <div class="table-container">
         <table class="ticker-table">
             <thead>
@@ -541,15 +542,15 @@ def render_html_table(date_data: dict) -> str:
                 </tr>
             </thead>
             <tbody>
-    """
+    """)
     
     if max_rows == 0:
-        html += """
+        html += dedent("""
                 <tr>
                     <td class="td-buy"><div class="empty-state">No buy signals captured for this date.</div></td>
                     <td class="td-sell"><div class="empty-state">No sell signals captured for this date.</div></td>
                 </tr>
-        """
+        """)
     else:
         for i in range(max_rows):
             html += "<tr>"
@@ -575,7 +576,7 @@ def render_html_table(date_data: dict) -> str:
                     mentions.append(f'<a href="{link}" target="_blank" class="author-link">{author_name}</a>')
                 mentions_html = ", ".join(mentions) if mentions else "Unknown"
                 
-                html += f"""
+                html += dedent(f"""
                 <div class="cell-card buy-card">
                     <span class="ticker-badge badge-buy">${item['ticker']}</span>
                     <div class="summary-text">{item['summary']}</div>
@@ -583,7 +584,7 @@ def render_html_table(date_data: dict) -> str:
                         <span>🗣️ Mentions:</span> {mentions_html}
                     </div>
                 </div>
-                """
+                """)
             else:
                 if i == 0:
                     html += '<div class="empty-state">No buy signals captured.</div>'
@@ -609,7 +610,7 @@ def render_html_table(date_data: dict) -> str:
                     mentions.append(f'<a href="{link}" target="_blank" class="author-link">{author_name}</a>')
                 mentions_html = ", ".join(mentions) if mentions else "Unknown"
                 
-                html += f"""
+                html += dedent(f"""
                 <div class="cell-card sell-card">
                     <span class="ticker-badge badge-sell">${item['ticker']}</span>
                     <div class="summary-text">{item['summary']}</div>
@@ -617,7 +618,7 @@ def render_html_table(date_data: dict) -> str:
                         <span>🗣️ Mentions:</span> {mentions_html}
                     </div>
                 </div>
-                """
+                """)
             else:
                 if i == 0:
                     html += '<div class="empty-state">No sell signals captured.</div>'
@@ -625,17 +626,17 @@ def render_html_table(date_data: dict) -> str:
             
             html += "</tr>"
             
-    html += """
+    html += dedent("""
             </tbody>
         </table>
     </div>
-    """
+    """)
     return html
 
 
 def render_backtest_table(trades: list) -> str:
     """Generates premium custom HTML table layout for weekly backtest results."""
-    html = """
+    html = dedent("""
     <div class="table-container" style="max-height: 500px;">
         <table class="ticker-table backtest-table">
             <thead>
@@ -650,7 +651,7 @@ def render_backtest_table(trades: list) -> str:
                 </tr>
             </thead>
             <tbody>
-    """
+    """)
     for t in trades:
         action = t["action"]
         ticker = t["ticker"]
@@ -691,7 +692,7 @@ def render_backtest_table(trades: list) -> str:
         else:
             outcome_html = '<span class="backtest-badge-pending">⏳ PENDING</span>'
             
-        html += f"""
+        html += dedent(f"""
                 <tr>
                     <td>{ticker_html}</td>
                     <td style="font-weight: 600; color: #334155;">{sig_date}</td>
@@ -701,12 +702,12 @@ def render_backtest_table(trades: list) -> str:
                     <td style="font-family: monospace; font-size: 1.05rem;">{perf_html}</td>
                     <td>{outcome_html}</td>
                 </tr>
-        """
-    html += """
+        """)
+    html += dedent("""
             </tbody>
         </table>
     </div>
-    """
+    """)
     return html
 
 
