@@ -304,8 +304,9 @@ def analyze_tweets_with_gemini(tweets: List[Dict[str, str]]) -> Optional[DailyRe
             config=types.GenerateContentConfig(
                 response_mime_type="application/json",
                 response_schema=DailyReport,
-                system_instruction="You are an expert financial analyst. Always return a perfectly structured JSON following the schema, extracting tickers, actions, summaries, and associated tweet metadata (author, author_name, tweet_id, text, created_at).",
-                temperature=0.1
+                system_instruction="You are an expert financial analyst. Always return a perfectly structured JSON following the schema, extracting tickers, actions, summaries, and associated tweet metadata. To prevent response truncation, limit the 'tweets' list for each stock analysis to a maximum of 3 of the most relevant/informative source tweets.",
+                temperature=0.1,
+                max_output_tokens=8192
             )
         )
         # Parse the JSON response
