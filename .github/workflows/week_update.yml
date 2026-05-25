@@ -2,8 +2,8 @@ name: Weekly Performance Backtest Update
 
 on:
   schedule:
-    # Run once weekly on Friday at 8:05 PM local PDT (Saturday at 03:05 UTC)
-    - cron: '5 3 * * 6'
+    # Run once weekly on Friday at 8:08 PM local PDT (Saturday at 03:08 UTC)
+    - cron: '8 3 * * 6'
   workflow_dispatch:
     # Allows manual triggering from the GitHub Actions tab
 
