@@ -295,7 +295,7 @@ CUSTOM_CSS = """
         border-radius: 16px !important;
         background: rgba(255, 255, 255, 0.75) !important;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04) !important;
-        margin-bottom: 2rem !important;
+        margin-bottom: 0.75rem !important;
         overflow: hidden !important;
     }
     
