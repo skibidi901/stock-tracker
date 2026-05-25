@@ -5,11 +5,6 @@ on:
     # Run once daily at 8:00 PM local Pacific Time (which is 03:00 UTC)
     - cron: '0 3 * * *'
   workflow_dispatch:
-    inputs:
-      target_date:
-        description: 'Target date to analyze (YYYY-MM-DD)'
-        required: false
-        default: ''
 
 permissions:
   contents: write # Crucial permission to commit and push changes back to the repo
@@ -52,13 +47,8 @@ jobs:
       run: |
         # Runs fetch_and_analyze.py. If API is not set, it will automatically
         # utilize mock data so the job finishes successfully.
-        if [ "${{ github.event.inputs.target_date }}" != "" ]; then
-          echo "🎯 Manual trigger requested for date: ${{ github.event.inputs.target_date }}"
-          python fetch_and_analyze.py --date "${{ github.event.inputs.target_date }}"
-        else
-          echo "🕒 Standard automatic trigger (defaulting to user local date)"
-          python fetch_and_analyze.py
-        fi
+        echo "🕒 Running standard daily scraper analysis..."
+        python fetch_and_analyze.py
 
     - name: Commit and Push Updated Data
       run: |

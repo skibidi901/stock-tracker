@@ -506,6 +506,19 @@ CUSTOM_CSS = """
         margin-left: 4px;
         cursor: help;
     }
+    
+    /* Direct Red Tab Labels & Indicators */
+    div[data-testid="stTabs"] button[data-baseweb="tab"] {
+        color: #ef4444 !important;
+    }
+    div[data-testid="stTabs"] button[data-baseweb="tab"] p {
+        color: #ef4444 !important;
+        font-weight: 800 !important;
+        font-size: 1.1rem !important;
+    }
+    div[data-testid="stTabs"] button[aria-selected="true"] {
+        border-bottom-color: #ef4444 !important;
+    }
 </style>
 """
 
