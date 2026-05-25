@@ -867,7 +867,7 @@ with tab_hist:
                 <div class="backtest-stat-val-generic" style="color: {'#10b981' if avg_ret >= 0 else '#ef4444'};">
                     {'+' if avg_ret >= 0 else ''}{avg_ret:.2f}%
                 </div>
-                <div class="backtest-stat-lbl">Avg Weekly Gain</div>
+                <div class="backtest-stat-lbl">Avg. Return per Trade per Week</div>
             </div>
         </div>
         """, unsafe_allow_html=True)
