@@ -555,8 +555,8 @@ def render_html_table(date_data: dict) -> str:
         <table class="ticker-table">
             <thead>
                 <tr>
-                    <th class="th-buy">📈 Buy (买入)</th>
-                    <th class="th-sell">📉 Sell (卖出)</th>
+                    <th class="th-buy">📈 Buy </th>
+                    <th class="th-sell">📉 Sell </th>
                 </tr>
             </thead>
             <tbody>
