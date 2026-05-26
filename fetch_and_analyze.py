@@ -419,6 +419,22 @@ def update_data_store(report: DailyReport, target_date: str, raw_tweets: List[Di
         print(f"❌ Failed to write database: {e}")
 
 
+def filter_relevant_tweets(tweets: List[Dict[str, str]]) -> List[Dict[str, str]]:
+    """Filters only tweets that are likely to contain stock recommendations (e.g. mentions tickers)."""
+    import re
+    relevant = []
+    # Match cashtags like $AAPL or $tsla, or uppercase ticker words of 2 to 6 characters
+    ticker_pattern = re.compile(r'\$[A-Za-z]{1,6}\b|[A-Z]{2,6}\b')
+    
+    for t in tweets:
+        text = t.get("text", "")
+        if ticker_pattern.search(text):
+            relevant.append(t)
+            
+    print(f"🧹 Pre-filtered tweets: Reduced from {len(tweets)} total to {len(relevant)} ticker-relevant tweets sent to Gemini.")
+    return relevant
+
+
 def main():
     parser = argparse.ArgumentParser(description="Fetch and analyze tweets using Gemini.")
     parser.add_argument("--mock", action="store_true", help="Force run with mock tweets instead of fetching from X API.")
@@ -472,8 +488,11 @@ def main():
             print("⚠️ No tweets retrieved from API. Exiting without updates.")
             return
 
+    # Filter only relevant stock tweets to prevent Gemini timeouts on large text inputs
+    relevant_tweets = filter_relevant_tweets(tweets)
+
     # Analyze with Gemini
-    report = analyze_tweets_with_gemini(tweets)
+    report = analyze_tweets_with_gemini(relevant_tweets)
 
     # Save results
     if report:
