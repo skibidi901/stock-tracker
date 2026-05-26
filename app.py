@@ -112,7 +112,7 @@ CUSTOM_CSS = """
         z-index: 10;
         padding: 14px 20px;
         font-weight: 600;
-        font-size: 0.95rem;
+        font-size: 1.25rem;
         text-transform: uppercase;
         letter-spacing: 0.05rem;
         border-bottom: 1px solid #cbd5e1;
