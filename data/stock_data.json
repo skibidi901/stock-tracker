@@ -497,5 +497,138 @@
       }
     ],
     "sell": []
+  },
+  "2026-05-25": {
+    "buy": [
+      {
+        "ticker": "MSTR",
+        "summary": "The stock is being watched for a potential long play this week if it opens lower and demonstrates relative strength, with a key gamma wall identified at 180.",
+        "tweets": [
+          {
+            "author": "ProblemSniper",
+            "author_name": "ProblemSniper",
+            "tweet_id": "2059104290225213546",
+            "text": "$MSTR gamma wall at 180. (Attracts there)\n\n#Bitcoin is down and if $MSTR open lower (156) and shows relative strength I want to play it this week.",
+            "created_at": "2026-05-26T02:48:13+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "NOK",
+        "summary": "Nokia is highlighted as a high-conviction long play due to Nvidia's 2.9% ownership stake, massive bullish option flow, and a technical breakout from a decade-long base.",
+        "tweets": [
+          {
+            "author": "xiaomustock",
+            "author_name": "川沐｜Trumoo🐮",
+            "tweet_id": "2059081342508270004",
+            "text": "夜盘 $MRVL 200+了。\n今年下半年美股只想搞几个股票简单模式，\n$DRAM $MRVL $MU $NOK https://t.co/WykeQBP5YR https://t.co/ZwlCwPqjvA",
+            "created_at": "2026-05-26T01:17:02+00:00"
+          },
+          {
+            "author": "Remzztrades",
+            "author_name": "Remz",
+            "tweet_id": "2059048114380746899",
+            "text": "$NOK \n\nThe amount of opportunity here is truly unbelievable.\n\nApproaching our first target at $16 just weeks after publicly mentioning January LEAPS that are now nearing 200%.\n\nThis is not the type of name you want to day trade if your goal is to make serious money.\n\nLEAPS and https://t.co/FKV5dNNqcx",
+            "created_at": "2026-05-25T23:05:00+00:00"
+          },
+          {
+            "author": "amitisinvesting",
+            "author_name": "amit",
+            "tweet_id": "2058984540472049920",
+            "text": "$NOK \n\nNokia long thesis: \n\n- Nvidia owns 2.9% of the company, they bought in October 2025 when the stock was around $6.50\n- The option flow is incredible signaling that there are larger players that see the name moving into the $20s\n- Chart is breaking out from a decade-long https://t.co/hkCGXnEjud",
+            "created_at": "2026-05-25T18:52:23+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "NBIS",
+        "summary": "Nebius is viewed as highly undervalued, driven by explosive hyperscaler-level AI infrastructure demand that is projected to grow revenues from under $1B to over $20B in three years.",
+        "tweets": [
+          {
+            "author": "Venu_7_",
+            "author_name": "Venu",
+            "tweet_id": "2059057484560847156",
+            "text": "Nebius $NBIS revenue is projected to go from under $1B to over $20B in just 3 years.\n\nThat’s not normal growth.\n\nThat’s hyperscaler-level AI infrastructure demand hitting all at once. https://t.co/4KRUgjYgq6",
+            "created_at": "2026-05-25T23:42:14+00:00"
+          },
+          {
+            "author": "TheRonnieVShow",
+            "author_name": "RonnieV",
+            "tweet_id": "2059032230966464853",
+            "text": "Nebius Snapshot.\n\n$NBIS Verdict: Undervalued.\n\nOne Sheet. All You Need. https://t.co/hEPV7c50uW",
+            "created_at": "2026-05-25T22:01:53+00:00"
+          },
+          {
+            "author": "TheRonnieVShow",
+            "author_name": "RonnieV",
+            "tweet_id": "2058992311225205155",
+            "text": "Nobody can seem to agree on what $NBIS is worth.\n\nOne analyst just raised their PT to $250.\n\nOthers are still sitting in the mid-$100s.\n\nMeanwhile the stock is trading at $214.\n\nThat's usually what happens when a company is changing faster than Wall Street can model it. https://t.co/XAveHhKey3",
+            "created_at": "2026-05-25T19:23:15+00:00"
+          },
+          {
+            "author": "Ren_aramb",
+            "author_name": "Ren",
+            "tweet_id": "2058792099210829863",
+            "text": "$NBIS NeoClouds keep getting more attractive with each passing day, but not all NeoClouds are created equally.\n\nPer Citi Research chart. GPU rental pricing across every generation is moving up. Not down.\n\nThis defies every conventional assumption about hardware depreciation. https://t.co/ZNnxR2ljG5",
+            "created_at": "2026-05-25T06:07:41+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "TSLA",
+        "summary": "Tesla is identified as a must-watch breakout setup for the second half of the year, catalyzed by the upcoming SpaceX IPO and speculation surrounding a potential future merger.",
+        "tweets": [
+          {
+            "author": "Remzztrades",
+            "author_name": "Remz",
+            "tweet_id": "2059046857830224181",
+            "text": "$TSLA is a trade you do not want to miss in the second half of the year.\n\nWith the SpaceX IPO expected in mid June and continued speculation around a future merger between Tesla and SpaceX, this is shaping up to be one of the biggest breakout setups of the year.\n\nHere’s how I’m https://t.co/fpg3LYNSF9",
+            "created_at": "2026-05-25T23:00:00+00:00"
+          },
+          {
+            "author": "cantonmeow",
+            "author_name": "Cantonese Cat 🐱🐈",
+            "tweet_id": "2058935750344036535",
+            "text": "$TSLA weekly\nIt tends to cool off sideways after you get that bullish MACD cross. It doesn't mean that it's bearish. https://t.co/fl21NiEUNN",
+            "created_at": "2026-05-25T15:38:30+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "ASTS",
+        "summary": "The stock is undergoing a massive weekly breakout on high volume, with price targets set at $128+ as it benefits from positive sentiment surrounding SpaceX's valuation.",
+        "tweets": [
+          {
+            "author": "dannycheng2022",
+            "author_name": "Danny cheng",
+            "tweet_id": "2059091092679864406",
+            "text": "$ASTS (May 26, 2026-daily chart)\n\n$ASTS was on my radar since $10 and has been actively charted with my community since it was trading below $18 — the day I initiated my position. It’s been incredibly rewarding to see so many in my community ride with it from the very first day I https://t.co/Jw1Y1bmRR7 https://t.co/pHfHkaL6Nq",
+            "created_at": "2026-05-26T01:55:47+00:00"
+          },
+          {
+            "author": "SRxTrades",
+            "author_name": "Sean trades",
+            "tweet_id": "2059050417305141333",
+            "text": "$ASTS\n\nMassive weekly breakout on high volume...\n\nIf the SpaceX IPO Valuation continues to go higher into the IPO then this name is going to absolutely explode...\n\nTargeting: $128+ https://t.co/GE7YVS8cAZ https://t.co/eadeA1fd4r",
+            "created_at": "2026-05-25T23:14:09+00:00"
+          }
+        ]
+      }
+    ],
+    "sell": [
+      {
+        "ticker": "RACE",
+        "summary": "The analyst expresses a highly bearish sentiment on Ferrari, stating an intention to short the stock immediately.",
+        "tweets": [
+          {
+            "author": "Han_Akamatsu",
+            "author_name": "Han Akamatsu 赤松",
+            "tweet_id": "2059035208892973199",
+            "text": "Time for me to short $RACE tomorrow.\n\nNo questions asked. https://t.co/Fnfjx0BrC3",
+            "created_at": "2026-05-25T22:13:43+00:00"
+          }
+        ]
+      }
+    ]
   }
 }
