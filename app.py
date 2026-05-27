@@ -834,6 +834,9 @@ with tab_live:
         else:
             render_data = date_data
             
+        # Get total daily tickers count (unfiltered)
+        total_daily_tickers = len(date_data.get("buy", [])) + len(date_data.get("sell", []))
+        
         # Parse date to human-readable form for the expander label
         try:
             dt = datetime.strptime(date_key, "%Y-%m-%d")
@@ -841,6 +844,8 @@ with tab_live:
         except Exception:
             formatted_date = f"⚡ {date_key}"
             
+        formatted_date = f"{formatted_date}  |  Total Recommended Tickers: {total_daily_tickers}"
+        
         # Keep only the very first visible row expanded by default, fold others
         is_expanded = (rendered_count == 0)
         with st.expander(formatted_date, expanded=is_expanded):
