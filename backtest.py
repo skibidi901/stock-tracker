@@ -93,6 +93,8 @@ def get_stock_price(ticker: str, target_date_str: str, utc_timestamp_str: str = 
         "DJI": "DIA",
         "SOXX": "SOXX",
         "SMH": "SMH",
+        "SMOL": "SMOL.ST",
+        "SIVE": "SIVE.ST",
     }
     symbol = ticker_map.get(ticker.upper(), ticker.upper())
     

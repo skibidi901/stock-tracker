@@ -1,10 +1,10 @@
 {
   "summary": {
-    "total_signals": 100,
-    "wins": 37,
-    "losses": 63,
-    "win_rate": 37.0,
-    "average_return": 0.8
+    "total_signals": 0,
+    "wins": 0,
+    "losses": 0,
+    "win_rate": 0.0,
+    "average_return": 0.0
   },
   "weeks": {
     "2026-W21": {
@@ -17,9 +17,9 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 467.51,
-          "friday_close": 503.89,
-          "perf_pct": 7.78,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -28,9 +28,9 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 64.03,
-          "friday_close": 66.9,
-          "perf_pct": 4.48,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -39,9 +39,9 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 116.2,
-          "friday_close": 127.0,
-          "perf_pct": 9.29,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -50,9 +50,9 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 37.03,
-          "friday_close": 42.7,
-          "perf_pct": 15.31,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -61,9 +61,9 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 21.04,
-          "friday_close": 21.43,
-          "perf_pct": 1.85,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -72,9 +72,9 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 143.69,
-          "friday_close": 147.57,
-          "perf_pct": 2.7,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -83,9 +83,9 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 85.64,
-          "friday_close": 89.96,
-          "perf_pct": 5.04,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -94,9 +94,9 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 316.47,
-          "friday_close": 332.67,
-          "perf_pct": 5.12,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -105,9 +105,9 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 119.84,
-          "friday_close": 123.52,
-          "perf_pct": 3.07,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -116,9 +116,9 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 295.19,
-          "friday_close": 305.08,
-          "perf_pct": 3.35,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -127,9 +127,9 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 196.33,
-          "friday_close": 208.26,
-          "perf_pct": 6.08,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -138,9 +138,9 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 751.0,
-          "friday_close": 895.88,
-          "perf_pct": 19.29,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -149,9 +149,9 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 283.43,
-          "friday_close": 288.53,
-          "perf_pct": 1.8,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -160,9 +160,9 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 426.01,
-          "friday_close": 433.59,
-          "perf_pct": 1.78,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -171,9 +171,9 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 745.64,
-          "friday_close": 750.59,
-          "perf_pct": 0.66,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -182,9 +182,9 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 745.64,
-          "friday_close": 750.59,
-          "perf_pct": 0.66,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -193,9 +193,9 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 537.33,
-          "friday_close": 570.09,
-          "perf_pct": 6.1,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -204,9 +204,9 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 167.05,
-          "friday_close": 166.52,
-          "perf_pct": -0.32,
-          "result": "LOSE",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -215,9 +215,9 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 576.32,
-          "friday_close": 602.14,
-          "perf_pct": 4.48,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -226,9 +226,9 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 84.68,
-          "friday_close": 85.1,
-          "perf_pct": -0.5,
-          "result": "LOSE",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -236,7 +236,7 @@
           "action": "BUY",
           "signal_date": "2026-05-24",
           "tweet_timestamp": "2026-05-24T20:21:08+00:00",
-          "entry_price": 0.0,
+          "entry_price": 85.55,
           "friday_close": 0.0,
           "perf_pct": 0.0,
           "result": "PENDING",
@@ -248,9 +248,9 @@
           "signal_date": "2026-05-24",
           "tweet_timestamp": "2026-05-24T23:09:30+00:00",
           "entry_price": 895.88,
-          "friday_close": 895.88,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -259,9 +259,9 @@
           "signal_date": "2026-05-24",
           "tweet_timestamp": "2026-05-24T22:35:30+00:00",
           "entry_price": 321.22,
-          "friday_close": 321.22,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -270,9 +270,9 @@
           "signal_date": "2026-05-24",
           "tweet_timestamp": "2026-05-24T20:44:00+00:00",
           "entry_price": 99.92,
-          "friday_close": 99.92,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -281,9 +281,9 @@
           "signal_date": "2026-05-24",
           "tweet_timestamp": "2026-05-24T18:39:04+00:00",
           "entry_price": 132.6,
-          "friday_close": 132.6,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -292,9 +292,9 @@
           "signal_date": "2026-05-24",
           "tweet_timestamp": "2026-05-24T17:57:51+00:00",
           "entry_price": 24.4,
-          "friday_close": 24.4,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -303,9 +303,9 @@
           "signal_date": "2026-05-25",
           "tweet_timestamp": "2026-05-26T02:48:13+00:00",
           "entry_price": 159.93,
-          "friday_close": 159.93,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -314,9 +314,9 @@
           "signal_date": "2026-05-25",
           "tweet_timestamp": "2026-05-26T01:17:02+00:00",
           "entry_price": 16.46,
-          "friday_close": 16.46,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -325,9 +325,9 @@
           "signal_date": "2026-05-25",
           "tweet_timestamp": "2026-05-25T23:42:14+00:00",
           "entry_price": 208.06,
-          "friday_close": 208.06,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -336,9 +336,9 @@
           "signal_date": "2026-05-25",
           "tweet_timestamp": "2026-05-25T23:00:00+00:00",
           "entry_price": 433.59,
-          "friday_close": 433.59,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -347,9 +347,9 @@
           "signal_date": "2026-05-25",
           "tweet_timestamp": "2026-05-26T01:55:47+00:00",
           "entry_price": 119.7,
-          "friday_close": 119.7,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -358,9 +358,9 @@
           "signal_date": "2026-05-25",
           "tweet_timestamp": "2026-05-25T22:13:43+00:00",
           "entry_price": 329.91,
-          "friday_close": 329.91,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -369,9 +369,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T02:56:04+00:00",
           "entry_price": 895.88,
-          "friday_close": 895.88,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -380,9 +380,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T02:42:30+00:00",
           "entry_price": 164.46,
-          "friday_close": 164.46,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -391,9 +391,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T02:14:40+00:00",
           "entry_price": 104.9,
-          "friday_close": 104.9,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -402,9 +402,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:55:10+00:00",
           "entry_price": 196.17,
-          "friday_close": 196.17,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -413,9 +413,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:38:30+00:00",
           "entry_price": 962.92,
-          "friday_close": 962.92,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -424,9 +424,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:37:22+00:00",
           "entry_price": 503.89,
-          "friday_close": 503.89,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -435,9 +435,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:34:21+00:00",
           "entry_price": 433.59,
-          "friday_close": 433.59,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -446,9 +446,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:30:22+00:00",
           "entry_price": 126.86,
-          "friday_close": 126.86,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -457,9 +457,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:15:49+00:00",
           "entry_price": 10.17,
-          "friday_close": 10.17,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -468,9 +468,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:12:42+00:00",
           "entry_price": 69.27,
-          "friday_close": 69.27,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -479,9 +479,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:18:07+00:00",
           "entry_price": 27.73,
-          "friday_close": 27.73,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -490,9 +490,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:12:12+00:00",
           "entry_price": 143.2,
-          "friday_close": 143.2,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -501,9 +501,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:11:55+00:00",
           "entry_price": 32.7,
-          "friday_close": 32.7,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -512,9 +512,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:09:55+00:00",
           "entry_price": 10.45,
-          "friday_close": 10.45,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -523,9 +523,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:08:49+00:00",
           "entry_price": 22.04,
-          "friday_close": 22.04,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -534,9 +534,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T00:18:05+00:00",
           "entry_price": 23.85,
-          "friday_close": 23.85,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -545,9 +545,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T00:12:49+00:00",
           "entry_price": 214.86,
-          "friday_close": 214.86,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -556,9 +556,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T23:37:49+00:00",
           "entry_price": 412.32,
-          "friday_close": 412.32,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -567,9 +567,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T23:35:31+00:00",
           "entry_price": 88.35,
-          "friday_close": 88.35,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -578,9 +578,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:11:22+00:00",
           "entry_price": 1589.55,
-          "friday_close": 1589.55,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -589,9 +589,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T23:22:26+00:00",
           "entry_price": 28.13,
-          "friday_close": 28.13,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -600,9 +600,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T23:15:09+00:00",
           "entry_price": 16.46,
-          "friday_close": 16.46,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -611,9 +611,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T22:44:57+00:00",
           "entry_price": 53.79,
-          "friday_close": 53.79,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -622,9 +622,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T22:42:41+00:00",
           "entry_price": 265.29,
-          "friday_close": 265.29,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -633,9 +633,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T22:07:59+00:00",
           "entry_price": 59.78,
-          "friday_close": 59.78,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -644,9 +644,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T20:43:31+00:00",
           "entry_price": 95.91,
-          "friday_close": 95.91,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -655,9 +655,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T20:23:48+00:00",
           "entry_price": 19.65,
-          "friday_close": 19.65,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -666,9 +666,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T20:17:00+00:00",
           "entry_price": 27.82,
-          "friday_close": 27.82,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -677,9 +677,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T19:56:20+00:00",
           "entry_price": 123.17,
-          "friday_close": 123.52,
-          "perf_pct": 0.28,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -688,9 +688,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T19:50:38+00:00",
           "entry_price": 209.22,
-          "friday_close": 208.06,
-          "perf_pct": -0.55,
-          "result": "LOSE",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -699,9 +699,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T19:41:28+00:00",
           "entry_price": 309.3,
-          "friday_close": 310.54,
-          "perf_pct": 0.4,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -710,9 +710,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T19:35:00+00:00",
           "entry_price": 120.29,
-          "friday_close": 119.7,
-          "perf_pct": -0.49,
-          "result": "LOSE",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -721,9 +721,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T18:36:01+00:00",
           "entry_price": 74.13,
-          "friday_close": 74.09,
-          "perf_pct": -0.05,
-          "result": "LOSE",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -732,9 +732,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T18:29:42+00:00",
           "entry_price": 3.19,
-          "friday_close": 3.17,
-          "perf_pct": -0.63,
-          "result": "LOSE",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -743,9 +743,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T18:21:39+00:00",
           "entry_price": 16.56,
-          "friday_close": 16.62,
-          "perf_pct": 0.36,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -753,7 +753,7 @@
           "action": "BUY",
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T18:04:15+00:00",
-          "entry_price": 0.0,
+          "entry_price": 4.15,
           "friday_close": 0.0,
           "perf_pct": 0.0,
           "result": "PENDING",
@@ -765,9 +765,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T17:45:43+00:00",
           "entry_price": 6.58,
-          "friday_close": 6.51,
-          "perf_pct": -1.06,
-          "result": "LOSE",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -776,9 +776,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T17:36:40+00:00",
           "entry_price": 4.61,
-          "friday_close": 4.48,
-          "perf_pct": -2.82,
-          "result": "LOSE",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -798,9 +798,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T16:48:00+00:00",
           "entry_price": 115.12,
-          "friday_close": 112.54,
-          "perf_pct": -2.24,
-          "result": "LOSE",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -809,9 +809,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T16:39:52+00:00",
           "entry_price": 1078.75,
-          "friday_close": 1064.74,
-          "perf_pct": -1.3,
-          "result": "LOSE",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -820,9 +820,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T16:36:00+00:00",
           "entry_price": 249.7,
-          "friday_close": 248.82,
-          "perf_pct": -0.35,
-          "result": "LOSE",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -831,9 +831,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T16:33:12+00:00",
           "entry_price": 36.94,
-          "friday_close": 37.1,
-          "perf_pct": 0.43,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -842,9 +842,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T16:25:12+00:00",
           "entry_price": 378.08,
-          "friday_close": 380.25,
-          "perf_pct": 0.57,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -853,9 +853,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T16:15:20+00:00",
           "entry_price": 38.87,
-          "friday_close": 38.95,
-          "perf_pct": 0.21,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -864,9 +864,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T16:10:22+00:00",
           "entry_price": 135.8,
-          "friday_close": 132.6,
-          "perf_pct": -2.36,
-          "result": "LOSE",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -875,9 +875,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T16:05:33+00:00",
           "entry_price": 159.59,
-          "friday_close": 158.01,
-          "perf_pct": -0.99,
-          "result": "LOSE",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -886,9 +886,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T16:00:00+00:00",
           "entry_price": 8.44,
-          "friday_close": 8.42,
-          "perf_pct": -0.24,
-          "result": "LOSE",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -897,9 +897,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T15:58:56+00:00",
           "entry_price": 164.08,
-          "friday_close": 159.93,
-          "perf_pct": -2.53,
-          "result": "LOSE",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -908,9 +908,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T15:33:40+00:00",
           "entry_price": 13.23,
-          "friday_close": 13.35,
-          "perf_pct": 0.91,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -919,9 +919,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T15:21:26+00:00",
           "entry_price": 107.93,
-          "friday_close": 109.92,
-          "perf_pct": 1.84,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -930,9 +930,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T15:24:59+00:00",
           "entry_price": 3.14,
-          "friday_close": 3.26,
-          "perf_pct": 3.82,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -941,9 +941,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T15:00:30+00:00",
           "entry_price": 2.12,
-          "friday_close": 1.93,
-          "perf_pct": -8.96,
-          "result": "LOSE",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -952,9 +952,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T14:51:10+00:00",
           "entry_price": 107.0,
-          "friday_close": 105.89,
-          "perf_pct": -1.04,
-          "result": "LOSE",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -963,9 +963,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T14:49:24+00:00",
           "entry_price": 65.47,
-          "friday_close": 66.9,
-          "perf_pct": 2.18,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -974,9 +974,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T14:48:22+00:00",
           "entry_price": 103.61,
-          "friday_close": 107.7,
-          "perf_pct": 3.95,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -985,9 +985,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": null,
           "entry_price": 274.82,
-          "friday_close": 274.82,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -996,9 +996,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T14:41:49+00:00",
           "entry_price": 47.38,
-          "friday_close": 47.89,
-          "perf_pct": 1.08,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -1007,9 +1007,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T14:41:27+00:00",
           "entry_price": 4.97,
-          "friday_close": 5.01,
-          "perf_pct": 0.8,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -1018,9 +1018,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T14:41:11+00:00",
           "entry_price": 32.25,
-          "friday_close": 31.79,
-          "perf_pct": -1.43,
-          "result": "LOSE",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -1029,9 +1029,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T14:30:44+00:00",
           "entry_price": 207.92,
-          "friday_close": 208.26,
-          "perf_pct": 0.16,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -1040,9 +1040,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T14:23:31+00:00",
           "entry_price": 241.32,
-          "friday_close": 241.71,
-          "perf_pct": 0.16,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -1051,9 +1051,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T14:22:37+00:00",
           "entry_price": 903.41,
-          "friday_close": 908.55,
-          "perf_pct": 0.57,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -1062,9 +1062,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T14:16:46+00:00",
           "entry_price": 26.83,
-          "friday_close": 24.4,
-          "perf_pct": -9.06,
-          "result": "LOSE",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -1073,9 +1073,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T14:13:50+00:00",
           "entry_price": 16.88,
-          "friday_close": 17.13,
-          "perf_pct": 1.48,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -1084,9 +1084,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:15:31+00:00",
           "entry_price": 416.03,
-          "friday_close": 416.03,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -1095,9 +1095,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T20:50:27+00:00",
           "entry_price": 42.7,
-          "friday_close": 42.7,
+          "friday_close": 0.0,
           "perf_pct": 0.0,
-          "result": "LOSE",
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -1106,9 +1106,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T19:35:00+00:00",
           "entry_price": 40.33,
-          "friday_close": 40.32,
-          "perf_pct": 0.02,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -1117,9 +1117,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T17:49:07+00:00",
           "entry_price": 609.16,
-          "friday_close": 612.34,
-          "perf_pct": -0.52,
-          "result": "LOSE",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -1128,9 +1128,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T15:21:39+00:00",
           "entry_price": 728.32,
-          "friday_close": 730.28,
-          "perf_pct": -0.27,
-          "result": "LOSE",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         },
         {
@@ -1139,9 +1139,9 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-26T14:33:57+00:00",
           "entry_price": 751.54,
-          "friday_close": 750.59,
-          "perf_pct": 0.13,
-          "result": "WIN",
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
           "finalized": false
         }
       ]
