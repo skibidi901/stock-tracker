@@ -687,12 +687,16 @@ def render_backtest_table(trades: list) -> str:
         # Style Direction
         dir_html = '<span style="color: #10b981; font-weight: 800;">📈 BUY</span>' if action == "BUY" else '<span style="color: #ef4444; font-weight: 800;">📉 SELL</span>'
         
-        # Entry Price styling with clock icon for intraday exact time matching
+        # Entry Price and Friday Close Price styling with correct local currency symbols
         clock_icon = '<span class="intraday-clock" title="Exact price captured at the hour of the tweet">🕒</span>' if has_timestamp and entry > 0 else ''
-        entry_html = f"${entry:.2f} {clock_icon}" if entry > 0 else "$--.--"
+        is_sek = ticker.upper() in ["SIVE", "SMOL"]
         
-        # Friday Close styling
-        close_html = f"${close:.2f}" if close > 0 else "$--.--"
+        if is_sek:
+            entry_html = f"{entry:.2f} kr {clock_icon}" if entry > 0 else "--.-- kr"
+            close_html = f"{close:.2f} kr" if close > 0 else "--.-- kr"
+        else:
+            entry_html = f"${entry:.2f} {clock_icon}" if entry > 0 else "$--.--"
+            close_html = f"${close:.2f}" if close > 0 else "$--.--"
         
         # Perf styling
         if res == "PENDING":
