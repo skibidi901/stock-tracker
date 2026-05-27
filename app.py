@@ -916,8 +916,9 @@ with tab_hist:
             if not trades_list:
                 continue
                 
+            unfiltered_total = len(week_info.get("trades", []))
             week_label = week_info.get("week_label", week_id)
-            formatted_week_label = f"⚡ {week_label}"
+            formatted_week_label = f"⚡ {week_label}  |  Total Recommended Tickers: {unfiltered_total}"
             
             # First week expanded by default, others folded
             is_week_expanded = (rendered_weeks == 0)
