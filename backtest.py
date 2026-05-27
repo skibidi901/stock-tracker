@@ -268,8 +268,11 @@ def run_backtest():
             else:
                 entry_price = get_stock_price(ticker, signal_date, tweet_timestamp, is_friday_close=False)
                 
-            # Fetch Friday Close Price
-            friday_close = get_stock_price(ticker, friday_date_str, is_friday_close=True)
+            # Fetch Friday Close Price only if the week is finalized (past Friday close)
+            if is_week_finalized:
+                friday_close = get_stock_price(ticker, friday_date_str, is_friday_close=True)
+            else:
+                friday_close = 0.0
             
             # Calculate Performance
             perf_pct = 0.0
