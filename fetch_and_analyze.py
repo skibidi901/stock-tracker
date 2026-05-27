@@ -249,8 +249,124 @@ def fetch_tweets_from_x(target_date: str) -> List[Dict[str, str]]:
     print("⚠️ No valid Bearer Token found or List connection failed.")
     return []
 
+def merge_daily_reports(reports: List[DailyReport]) -> DailyReport:
+    """Consolidates multiple DailyReport objects into a single report, unioning ticker analyses."""
+    merged_analyses: Dict[str, StockAnalysis] = {}
+    
+    for report in reports:
+        if not report or not report.analyses:
+            continue
+        for analysis in report.analyses:
+            ticker = analysis.ticker.upper()
+            if ticker in merged_analyses:
+                existing = merged_analyses[ticker]
+                # Merge tweet_ids (preserving order and uniqueness)
+                seen_ids = set(existing.tweet_ids)
+                combined_tweet_ids = list(existing.tweet_ids)
+                for tid in analysis.tweet_ids:
+                    if tid not in seen_ids:
+                        combined_tweet_ids.append(tid)
+                        seen_ids.add(tid)
+                
+                # Merge summaries nicely
+                if analysis.summary not in existing.summary:
+                    combined_summary = f"{existing.summary} {analysis.summary}"
+                else:
+                    combined_summary = existing.summary
+                
+                # Keep the action of the one with more tweet_ids or default to existing
+                action = existing.action
+                if len(analysis.tweet_ids) > len(existing.tweet_ids):
+                    action = analysis.action
+                
+                merged_analyses[ticker] = StockAnalysis(
+                    ticker=ticker,
+                    action=action,
+                    summary=combined_summary,
+                    tweet_ids=combined_tweet_ids
+                )
+            else:
+                merged_analyses[ticker] = analysis
+                
+    return DailyReport(analyses=list(merged_analyses.values()))
+
+
+def analyze_single_batch_with_gemini(client, model_name: str, tweets: List[Dict[str, str]], safety_settings) -> Optional[DailyReport]:
+    """Helper to analyze a single batch of tweets using Gemini."""
+    if not tweets:
+        return None
+
+    # Format tweets as high-quality inputs including their metadata
+    tweets_formatted = ""
+    for i, t in enumerate(tweets):
+        tweets_formatted += f"--- TWEET {i+1} ---\n"
+        tweets_formatted += f"ID: {t['id']}\n"
+        tweets_formatted += f"Author Handle: {t['author']}\n"
+        tweets_formatted += f"Author Name: {t.get('author_name', t['author'])}\n"
+        tweets_formatted += f"Posted Time (UTC): {t.get('created_at', 'unknown')}\n"
+        tweets_formatted += f"Text:\n{t['text']}\n\n"
+
+    prompt = f"""
+    You are a high-caliber stock market analyst and data processing engine.
+    Analyze the following list of tweets. Perform the following steps:
+    1. Scan each tweet to identify mentioned stock tickers (e.g. AAPL, TSLA, NVDA, PLTR, BABA). Ignore generic text and tags.
+    2. Categorize each identified ticker into:
+       - BUY: The user is buying, holding, highly bullish, or recommending long.
+       - SELL: The user is selling, trimming, highly bearish, shorting, or recommending short.
+       Ignore tickers that only have neutral mentions or spam.
+    3. For each ticker, generate a professional, high-quality, concise 1-2 sentence summary explaining *why* it was mentioned, synthesizing the core catalyst or technical reason from all relevant tweets.
+    4. Link the relevant tweet IDs that contributed to this analysis. Populate the 'tweet_ids' list in the output schema with the exact tweet IDs (e.g., '1882000000000000001') from the matching source tweets.
+
+    Here are the tweets to analyze:
+    ---
+    {tweets_formatted}
+    ---
+    """
+
+    response = None
+    try:
+        response = client.models.generate_content(
+            model=model_name,
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                response_mime_type="application/json",
+                response_schema=DailyReport,
+                system_instruction="You are an expert financial analyst. Always return a perfectly structured JSON following the schema, extracting tickers, actions, summaries, and associated tweet IDs.",
+                temperature=0.1,
+                max_output_tokens=8192,
+                safety_settings=safety_settings
+            )
+        )
+        # Parse the JSON response
+        report = DailyReport.model_validate_json(response.text)
+        return report
+    except Exception as e:
+        print(f"❌ Gemini batch analysis failed: {e}")
+        if response:
+            try:
+                if response.candidates:
+                    cand = response.candidates[0]
+                    if hasattr(cand, "finish_reason") and cand.finish_reason:
+                        print(f"⚠️ Finish Reason: {cand.finish_reason}")
+                    if hasattr(cand, "content") and cand.content:
+                        parts = cand.content.parts
+                        if parts:
+                            txt_parts = [p.text for p in parts if hasattr(p, "text") and p.text]
+                            if txt_parts:
+                                print("⚠️ Raw response text was:")
+                                print("".join(txt_parts))
+            except Exception as debug_err:
+                print(f"⚠️ Error extracting debug info: {debug_err}")
+            try:
+                if hasattr(response, "prompt_feedback") and response.prompt_feedback:
+                    print(f"⚠️ Prompt Feedback: {response.prompt_feedback}")
+            except Exception:
+                pass
+        return None
+
+
 def analyze_tweets_with_gemini(tweets: List[Dict[str, str]]) -> Optional[DailyReport]:
-    """Uses Google GenAI SDK with structured output to analyze tweets and retain author metadata."""
+    """Uses Google GenAI SDK with structured output to analyze tweets in batches and merge the results."""
     if not tweets:
         print("⚠️ No tweets to analyze.")
         return None
@@ -273,81 +389,52 @@ def analyze_tweets_with_gemini(tweets: List[Dict[str, str]]) -> Optional[DailyRe
         http_options=types.HttpOptions(timeout=120_000)
     )
 
-    # Format tweets as high-quality inputs including their metadata
-    tweets_formatted = ""
-    for i, t in enumerate(tweets):
-        tweets_formatted += f"--- TWEET {i+1} ---\n"
-        tweets_formatted += f"ID: {t['id']}\n"
-        tweets_formatted += f"Author Handle: {t['author']}\n"
-        tweets_formatted += f"Author Name: {t['author_name']}\n"
-        tweets_formatted += f"Posted Time (UTC): {t.get('created_at', 'unknown')}\n"
-        tweets_formatted += f"Text:\n{t['text']}\n\n"
+    safety_settings = [
+        types.SafetySetting(
+            category=types.HarmCategory.HARM_CATEGORY_HARASSMENT,
+            threshold=types.HarmBlockThreshold.BLOCK_NONE,
+        ),
+        types.SafetySetting(
+            category=types.HarmCategory.HARM_CATEGORY_HATE_SPEECH,
+            threshold=types.HarmBlockThreshold.BLOCK_NONE,
+        ),
+        types.SafetySetting(
+            category=types.HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
+            threshold=types.HarmBlockThreshold.BLOCK_NONE,
+        ),
+        types.SafetySetting(
+            category=types.HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
+            threshold=types.HarmBlockThreshold.BLOCK_NONE,
+        ),
+        types.SafetySetting(
+            category=types.HarmCategory.HARM_CATEGORY_CIVIC_INTEGRITY,
+            threshold=types.HarmBlockThreshold.BLOCK_NONE,
+        ),
+    ]
 
-    prompt = f"""
-    You are a high-caliber stock market analyst and data processing engine.
-    Analyze the following list of tweets. Perform the following steps:
-    1. Scan each tweet to identify mentioned stock tickers (e.g. AAPL, TSLA, NVDA, PLTR, BABA). Ignore generic text and tags.
-    2. Categorize each identified ticker into:
-       - BUY: The user is buying, holding, highly bullish, or recommending long.
-       - SELL: The user is selling, trimming, highly bearish, shorting, or recommending short.
-       Ignore tickers that only have neutral mentions or spam.
-    3. For each ticker, generate a professional, high-quality, concise 1-2 sentence summary explaining *why* it was mentioned, synthesizing the core catalyst or technical reason from all relevant tweets.
-    4. Link the relevant tweet IDs that contributed to this analysis. Populate the 'tweet_ids' list in the output schema with the exact tweet IDs (e.g., '1882000000000000001') from the matching source tweets.
+    # Split tweets into batches of 20
+    batch_size = 20
+    batches = [tweets[i:i + batch_size] for i in range(0, len(tweets), batch_size)]
+    print(f"📦 Split {len(tweets)} relevant tweets into {len(batches)} batches of {batch_size}.")
 
-    Here are the tweets to analyze:
-    ---
-    {tweets_formatted}
-    ---
-    """
+    reports = []
+    for idx, batch in enumerate(batches):
+        print(f"🧠 Processing batch {idx+1}/{len(batches)} ({len(batch)} tweets)...")
+        report = analyze_single_batch_with_gemini(client, model_name, batch, safety_settings)
+        if report:
+            reports.append(report)
+            print(f"✅ Batch {idx+1} successfully analyzed ({len(report.analyses)} tickers extracted).")
+        else:
+            print(f"⚠️ Batch {idx+1} analysis failed. Skipping this batch...")
 
-    try:
-        # Disable all content filtering to prevent false-positives on geopolitical/war/financial news in tweets
-        safety_settings = [
-            types.SafetySetting(
-                category=types.HarmCategory.HARM_CATEGORY_HARASSMENT,
-                threshold=types.HarmBlockThreshold.BLOCK_NONE,
-            ),
-            types.SafetySetting(
-                category=types.HarmCategory.HARM_CATEGORY_HATE_SPEECH,
-                threshold=types.HarmBlockThreshold.BLOCK_NONE,
-            ),
-            types.SafetySetting(
-                category=types.HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
-                threshold=types.HarmBlockThreshold.BLOCK_NONE,
-            ),
-            types.SafetySetting(
-                category=types.HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
-                threshold=types.HarmBlockThreshold.BLOCK_NONE,
-            ),
-            types.SafetySetting(
-                category=types.HarmCategory.HARM_CATEGORY_CIVIC_INTEGRITY,
-                threshold=types.HarmBlockThreshold.BLOCK_NONE,
-            ),
-        ]
-
-        response = client.models.generate_content(
-            model=model_name,
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                response_mime_type="application/json",
-                response_schema=DailyReport,
-                system_instruction="You are an expert financial analyst. Always return a perfectly structured JSON following the schema, extracting tickers, actions, summaries, and associated tweet IDs.",
-                temperature=0.1,
-                max_output_tokens=8192,
-                safety_settings=safety_settings
-            )
-        )
-        # Parse the JSON response
-        report = DailyReport.model_validate_json(response.text)
-        print(f"✅ Gemini successfully analyzed and extracted {len(report.analyses)} tickers.")
-        return report
-    except Exception as e:
-        print(f"❌ Gemini analysis failed: {e}")
-        try:
-            print("Raw response text was:", response.text)
-        except:
-            pass
+    if not reports:
+        print("❌ All Gemini analysis batches failed.")
         return None
+
+    # Merge all daily reports
+    merged_report = merge_daily_reports(reports)
+    print(f"✅ Successfully consolidated analyses: Extracted {len(merged_report.analyses)} unique tickers across all batches.")
+    return merged_report
 
 
 def update_data_store(report: DailyReport, target_date: str, raw_tweets: List[Dict[str, Any]]) -> None:
@@ -423,12 +510,39 @@ def filter_relevant_tweets(tweets: List[Dict[str, str]]) -> List[Dict[str, str]]
     """Filters only tweets that are likely to contain stock recommendations (e.g. mentions tickers)."""
     import re
     relevant = []
-    # Match cashtags like $AAPL or $tsla, or uppercase ticker words of 2 to 6 characters
-    ticker_pattern = re.compile(r'\$[A-Za-z]{1,6}\b|[A-Z]{2,6}\b')
+    
+    # We want to match cashtags like $AAPL or $tsla, which are highly specific.
+    cashtag_pattern = re.compile(r'\$[A-Za-z]{1,6}\b')
+    
+    # We can also match uppercase words of 2 to 5 characters, but exclude a set of common non-ticker words.
+    uppercase_word_pattern = re.compile(r'\b[A-Z]{2,5}\b')
+    
+    exclude_words = {
+        "RT", "AI", "US", "UK", "EU", "UN", "CEO", "CFO", "CTO", "COO", "SEC", "FED", "FOMC", "CPI", "GDP", "APR", "APY",
+        "ATH", "YTD", "ETF", "NAV", "ROI", "PST", "PDT", "EST", "EDT", "UTC", "GMT", "P&L", "S&P", "NYSE", "NASDAQ",
+        "BUY", "SELL", "HOLD", "LONG", "SHORT", "CALL", "PUT", "THE", "AND", "FOR", "BUT", "NOT", "YES", "NO", "OK",
+        "HTTP", "HTTPS", "API", "JSON", "URL", "HTML", "CSS", "XML", "CSV", "PDF", "GPU", "CPU", "RAM", "ROM", "SSD",
+        "HDD", "TAM", "HBM", "FSD", "EV", "AV", "UI", "UX", "PR", "HR", "QA", "VS", "OS", "PC", "MAC", "iOS", "IP",
+        "AM", "PM", "ET", "PT", "CT", "MT", "USA", "USD", "EUR", "GBP", "JPY", "CNY", "HKD", "CAD", "AUD", "SGD",
+        "BTC", "ETH", "SOL", "XRP", "ADA", "DOT", "DOGE", "SHIB", "AVAX", "LINK", "LTC", "UNI", "BCH", "FIL", "ETC",
+        "ICP", "VET", "TRX", "EOS", "XLM", "NEO", "QTUM", "ZEC", "DASH", "XMR", "WAVES", "ONT", "IOTA", "NANO"
+    }
     
     for t in tweets:
         text = t.get("text", "")
-        if ticker_pattern.search(text):
+        # Check if it has a cashtag
+        if cashtag_pattern.search(text):
+            relevant.append(t)
+            continue
+            
+        # Or check if it has uppercase words that are not in the exclude list
+        words = uppercase_word_pattern.findall(text)
+        has_ticker = False
+        for word in words:
+            if word not in exclude_words:
+                has_ticker = True
+                break
+        if has_ticker:
             relevant.append(t)
             
     print(f"🧹 Pre-filtered tweets: Reduced from {len(tweets)} total to {len(relevant)} ticker-relevant tweets sent to Gemini.")
