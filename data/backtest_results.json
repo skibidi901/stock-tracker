@@ -901,6 +901,160 @@
           "perf_pct": 0.0,
           "result": "PENDING",
           "finalized": false
+        },
+        {
+          "ticker": "ORCL",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T14:57:42+00:00",
+          "entry_price": 196.93,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "LLY",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T14:56:03+00:00",
+          "entry_price": 1145.41,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "MU",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T14:45:49+00:00",
+          "entry_price": 932.02,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "NBIS",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": null,
+          "entry_price": 224.5,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "EOSE",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T14:54:32+00:00",
+          "entry_price": 8.88,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "SIVE",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T14:17:58+00:00",
+          "entry_price": 65.2,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "CRWV",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T14:56:27+00:00",
+          "entry_price": 104.95,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "SNDK",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T14:15:31+00:00",
+          "entry_price": 1676.6,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "MRVL",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T14:09:54+00:00",
+          "entry_price": 196.76,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "ARM",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T14:02:27+00:00",
+          "entry_price": 331.25,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "ACHR",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T14:01:01+00:00",
+          "entry_price": 6.81,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "ONDS",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T14:06:23+00:00",
+          "entry_price": 13.0,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "DELL",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T13:36:59+00:00",
+          "entry_price": 317.03,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "IPWR",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T13:24:54+00:00",
+          "entry_price": 8.65,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
         }
       ]
     }
