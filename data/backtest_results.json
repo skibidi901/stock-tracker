@@ -1,10 +1,10 @@
 {
   "summary": {
-    "total_signals": 0,
-    "wins": 0,
-    "losses": 0,
-    "win_rate": 0.0,
-    "average_return": 0.0
+    "total_signals": 94,
+    "wins": 62,
+    "losses": 32,
+    "win_rate": 65.96,
+    "average_return": 3.04
   },
   "weeks": {
     "2026-W21": {
@@ -17,10 +17,10 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 467.51,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 516.1,
+          "perf_pct": 10.39,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "ENPH",
@@ -28,10 +28,10 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 64.03,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 68.36,
+          "perf_pct": 6.76,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "ON",
@@ -39,10 +39,10 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 116.2,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 120.62,
+          "perf_pct": 3.8,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "OUST",
@@ -50,10 +50,10 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 37.03,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 46.05,
+          "perf_pct": 24.36,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "HIMX",
@@ -61,10 +61,10 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 21.04,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 20.57,
+          "perf_pct": -2.23,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "SYNA",
@@ -72,10 +72,10 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 143.69,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 137.28,
+          "perf_pct": -4.46,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "GFS",
@@ -83,10 +83,10 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 85.64,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 79.97,
+          "perf_pct": -6.62,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "NXPI",
@@ -94,10 +94,10 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 316.47,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 321.35,
+          "perf_pct": 1.54,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "INTC",
@@ -105,10 +105,10 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 119.84,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 114.68,
+          "perf_pct": -4.31,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "DELL",
@@ -116,10 +116,10 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 295.19,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 420.91,
+          "perf_pct": 42.59,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "MRVL",
@@ -127,10 +127,10 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 196.33,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 205.0,
+          "perf_pct": 4.42,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "MU",
@@ -138,10 +138,10 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 751.0,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 971.0,
+          "perf_pct": 29.29,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "TSEM",
@@ -149,10 +149,10 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 283.43,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 255.23,
+          "perf_pct": -9.95,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "TSLA",
@@ -160,10 +160,10 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 426.01,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 435.79,
+          "perf_pct": 2.3,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "SPX",
@@ -171,10 +171,10 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 745.64,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 756.48,
+          "perf_pct": 1.45,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "SPY",
@@ -182,10 +182,10 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 745.64,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 756.48,
+          "perf_pct": 1.45,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "SOXX",
@@ -193,10 +193,10 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 537.33,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 569.08,
+          "perf_pct": 5.91,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "CAR",
@@ -204,10 +204,10 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 167.05,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 175.84,
+          "perf_pct": 5.26,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "SMH",
@@ -215,10 +215,10 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 576.32,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 598.93,
+          "perf_pct": 3.92,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "TLT",
@@ -226,10 +226,10 @@
           "signal_date": "2026-05-23",
           "tweet_timestamp": null,
           "entry_price": 84.68,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 85.76,
+          "perf_pct": -1.28,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "SIVE",
@@ -237,10 +237,10 @@
           "signal_date": "2026-05-24",
           "tweet_timestamp": "2026-05-24T20:21:08+00:00",
           "entry_price": 85.55,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 68.95,
+          "perf_pct": -19.4,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "MU",
@@ -248,10 +248,10 @@
           "signal_date": "2026-05-24",
           "tweet_timestamp": "2026-05-24T23:09:30+00:00",
           "entry_price": 895.88,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 971.0,
+          "perf_pct": 8.39,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "ARM",
@@ -259,10 +259,10 @@
           "signal_date": "2026-05-24",
           "tweet_timestamp": "2026-05-24T22:35:30+00:00",
           "entry_price": 321.22,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 353.29,
+          "perf_pct": 9.98,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "NOW",
@@ -270,10 +270,10 @@
           "signal_date": "2026-05-24",
           "tweet_timestamp": "2026-05-24T20:44:00+00:00",
           "entry_price": 99.92,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 124.37,
+          "perf_pct": 24.47,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "AXTI",
@@ -281,10 +281,10 @@
           "signal_date": "2026-05-24",
           "tweet_timestamp": "2026-05-24T18:39:04+00:00",
           "entry_price": 132.6,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 103.16,
+          "perf_pct": -22.2,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "FCEL",
@@ -292,10 +292,10 @@
           "signal_date": "2026-05-24",
           "tweet_timestamp": "2026-05-24T17:57:51+00:00",
           "entry_price": 24.4,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 21.66,
+          "perf_pct": -11.23,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "MSTR",
@@ -303,10 +303,10 @@
           "signal_date": "2026-05-25",
           "tweet_timestamp": "2026-05-26T02:48:13+00:00",
           "entry_price": 159.93,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 159.09,
+          "perf_pct": -0.53,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "NOK",
@@ -314,10 +314,10 @@
           "signal_date": "2026-05-25",
           "tweet_timestamp": "2026-05-26T01:17:02+00:00",
           "entry_price": 16.46,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 14.84,
+          "perf_pct": -9.84,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "NBIS",
@@ -325,10 +325,10 @@
           "signal_date": "2026-05-25",
           "tweet_timestamp": "2026-05-25T23:42:14+00:00",
           "entry_price": 208.06,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 231.09,
+          "perf_pct": 11.07,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "TSLA",
@@ -336,10 +336,10 @@
           "signal_date": "2026-05-25",
           "tweet_timestamp": "2026-05-25T23:00:00+00:00",
           "entry_price": 433.59,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 435.79,
+          "perf_pct": 0.51,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "ASTS",
@@ -347,10 +347,10 @@
           "signal_date": "2026-05-25",
           "tweet_timestamp": "2026-05-26T01:55:47+00:00",
           "entry_price": 119.7,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 113.41,
+          "perf_pct": -5.25,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "RACE",
@@ -358,10 +358,10 @@
           "signal_date": "2026-05-25",
           "tweet_timestamp": "2026-05-25T22:13:43+00:00",
           "entry_price": 329.91,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 340.23,
+          "perf_pct": -3.13,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "MU",
@@ -369,10 +369,10 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T02:56:04+00:00",
           "entry_price": 895.88,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 971.0,
+          "perf_pct": 8.39,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "SMTC",
@@ -380,10 +380,10 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T02:42:30+00:00",
           "entry_price": 164.46,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 152.54,
+          "perf_pct": -7.25,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "SNDK",
@@ -391,10 +391,10 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T02:30:02+00:00",
           "entry_price": 1589.55,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 1694.98,
+          "perf_pct": 6.63,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "SHOP",
@@ -402,10 +402,10 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T02:14:40+00:00",
           "entry_price": 104.9,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 118.71,
+          "perf_pct": 13.16,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "GLW",
@@ -413,10 +413,10 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:55:10+00:00",
           "entry_price": 196.17,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 181.16,
+          "perf_pct": -7.65,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "URI",
@@ -424,10 +424,10 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:38:30+00:00",
           "entry_price": 962.92,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 995.67,
+          "perf_pct": 3.4,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "AMD",
@@ -435,10 +435,10 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:37:22+00:00",
           "entry_price": 503.89,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 516.1,
+          "perf_pct": 2.42,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "TSLA",
@@ -446,10 +446,10 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:34:21+00:00",
           "entry_price": 433.59,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 435.79,
+          "perf_pct": 0.51,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "C",
@@ -457,10 +457,10 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:30:22+00:00",
           "entry_price": 126.86,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 125.9,
+          "perf_pct": -0.76,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "USAR",
@@ -468,10 +468,10 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:18:07+00:00",
           "entry_price": 27.73,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 28.01,
+          "perf_pct": 1.01,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "LUMN",
@@ -479,10 +479,10 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:15:49+00:00",
           "entry_price": 10.17,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 10.99,
+          "perf_pct": 8.06,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "AFRM",
@@ -490,10 +490,10 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:12:42+00:00",
           "entry_price": 69.27,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 73.65,
+          "perf_pct": 6.32,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "MSFT",
@@ -501,10 +501,10 @@
           "signal_date": "2026-05-26",
           "tweet_timestamp": "2026-05-27T01:15:31+00:00",
           "entry_price": 416.03,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 450.24,
+          "perf_pct": -8.22,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "RDDT",
@@ -512,10 +512,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T14:41:48+00:00",
           "entry_price": 155.41,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 176.0,
+          "perf_pct": 13.25,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "SHOP",
@@ -523,10 +523,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T14:41:48+00:00",
           "entry_price": 108.53,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 118.71,
+          "perf_pct": 9.38,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "TSLA",
@@ -534,10 +534,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T14:40:58+00:00",
           "entry_price": 437.34,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 435.79,
+          "perf_pct": -0.35,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "SOFI",
@@ -545,10 +545,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T14:28:00+00:00",
           "entry_price": 16.5,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 18.22,
+          "perf_pct": 10.42,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "OPEN",
@@ -556,10 +556,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T14:25:06+00:00",
           "entry_price": 4.91,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 5.04,
+          "perf_pct": 2.65,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "LLY",
@@ -567,10 +567,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T14:20:59+00:00",
           "entry_price": 1091.96,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 1105.0,
+          "perf_pct": 1.19,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "HIMS",
@@ -578,10 +578,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T14:19:33+00:00",
           "entry_price": 25.47,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 26.15,
+          "perf_pct": 2.67,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "NOK",
@@ -589,10 +589,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T14:17:28+00:00",
           "entry_price": 15.68,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 14.84,
+          "perf_pct": -5.36,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "RCL",
@@ -600,10 +600,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T14:13:21+00:00",
           "entry_price": 278.8,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 284.63,
+          "perf_pct": 2.09,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "MU",
@@ -611,10 +611,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T14:31:28+00:00",
           "entry_price": 892.15,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 971.0,
+          "perf_pct": 8.84,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "UNP",
@@ -622,10 +622,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T13:44:18+00:00",
           "entry_price": 272.57,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 262.64,
+          "perf_pct": -3.64,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "ZETA",
@@ -633,10 +633,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T13:34:43+00:00",
           "entry_price": 19.8,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 22.89,
+          "perf_pct": 15.61,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "RKLB",
@@ -644,10 +644,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T13:33:32+00:00",
           "entry_price": 149.72,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 143.48,
+          "perf_pct": -4.17,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "DUOT",
@@ -655,10 +655,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T13:21:00+00:00",
           "entry_price": 14.86,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 13.5,
+          "perf_pct": -9.15,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "CRWV",
@@ -666,10 +666,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T13:14:23+00:00",
           "entry_price": 101.13,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 109.53,
+          "perf_pct": 8.31,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "FDX",
@@ -677,10 +677,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T12:51:04+00:00",
           "entry_price": 409.79,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 411.75,
+          "perf_pct": 0.48,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "TE",
@@ -688,10 +688,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T12:48:52+00:00",
           "entry_price": 10.07,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 10.56,
+          "perf_pct": 4.87,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "BB",
@@ -699,10 +699,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T12:01:47+00:00",
           "entry_price": 8.14,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 9.0,
+          "perf_pct": 10.57,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "AMD",
@@ -710,10 +710,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T11:44:00+00:00",
           "entry_price": 495.14,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 516.1,
+          "perf_pct": 4.23,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "SLNH",
@@ -721,10 +721,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T10:47:37+00:00",
           "entry_price": 1.84,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 1.7,
+          "perf_pct": -7.61,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "GRRR",
@@ -732,10 +732,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T10:05:11+00:00",
           "entry_price": 15.86,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 20.48,
+          "perf_pct": 29.13,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "NVDA",
@@ -743,10 +743,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T09:22:29+00:00",
           "entry_price": 209.62,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 211.14,
+          "perf_pct": 0.73,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "IREN",
@@ -754,10 +754,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T09:12:19+00:00",
           "entry_price": 60.69,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 63.54,
+          "perf_pct": 4.7,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "XFAB",
@@ -776,10 +776,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T08:14:13+00:00",
           "entry_price": 6.51,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 6.81,
+          "perf_pct": 4.61,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "USAR",
@@ -787,10 +787,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T07:01:44+00:00",
           "entry_price": 26.79,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 28.01,
+          "perf_pct": 4.55,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "AVGO",
@@ -798,10 +798,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T04:45:29+00:00",
           "entry_price": 420.08,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 446.77,
+          "perf_pct": 6.35,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "SMTC",
@@ -809,10 +809,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T05:41:00+00:00",
           "entry_price": 158.23,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 152.54,
+          "perf_pct": -3.6,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "NVTS",
@@ -820,10 +820,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T05:35:21+00:00",
           "entry_price": 28.93,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 26.6,
+          "perf_pct": -8.05,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "AOSL",
@@ -831,10 +831,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T05:35:21+00:00",
           "entry_price": 48.12,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 45.35,
+          "perf_pct": -5.76,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "ACMR",
@@ -842,10 +842,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T04:30:22+00:00",
           "entry_price": 86.62,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 86.56,
+          "perf_pct": -0.07,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "RDW",
@@ -853,10 +853,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T04:23:40+00:00",
           "entry_price": 23.38,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 24.57,
+          "perf_pct": 5.09,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "SIVE",
@@ -864,10 +864,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T06:48:10+00:00",
           "entry_price": 73.85,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 68.95,
+          "perf_pct": -6.64,
+          "result": "LOSE",
+          "finalized": true
         },
         {
           "ticker": "SNDK",
@@ -875,10 +875,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T03:07:50+00:00",
           "entry_price": 1552.05,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 1694.98,
+          "perf_pct": 9.21,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "AAPL",
@@ -886,10 +886,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T12:51:04+00:00",
           "entry_price": 312.6,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 312.06,
+          "perf_pct": 0.17,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "GFS",
@@ -897,10 +897,10 @@
           "signal_date": "2026-05-27",
           "tweet_timestamp": "2026-05-27T12:15:05+00:00",
           "entry_price": 81.45,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 79.97,
+          "perf_pct": 1.82,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "ORCL",
@@ -908,10 +908,10 @@
           "signal_date": "2026-05-28",
           "tweet_timestamp": "2026-05-28T14:57:42+00:00",
           "entry_price": 196.93,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
+          "friday_close": 225.78,
+          "perf_pct": 14.65,
+          "result": "WIN",
+          "finalized": true
         },
         {
           "ticker": "LLY",
@@ -919,6 +919,155 @@
           "signal_date": "2026-05-28",
           "tweet_timestamp": "2026-05-28T14:56:03+00:00",
           "entry_price": 1145.41,
+          "friday_close": 1105.0,
+          "perf_pct": -3.53,
+          "result": "LOSE",
+          "finalized": true
+        },
+        {
+          "ticker": "MU",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T14:45:49+00:00",
+          "entry_price": 932.02,
+          "friday_close": 971.0,
+          "perf_pct": 4.18,
+          "result": "WIN",
+          "finalized": true
+        },
+        {
+          "ticker": "NBIS",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": null,
+          "entry_price": 224.5,
+          "friday_close": 231.09,
+          "perf_pct": 2.94,
+          "result": "WIN",
+          "finalized": true
+        },
+        {
+          "ticker": "EOSE",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T14:54:32+00:00",
+          "entry_price": 8.88,
+          "friday_close": 8.43,
+          "perf_pct": -5.07,
+          "result": "LOSE",
+          "finalized": true
+        },
+        {
+          "ticker": "SIVE",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T14:17:58+00:00",
+          "entry_price": 65.2,
+          "friday_close": 68.95,
+          "perf_pct": 5.75,
+          "result": "WIN",
+          "finalized": true
+        },
+        {
+          "ticker": "CRWV",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T14:56:27+00:00",
+          "entry_price": 104.95,
+          "friday_close": 109.53,
+          "perf_pct": 4.36,
+          "result": "WIN",
+          "finalized": true
+        },
+        {
+          "ticker": "SNDK",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T14:15:31+00:00",
+          "entry_price": 1676.6,
+          "friday_close": 1694.98,
+          "perf_pct": 1.1,
+          "result": "WIN",
+          "finalized": true
+        },
+        {
+          "ticker": "MRVL",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T14:09:54+00:00",
+          "entry_price": 196.76,
+          "friday_close": 205.0,
+          "perf_pct": 4.19,
+          "result": "WIN",
+          "finalized": true
+        },
+        {
+          "ticker": "ARM",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T14:02:27+00:00",
+          "entry_price": 331.25,
+          "friday_close": 353.29,
+          "perf_pct": 6.65,
+          "result": "WIN",
+          "finalized": true
+        },
+        {
+          "ticker": "ACHR",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T14:01:01+00:00",
+          "entry_price": 6.81,
+          "friday_close": 6.81,
+          "perf_pct": 0.0,
+          "result": "LOSE",
+          "finalized": true
+        },
+        {
+          "ticker": "ONDS",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T14:06:23+00:00",
+          "entry_price": 13.0,
+          "friday_close": 13.22,
+          "perf_pct": 1.69,
+          "result": "WIN",
+          "finalized": true
+        },
+        {
+          "ticker": "DELL",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T13:36:59+00:00",
+          "entry_price": 317.03,
+          "friday_close": 420.91,
+          "perf_pct": 32.77,
+          "result": "WIN",
+          "finalized": true
+        },
+        {
+          "ticker": "IPWR",
+          "action": "BUY",
+          "signal_date": "2026-05-28",
+          "tweet_timestamp": "2026-05-28T13:24:54+00:00",
+          "entry_price": 8.65,
+          "friday_close": 7.44,
+          "perf_pct": -13.99,
+          "result": "LOSE",
+          "finalized": true
+        }
+      ]
+    },
+    "2026-W22": {
+      "week_label": "Week 22 (Jun 01 - Jun 05, 2026)",
+      "friday_date": "2026-06-05",
+      "trades": [
+        {
+          "ticker": "NOW",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-30T00:59:37+00:00",
+          "entry_price": 124.37,
           "friday_close": 0.0,
           "perf_pct": 0.0,
           "result": "PENDING",
@@ -927,42 +1076,86 @@
         {
           "ticker": "MU",
           "action": "BUY",
-          "signal_date": "2026-05-28",
-          "tweet_timestamp": "2026-05-28T14:45:49+00:00",
-          "entry_price": 932.02,
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-30T02:31:14+00:00",
+          "entry_price": 971.0,
           "friday_close": 0.0,
           "perf_pct": 0.0,
           "result": "PENDING",
           "finalized": false
         },
         {
-          "ticker": "NBIS",
+          "ticker": "NVDA",
           "action": "BUY",
-          "signal_date": "2026-05-28",
-          "tweet_timestamp": null,
-          "entry_price": 224.5,
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-30T02:31:14+00:00",
+          "entry_price": 211.14,
           "friday_close": 0.0,
           "perf_pct": 0.0,
           "result": "PENDING",
           "finalized": false
         },
         {
-          "ticker": "EOSE",
+          "ticker": "ORCL",
           "action": "BUY",
-          "signal_date": "2026-05-28",
-          "tweet_timestamp": "2026-05-28T14:54:32+00:00",
-          "entry_price": 8.88,
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T23:43:49+00:00",
+          "entry_price": 225.78,
           "friday_close": 0.0,
           "perf_pct": 0.0,
           "result": "PENDING",
           "finalized": false
         },
         {
-          "ticker": "SIVE",
+          "ticker": "AAOI",
           "action": "BUY",
-          "signal_date": "2026-05-28",
-          "tweet_timestamp": "2026-05-28T14:17:58+00:00",
-          "entry_price": 65.2,
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-30T01:39:24+00:00",
+          "entry_price": 158.41,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "COIN",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T22:08:42+00:00",
+          "entry_price": 189.03,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "ZETA",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T21:13:17+00:00",
+          "entry_price": 22.89,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "PLTR",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T21:09:55+00:00",
+          "entry_price": 156.54,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "IMSR",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T21:24:53+00:00",
+          "entry_price": 9.13,
           "friday_close": 0.0,
           "perf_pct": 0.0,
           "result": "PENDING",
@@ -971,31 +1164,130 @@
         {
           "ticker": "CRWV",
           "action": "BUY",
-          "signal_date": "2026-05-28",
-          "tweet_timestamp": "2026-05-28T14:56:27+00:00",
-          "entry_price": 104.95,
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T21:24:53+00:00",
+          "entry_price": 109.53,
           "friday_close": 0.0,
           "perf_pct": 0.0,
           "result": "PENDING",
           "finalized": false
         },
         {
-          "ticker": "SNDK",
+          "ticker": "CRM",
           "action": "BUY",
-          "signal_date": "2026-05-28",
-          "tweet_timestamp": "2026-05-28T14:15:31+00:00",
-          "entry_price": 1676.6,
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T20:26:10+00:00",
+          "entry_price": 191.1,
           "friday_close": 0.0,
           "perf_pct": 0.0,
           "result": "PENDING",
           "finalized": false
         },
         {
-          "ticker": "MRVL",
+          "ticker": "FSLR",
           "action": "BUY",
-          "signal_date": "2026-05-28",
-          "tweet_timestamp": "2026-05-28T14:09:54+00:00",
-          "entry_price": 196.76,
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T20:22:46+00:00",
+          "entry_price": 306.79,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "NBIS",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T20:14:26+00:00",
+          "entry_price": 231.09,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "IBM",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T20:50:15+00:00",
+          "entry_price": 297.8,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "CSCO",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T19:36:32+00:00",
+          "entry_price": 121.33,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "INOD",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T19:00:00+00:00",
+          "entry_price": 105.56,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "TEAM",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T18:11:56+00:00",
+          "entry_price": 107.68,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "SOFI",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T18:11:52+00:00",
+          "entry_price": 18.31,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "HOOD",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T17:43:17+00:00",
+          "entry_price": 93.42,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "DDOG",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T18:11:20+00:00",
+          "entry_price": 242.84,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "ALMU",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T17:22:17+00:00",
+          "entry_price": 21.64,
           "friday_close": 0.0,
           "perf_pct": 0.0,
           "result": "PENDING",
@@ -1004,31 +1296,9 @@
         {
           "ticker": "ARM",
           "action": "BUY",
-          "signal_date": "2026-05-28",
-          "tweet_timestamp": "2026-05-28T14:02:27+00:00",
-          "entry_price": 331.25,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
-        },
-        {
-          "ticker": "ACHR",
-          "action": "BUY",
-          "signal_date": "2026-05-28",
-          "tweet_timestamp": "2026-05-28T14:01:01+00:00",
-          "entry_price": 6.81,
-          "friday_close": 0.0,
-          "perf_pct": 0.0,
-          "result": "PENDING",
-          "finalized": false
-        },
-        {
-          "ticker": "ONDS",
-          "action": "BUY",
-          "signal_date": "2026-05-28",
-          "tweet_timestamp": "2026-05-28T14:06:23+00:00",
-          "entry_price": 13.0,
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T17:16:55+00:00",
+          "entry_price": 352.66,
           "friday_close": 0.0,
           "perf_pct": 0.0,
           "result": "PENDING",
@@ -1037,20 +1307,328 @@
         {
           "ticker": "DELL",
           "action": "BUY",
-          "signal_date": "2026-05-28",
-          "tweet_timestamp": "2026-05-28T13:36:59+00:00",
-          "entry_price": 317.03,
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T17:15:25+00:00",
+          "entry_price": 409.13,
           "friday_close": 0.0,
           "perf_pct": 0.0,
           "result": "PENDING",
           "finalized": false
         },
         {
-          "ticker": "IPWR",
+          "ticker": "MSFT",
           "action": "BUY",
-          "signal_date": "2026-05-28",
-          "tweet_timestamp": "2026-05-28T13:24:54+00:00",
-          "entry_price": 8.65,
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T17:04:44+00:00",
+          "entry_price": 443.63,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "AMC",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T16:36:25+00:00",
+          "entry_price": 1.74,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "RKLB",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T16:47:29+00:00",
+          "entry_price": 141.12,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "FPS",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T16:42:50+00:00",
+          "entry_price": 52.37,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "VRRM",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T16:06:14+00:00",
+          "entry_price": 4.49,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "FLEX",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T16:11:18+00:00",
+          "entry_price": 152.34,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "NOK",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T15:54:56+00:00",
+          "entry_price": 14.63,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "TSM",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T15:24:14+00:00",
+          "entry_price": 419.09,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "DUOT",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T14:16:00+00:00",
+          "entry_price": 13.73,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "AEHR",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T14:02:00+00:00",
+          "entry_price": 96.37,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "AVGO",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T13:42:46+00:00",
+          "entry_price": 432.95,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "ONDS",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T13:39:23+00:00",
+          "entry_price": 12.74,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "INTC",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T13:33:32+00:00",
+          "entry_price": 123.8,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "HBM",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T13:33:05+00:00",
+          "entry_price": 28.13,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "AMD",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T13:11:52+00:00",
+          "entry_price": 516.1,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "AMZN",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T12:44:24+00:00",
+          "entry_price": 270.64,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "GOOGL",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T12:44:24+00:00",
+          "entry_price": 380.34,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "OUST",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T12:44:24+00:00",
+          "entry_price": 46.05,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "XPEV",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T12:44:24+00:00",
+          "entry_price": 16.45,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "OSCR",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T12:37:33+00:00",
+          "entry_price": 22.23,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "MP",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T12:03:39+00:00",
+          "entry_price": 64.7,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "RDDT",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T11:52:40+00:00",
+          "entry_price": 176.0,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "RPI",
+          "action": "BUY",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T11:22:23+00:00",
+          "entry_price": 0.0,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "LITE",
+          "action": "SELL",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T20:50:15+00:00",
+          "entry_price": 854.96,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "SMH",
+          "action": "SELL",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T17:46:19+00:00",
+          "entry_price": 599.97,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "MXL",
+          "action": "SELL",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T15:42:12+00:00",
+          "entry_price": 92.35,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "CRDO",
+          "action": "SELL",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T15:13:39+00:00",
+          "entry_price": 228.47,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "ASTS",
+          "action": "SELL",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T14:05:13+00:00",
+          "entry_price": 107.14,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "TEM",
+          "action": "SELL",
+          "signal_date": "2026-05-29",
+          "tweet_timestamp": "2026-05-29T13:12:47+00:00",
+          "entry_price": 50.47,
           "friday_close": 0.0,
           "perf_pct": 0.0,
           "result": "PENDING",
