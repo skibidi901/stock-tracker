@@ -3317,5 +3317,144 @@
         ]
       }
     ]
+  },
+  "2026-05-30": {
+    "buy": [
+      {
+        "ticker": "NVDA",
+        "summary": "NVIDIA is highly favored due to being the cheapest major chip designer relative to its high expected growth, alongside catalysts like entering the PC CPU market with ARM architecture and the rise of AI PCs.",
+        "tweets": [
+          {
+            "author": "oguzerkan",
+            "author_name": "Oguz Erkan",
+            "tweet_id": "2060653806094889293",
+            "text": "$NVDA is now the cheapest of the major chip designers.\n\nYet, it has the second-highest expected cumulative growth for the next 3 years:\n\n- $AVGO: 223.5%\n- $NVDA: 205.5%\n- $AMD: 196.7%\n- $MRVL: 170.9%\n- $ARM: 108.7%\n- $INTC: 35.3%\n- $QCOM: 5.2%\n\nWhy wouldn't $NVDA work from here? https://t.co/Rs1RYTjTbv",
+            "created_at": "2026-05-30T09:25:27+00:00"
+          },
+          {
+            "author": "xiaomustock",
+            "author_name": "川沐｜Trumoo🐮",
+            "tweet_id": "2060615389155840461",
+            "text": "想象中为什么会诞生AI PC 需求，相当于云厂因为电力难以扩张，那么就把AI算力下放到每一个普通人家里，电力成本他们承担，卖硬件的 $NVDA $MU $DRAM 继续赚钱，\n他们只是相当于把Agent需要的那部分AI数据中心需求拆分成了无数个AI PC 下放到每家每户。 https://t.co/oYl17krQat",
+            "created_at": "2026-05-30T06:52:47+00:00"
+          },
+          {
+            "author": "hanking66",
+            "author_name": "美股仙人",
+            "tweet_id": "2060612487557554685",
+            "text": "nvda 大概率要用 arm 架构进军 pc cpu 市场了。NVDA 涨不涨不知道，intc 肯定是要麻了，难怪最近 intc 跟死了妈一样🤣\n\nBuy the dip，长期持有，Discord在个人资料。 https://t.co/aoEJcyj0sK",
+            "created_at": "2026-05-30T06:41:16+00:00"
+          },
+          {
+            "author": "xiaomustock",
+            "author_name": "川沐｜Trumoo🐮",
+            "tweet_id": "2060603880270967100",
+            "text": "黄仁勋大概率讲的还是存储，cpu，gpu，\n但会多一个新东西估计就是AI PC \n25.0528，121.5990是台北发布会坐标\n$ARM $MSFT $NVDA 同发A new era of PC\n \nAI PC一样需要海量存储，单PC内存需求量肯定比常规PC大很多。同时CPU权重被提升。 https://t.co/STZPLbotep https://t.co/AvQpgVTiBx",
+            "created_at": "2026-05-30T06:07:03+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "MU",
+        "summary": "Micron is positioned to profit heavily from exponential growth in HBM capacity per GPU and the increased memory demands of decentralized AI PCs.",
+        "tweets": [
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2060617956732858790",
+            "text": "RT @TradexWhisperer: $MU $DRAM HBM per GPU:\n\nH100: 80GB\nH200: 141GB\nB200: 192GB\nRubin: 288GB\nRubin Ultra: 576GB\n\nFrom 80GB to 576GB in five…",
+            "created_at": "2026-05-30T07:02:59+00:00"
+          },
+          {
+            "author": "xiaomustock",
+            "author_name": "川沐｜Trumoo🐮",
+            "tweet_id": "2060615389155840461",
+            "text": "想象中为什么会诞生AI PC 需求，相当于云厂因为电力难以扩张，那么就把AI算力下放到每一个普通人家里，电力成本他们承担，卖硬件的 $NVDA $MU $DRAM 继续赚钱，\n他们只是相当于把Agent需要的那部分AI数据中心需求拆分成了无数个AI PC 下放到每家每户。 https://t.co/oYl17krQat",
+            "created_at": "2026-05-30T06:52:47+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "MSFT",
+        "summary": "Microsoft exhibits strong bullish technical momentum aligned with a volume node launch pad, supported by its partnership in ushering in the new AI PC era.",
+        "tweets": [
+          {
+            "author": "xiaomustock",
+            "author_name": "川沐｜Trumoo🐮",
+            "tweet_id": "2060603880270967100",
+            "text": "黄仁勋大概率讲的还是存储，cpu，gpu，\n但会多一个新东西估计就是AI PC \n25.0528，121.5990是台北发布会坐标\n$ARM $MSFT $NVDA 同发A new era of PC\n \nAI PC一样需要海量存储，单PC内存需求量肯定比常规PC大很多。同时CPU权重被提升。 https://t.co/STZPLbotep https://t.co/AvQpgVTiBx",
+            "created_at": "2026-05-30T06:07:03+00:00"
+          },
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2060583034827804943",
+            "text": "$MSFT Blue Candle: $400 → $450. Shared this on X.\n\nThis is what happens when a BLUE candle aligns with a Volume Node. A Launch Pad.\n\nGet 300+ charts daily. Try it free:\nhttps://t.co/ZQDP5HCFyq https://t.co/Dza6Av7LR2 https://t.co/AA33AC49n6",
+            "created_at": "2026-05-30T04:44:13+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "SIVE",
+        "summary": "Sivers Semiconductors is seeing highly bullish sentiment following an earnings transcript that revealed a strong pluggable partnership with Jabil and growing optical transceiver requests.",
+        "tweets": [
+          {
+            "author": "aleabitoreddit",
+            "author_name": "Serenity",
+            "tweet_id": "2060615296357196178",
+            "text": "&gt; markets went from doubting $SIVE customers ($150m MC)\n\nTurns out it’s likely companies eg. $JBL, Ayar, $AAPL, Defense Primes, $MRVL celestial. \n\n&gt; to doubting their execution ($600m mc)\n\nTurns out you skip the capex if you go with Win Semi\n\n&gt; to doubting what share they get vs",
+            "created_at": "2026-05-30T06:52:25+00:00"
+          },
+          {
+            "author": "aleabitoreddit",
+            "author_name": "Serenity",
+            "tweet_id": "2060597940461486513",
+            "text": "Had some more time go through $SIVE earnings transcript, it’s very bullish:\n\n- $JBL pluggable partnership led to more optical transceiver requests for $SIVE  \n\nSo maybe Innolight/Eoptolink and other large players are my guess. \n\n- More laser capacity on top of Win Semi with more https://t.co/ZaptyNiSv1",
+            "created_at": "2026-05-30T05:43:27+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "PANW",
+        "summary": "Palo Alto Networks presents a clear, long-term bullish setup on its monthly chart, signaling continued upward momentum.",
+        "tweets": [
+          {
+            "author": "dannycheng2022",
+            "author_name": "Danny cheng",
+            "tweet_id": "2060598258666529060",
+            "text": "$PANW (May 30, 2026-monthly chart)\n\nA freebie for all.  The bullish signal was highlighted in early May with my community — well before the recent surge — after spotting the clear bullish setup.  \n\nIf you simply follow the yellow candles to sell on the monthly chart, you would https://t.co/tAm4I0oAe3",
+            "created_at": "2026-05-30T05:44:43+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "TKO",
+        "summary": "TKO Group Holdings is highlighted as a strong buy-the-dip candidate, driven by speculative retail enthusiasm surrounding Donald Trump's involvement.",
+        "tweets": [
+          {
+            "author": "hanking66",
+            "author_name": "美股仙人",
+            "tweet_id": "2060561816359752069",
+            "text": "这…这…川普买了… $tko，冲就完事了！别问这是什么，我也是第一次听到😅😅\n\n坚持贯彻黄毛指哪我冲那，放弃思考，扔掉大脑🧠🧠\n\nBuy the dip，长期持有，Discord在个人资料。",
+            "created_at": "2026-05-30T03:19:55+00:00"
+          }
+        ]
+      }
+    ],
+    "sell": [
+      {
+        "ticker": "INTC",
+        "summary": "Intel is experiencing severe bearish sentiment and underperformance as NVIDIA prepares to challenge its dominance by entering the PC CPU market using ARM architecture.",
+        "tweets": [
+          {
+            "author": "hanking66",
+            "author_name": "美股仙人",
+            "tweet_id": "2060612487557554685",
+            "text": "nvda 大概率要用 arm 架构进军 pc cpu 市场了。NVDA 涨不涨不知道，intc 肯定是要麻了，难怪最近 intc 跟死了妈一样🤣\n\nBuy the dip，长期持有，Discord在个人资料。 https://t.co/aoEJcyj0sK",
+            "created_at": "2026-05-30T06:41:16+00:00"
+          }
+        ]
+      }
+    ]
   }
 }

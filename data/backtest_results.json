@@ -1633,6 +1633,83 @@
           "perf_pct": 0.0,
           "result": "PENDING",
           "finalized": false
+        },
+        {
+          "ticker": "NVDA",
+          "action": "BUY",
+          "signal_date": "2026-05-30",
+          "tweet_timestamp": "2026-05-30T09:25:27+00:00",
+          "entry_price": 211.14,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "MU",
+          "action": "BUY",
+          "signal_date": "2026-05-30",
+          "tweet_timestamp": "2026-05-30T07:02:59+00:00",
+          "entry_price": 971.0,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "MSFT",
+          "action": "BUY",
+          "signal_date": "2026-05-30",
+          "tweet_timestamp": "2026-05-30T06:07:03+00:00",
+          "entry_price": 450.24,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "SIVE",
+          "action": "BUY",
+          "signal_date": "2026-05-30",
+          "tweet_timestamp": "2026-05-30T06:52:25+00:00",
+          "entry_price": 68.95,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "PANW",
+          "action": "BUY",
+          "signal_date": "2026-05-30",
+          "tweet_timestamp": "2026-05-30T05:44:43+00:00",
+          "entry_price": 281.69,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "TKO",
+          "action": "BUY",
+          "signal_date": "2026-05-30",
+          "tweet_timestamp": "2026-05-30T03:19:55+00:00",
+          "entry_price": 205.18,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "INTC",
+          "action": "SELL",
+          "signal_date": "2026-05-30",
+          "tweet_timestamp": "2026-05-30T06:41:16+00:00",
+          "entry_price": 114.68,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
         }
       ]
     }
