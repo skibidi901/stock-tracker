@@ -1710,6 +1710,83 @@
           "perf_pct": 0.0,
           "result": "PENDING",
           "finalized": false
+        },
+        {
+          "ticker": "RBLX",
+          "action": "BUY",
+          "signal_date": "2026-05-31",
+          "tweet_timestamp": "2026-05-31T10:06:50+00:00",
+          "entry_price": 0.0,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "IONQ",
+          "action": "BUY",
+          "signal_date": "2026-05-31",
+          "tweet_timestamp": "2026-05-31T08:27:13+00:00",
+          "entry_price": 0.0,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "NVTS",
+          "action": "BUY",
+          "signal_date": "2026-05-31",
+          "tweet_timestamp": "2026-05-31T06:36:26+00:00",
+          "entry_price": 0.0,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "MU",
+          "action": "BUY",
+          "signal_date": "2026-05-31",
+          "tweet_timestamp": "2026-05-31T05:37:53+00:00",
+          "entry_price": 0.0,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "ZETA",
+          "action": "BUY",
+          "signal_date": "2026-05-31",
+          "tweet_timestamp": "2026-05-31T04:13:09+00:00",
+          "entry_price": 0.0,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "SPY",
+          "action": "BUY",
+          "signal_date": "2026-05-31",
+          "tweet_timestamp": "2026-05-31T03:39:52+00:00",
+          "entry_price": 0.0,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "RDDT",
+          "action": "BUY",
+          "signal_date": "2026-05-31",
+          "tweet_timestamp": "2026-05-31T03:22:39+00:00",
+          "entry_price": 0.0,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
         }
       ]
     }

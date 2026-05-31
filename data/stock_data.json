@@ -3456,5 +3456,108 @@
         ]
       }
     ]
+  },
+  "2026-05-31": {
+    "buy": [
+      {
+        "ticker": "RBLX",
+        "summary": "Roblox has successfully filled its 2024 gap at $43 and established support at the multi-year $40 level. A bullish crossover on the weekly Hull Moving Average (HMA) signals a potential trend reversal.",
+        "tweets": [
+          {
+            "author": "Han_Akamatsu",
+            "author_name": "Han Akamatsu 赤松",
+            "tweet_id": "2061026609683923434",
+            "text": "$RBLX Long Roblox at $45/47. ✍🏻\n\nRoblox has now filled the gap it left in 2024 at $43 and found support at that multi year support level of $40. \n\nNow stock had a bullish crossover on the 1W HMA this week, with stock closing above $45.5. These crossovers signal a change of trend https://t.co/tZMydlquSJ",
+            "created_at": "2026-05-31T10:06:50+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "IONQ",
+        "summary": "IONQ is showing early signs of a bottoming process indicated by a volatility hole, suggesting a potential trend reversal is underway.",
+        "tweets": [
+          {
+            "author": "dannycheng2022",
+            "author_name": "Danny cheng",
+            "tweet_id": "2061001539972726964",
+            "text": "$IONQ (May 31, 2026-daily chart update)\n\n$IONQ – A freebie for my X followers.\n\nThe volatility hole signaled the early stages of a bottoming process, which typically takes several weeks before a clear trend-reversal candle appears.  \n\nSince the bullish red ribbon unfolded in https://t.co/ugxen9yUTa",
+            "created_at": "2026-05-31T08:27:13+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "NVTS",
+        "summary": "Navitas Semiconductor is highlighted as a key pioneer in GaN power supply for AI data centers, backed by solid revenue and backlog data.",
+        "tweets": [
+          {
+            "author": "nft_hu",
+            "author_name": "Fiona ❤️& ✌️",
+            "tweet_id": "2060973662484967786",
+            "text": "800HVDC的第二篇来了！这篇会更聚焦在他们的财报数据和积压订单上。\n因为包含的标的过多，所以这一篇中我先选取我认为比较值得一看的公司：\n（排名具有强主观性，有值得看的欢迎评论区补充）\n\n1️⃣ $NVTS 纳威半导体虽然同时有SiC和GaN，但是主要优势还是在GaN。AI 数据中心 GaN 供电的先行者营收 ~$77M https://t.co/6tr6y4gAgq",
+            "created_at": "2026-05-31T06:36:26+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "MU",
+        "summary": "Micron Technology is positioned as a new leader in the AI sector, representing a major paradigm shift in the market.",
+        "tweets": [
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2060958924422148166",
+            "text": "RT @TradexWhisperer: $MU | January 2, 2026\n\nA New AI Leader Is Born. This is the first glimpse of a paradigm shift. https://t.co/DK2OuyxpTS",
+            "created_at": "2026-05-31T05:37:53+00:00"
+          },
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2060947199694143592",
+            "text": "$MU How do you know if you are an idiot? https://t.co/MUGSiVAJIl",
+            "created_at": "2026-05-31T04:51:17+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "ZETA",
+        "summary": "Zeta Global is rated as a buy based on a short-squeeze setup, showing strong performance as a major portfolio holding.",
+        "tweets": [
+          {
+            "author": "theaiportfolios",
+            "author_name": "The Claude Portfolio",
+            "tweet_id": "2060937600794591294",
+            "text": "Commentary: ZETA is Claude's second-largest position at about 11% of the book, up roughly 40% since entry, and it ran 13% on May 29. @theaietf  rates it a Buy on a short-squeeze setup.\n\nHere's Claude's reasoning:\n\nZETA is my second-largest position and up about 40% since I bought https://t.co/ftcX8sWCKa https://t.co/G4WmLOq1my",
+            "created_at": "2026-05-31T04:13:09+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "SPY",
+        "summary": "The analyst maintains a long-term bullish outlook on the SPY, pointing to strong monthly charts that continue to defy bearish expectations.",
+        "tweets": [
+          {
+            "author": "dannycheng2022",
+            "author_name": "Danny cheng",
+            "tweet_id": "2060929227806097536",
+            "text": "Why I’ve Stayed Bullish on $SPY for 3 Years Straight — And Why the Permabears Keep Getting It Wrong\n(May 31, 2026-monthly chart)\n\nOver the past three years, I've consistently shared my $SPY charts on X, and every single time they've sparked heated debate—mostly from the same https://t.co/cdcC8s9tII",
+            "created_at": "2026-05-31T03:39:52+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "RDDT",
+        "summary": "Reddit is presented as a highly attractive investment due to seven consecutive quarters of over 60% revenue growth, 91.5% gross margins, and strong international user expansion.",
+        "tweets": [
+          {
+            "author": "TheProfInvestor",
+            "author_name": "Prof",
+            "tweet_id": "2060924893102051547",
+            "text": "$RDDT This is the easy choice which most people are not going to make today: \n\n&gt; Seven straight quarters of 60%+ revenue growth.\n&gt; 91.5% gross margins. Barely any costs to scale.\n&gt; 126.8M daily active users and still growing. International up 76% - the US is already monetized.\n&gt; https://t.co/R5zvBj0DmS",
+            "created_at": "2026-05-31T03:22:39+00:00"
+          }
+        ]
+      }
+    ],
+    "sell": []
   }
 }
