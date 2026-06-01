@@ -3559,5 +3559,262 @@
       }
     ],
     "sell": []
+  },
+  "2026-06-01": {
+    "buy": [
+      {
+        "ticker": "INOD",
+        "summary": "The stock has broken out to new all-time highs, signaling strong bullish momentum.",
+        "tweets": [
+          {
+            "author": "tradergokux",
+            "author_name": "TraderGoku",
+            "tweet_id": "2061503522298830920",
+            "text": "$INOD 突破至历史新高 https://t.co/2SzjaPZUtn https://t.co/Iz9VCCHqrc",
+            "created_at": "2026-06-01T17:41:55+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "PLTR",
+        "summary": "Strong bullish sentiment and fear of missing out (FOMO) are driving expectations for a major upward move.",
+        "tweets": [
+          {
+            "author": "Remzztrades",
+            "author_name": "Remz",
+            "tweet_id": "2061503412139631046",
+            "text": "I don’t think anyone wants to miss $PLTR. Some major fomo possible now.",
+            "created_at": "2026-06-01T17:41:28+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "VRRM",
+        "summary": "Traders are highly bullish on call options, anticipating a major run once the $5 resistance level flips into support.",
+        "tweets": [
+          {
+            "author": "sparkle6193920",
+            "author_name": "💎 Diamond Trades 💎",
+            "tweet_id": "2061503272075092463",
+            "text": "RT @sparkle6193920: Diamond 💎 subscribers and discord members might retire from $vrrm 🔐💎💝😘 https://t.co/fut5oeu3oj",
+            "created_at": "2026-06-01T17:40:55+00:00"
+          },
+          {
+            "author": "sparkle6193920",
+            "author_name": "💎 Diamond Trades 💎",
+            "tweet_id": "2061503040314548307",
+            "text": "These $VRRM calls are .70\nOnce $5 resistance flips into support 🔑 the true fun begins \n\n2/2 FREE 💎💎💎 multi baggers with $orcl ✌🏽 https://t.co/M1NsgQqSY6",
+            "created_at": "2026-06-01T17:40:00+00:00"
+          },
+          {
+            "author": "sparkle6193920",
+            "author_name": "💎 Diamond Trades 💎",
+            "tweet_id": "2061501641455534356",
+            "text": "RT @RiCobra66: @sparkle6193920 Lady Di good call on VRRM just made 1k",
+            "created_at": "2026-06-01T17:34:26+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "ORCL",
+        "summary": "The stock is described as a waking giant with call options yielding 100% gains and a price target of over $300.",
+        "tweets": [
+          {
+            "author": "sparkle6193920",
+            "author_name": "💎 Diamond Trades 💎",
+            "tweet_id": "2061503040314548307",
+            "text": "These $VRRM calls are .70\nOnce $5 resistance flips into support 🔑 the true fun begins \n\n2/2 FREE 💎💎💎 multi baggers with $orcl ✌🏽 https://t.co/M1NsgQqSY6",
+            "created_at": "2026-06-01T17:40:00+00:00"
+          },
+          {
+            "author": "StockTraderHub",
+            "author_name": "The Stock Trader Hub",
+            "tweet_id": "2061502383021006919",
+            "text": "RT @RockyTSTH: $ORCL calls posted in the group hitting 100%. https://t.co/CPg6XkrgAh",
+            "created_at": "2026-06-01T17:37:23+00:00"
+          },
+          {
+            "author": "StockTraderHub",
+            "author_name": "The Stock Trader Hub",
+            "tweet_id": "2061502258894774719",
+            "text": "$ORCL BANG! Sleeping giant woke up, $300+ soon 😘 https://t.co/WCHQ4Q6P2B https://t.co/S7nl6wqRxM",
+            "created_at": "2026-06-01T17:36:54+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "ZETA",
+        "summary": "The market is actively re-rating the stock following impressive 50% revenue growth, with analysts targeting a move to $30.",
+        "tweets": [
+          {
+            "author": "amitisinvesting",
+            "author_name": "amit",
+            "tweet_id": "2061502668028154061",
+            "text": "looks like the street isn’t ignoring 50% revenue growth on software companies anymore 😂\n\n$ZETA +12% https://t.co/v7Cc1XoH2m",
+            "created_at": "2026-06-01T17:38:31+00:00"
+          },
+          {
+            "author": "TheRonnieVShow",
+            "author_name": "RonnieV",
+            "tweet_id": "2061501184377045118",
+            "text": "The chase continues...\n\n$17.43 ➡️ $20.25 🎯 ➡️ $25.44 🎯\n\nNext stop: $30\n\n$ZETA is re-rating in real time. https://t.co/zcLxE3feOX",
+            "created_at": "2026-06-01T17:32:37+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "DRAM",
+        "summary": "Maintained as a core portfolio holding representing 60% of the user's allocation to capture storage sector upside.",
+        "tweets": [
+          {
+            "author": "xiaomustock",
+            "author_name": "川沐｜Trumoo🐮",
+            "tweet_id": "2061501875703194018",
+            "text": "仓位最近调整成了这样\n美区： $DRAM   $MRVL $NOK  $IBM \n（主仓位dram 60%，1/20仓ibm，其他没变）\n港区：#2x做多海力士 \na区：#港美互联网 （  #中韩半导体 已经清仓换了港美）\n支付宝基金：#富国全球科技 #建信新兴市场\n全方位无死角的存储持仓，光通信，附加一点 $IBM 作为未来量子仓。 https://t.co/SO8b61ElDb",
+            "created_at": "2026-06-01T17:35:22+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "IBM",
+        "summary": "Held as a long-term position to serve as a strategic exposure to future quantum computing developments.",
+        "tweets": [
+          {
+            "author": "xiaomustock",
+            "author_name": "川沐｜Trumoo🐮",
+            "tweet_id": "2061501875703194018",
+            "text": "仓位最近调整成了这样\n美区： $DRAM   $MRVL $NOK  $IBM \n（主仓位dram 60%，1/20仓ibm，其他没变）\n港区：#2x做多海力士 \na区：#港美互联网 （  #中韩半导体 已经清仓换了港美）\n支付宝基金：#富国全球科技 #建信新兴市场\n全方位无死角的存储持仓，光通信，附加一点 $IBM 作为未来量子仓。 https://t.co/SO8b61ElDb",
+            "created_at": "2026-06-01T17:35:22+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "NOK",
+        "summary": "Acquired in pre-market trading as part of a portfolio reallocation strategy focusing on global technology and storage.",
+        "tweets": [
+          {
+            "author": "xiaomustock",
+            "author_name": "川沐｜Trumoo🐮",
+            "tweet_id": "2061501875703194018",
+            "text": "仓位最近调整成了这样\n美区： $DRAM   $MRVL $NOK  $IBM \n（主仓位dram 60%，1/20仓ibm，其他没变）\n港区：#2x做多海力士 \na区：#港美互联网 （  #中韩半导体 已经清仓换了港美）\n支付宝基金：#富国全球科技 #建信新兴市场\n全方位无死角的存储持仓，光通信，附加一点 $IBM 作为未来量子仓。 https://t.co/SO8b61ElDb",
+            "created_at": "2026-06-01T17:35:22+00:00"
+          },
+          {
+            "author": "babyfolio",
+            "author_name": "Babyfolio",
+            "tweet_id": "2061499444604928459",
+            "text": "Posted on the sub 13 hrs ago\nI'll post here too.\nI trimmed $OUST and sold $6324 to buy $NOK in the pre-market.",
+            "created_at": "2026-06-01T17:25:43+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "INTC",
+        "summary": "Viewed as an undervalued infrastructure play that will benefit as agentic AI shifts control and memory traffic back to CPUs.",
+        "tweets": [
+          {
+            "author": "yianisz",
+            "author_name": "Yiannis Zourmpanos",
+            "tweet_id": "2061501798351786124",
+            "text": "$INTC is the cheapest way to own the plumbing nobody wants to model.\n\nAgentic AI pushes more control, memory traffic, and task orchestration back onto CPUs, while the crowd still prices the stack like GPUs swallow every dollar.\n\nThat favors boring servers, x86 refresh cycles, and",
+            "created_at": "2026-06-01T17:35:04+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "IMSR",
+        "summary": "The stock successfully broke out from its $8.5 resistance level on strong volume, showing promising gamma dynamics ahead of June OPEX.",
+        "tweets": [
+          {
+            "author": "Han_Akamatsu",
+            "author_name": "Han Akamatsu 赤松",
+            "tweet_id": "2061501362127647180",
+            "text": "$IMSR Lots of things can lie when trading a stock. Volume will never.\n\nLast days you brought the volume on $IMSR.\n\nAnd you combined it with a breakout from that $8.5 resistance level. \n\nGamma looks fantastic towards June OPEX. Let’s see how that $10 level treats us now and how https://t.co/KdrGVyix0J",
+            "created_at": "2026-06-01T17:33:20+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "CRWV",
+        "summary": "The stock is showing a strong weekly launchpad setup with call option trade ideas targeting a move toward $136-$143.",
+        "tweets": [
+          {
+            "author": "TrendSpider",
+            "author_name": "TrendSpider",
+            "tweet_id": "2061500523962868149",
+            "text": "Wasting no time $CRWV https://t.co/vCGqvOzn6x https://t.co/i9NyOIRH0N",
+            "created_at": "2026-06-01T17:30:00+00:00"
+          },
+          {
+            "author": "tradergokux",
+            "author_name": "TraderGoku",
+            "tweet_id": "2061500246341947557",
+            "text": "$CRWV Monster weekly launchpad, I want to see more volume. https://t.co/AOuTgQNAn4 https://t.co/3EbeDBESP7",
+            "created_at": "2026-06-01T17:28:54+00:00"
+          },
+          {
+            "author": "ProblemSniper",
+            "author_name": "ProblemSniper",
+            "tweet_id": "2061499090765222257",
+            "text": "TRADE IDEA: \n\n$CRWV 150C 6/18 3.5 or lesser. \n\nHas a look for day 2. If happens can see 136-143 this week. $NBIS is a monster. PT on that remains at 300. https://t.co/b2iIEXyOEm",
+            "created_at": "2026-06-01T17:24:18+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "AAOI",
+        "summary": "Highly bullish sentiment with call options up 80%, drawing comparisons to being the next major runner in the sector.",
+        "tweets": [
+          {
+            "author": "Ren_aramb",
+            "author_name": "Ren",
+            "tweet_id": "2061499457313624173",
+            "text": "@aleabitoreddit I guess great minds think alike. Lfg $AAOI \n\nThis for me is the next $SNDK in the making.\n\nUp 80% on Friday calls. I don’t often do calls so I’m proud lol.",
+            "created_at": "2026-06-01T17:25:46+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "NBIS",
+        "summary": "Described as a monster stock with a maintained price target of $300.",
+        "tweets": [
+          {
+            "author": "ProblemSniper",
+            "author_name": "ProblemSniper",
+            "tweet_id": "2061499090765222257",
+            "text": "TRADE IDEA: \n\n$CRWV 150C 6/18 3.5 or lesser. \n\nHas a look for day 2. If happens can see 136-143 this week. $NBIS is a monster. PT on that remains at 300. https://t.co/b2iIEXyOEm",
+            "created_at": "2026-06-01T17:24:18+00:00"
+          }
+        ]
+      }
+    ],
+    "sell": [
+      {
+        "ticker": "ARM",
+        "summary": "Despite being a prime beneficiary of Nvidia's CPU growth, the stock is avoided due to an excessively high price-to-earnings ratio.",
+        "tweets": [
+          {
+            "author": "xiaomustock",
+            "author_name": "川沐｜Trumoo🐮",
+            "tweet_id": "2061503255788532141",
+            "text": "$arm 好归好，英伟达cpu芯片最大受益者。\n市盈率下不去手，我不想买我睡不着影响我睡眠的资产，所以小市值股票和超高市盈率股票我几乎都不买。\n以前吃过亏了，所以一些机会我只能无奈错过。 https://t.co/rzq7eqsaMF",
+            "created_at": "2026-06-01T17:40:51+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "OUST",
+        "summary": "The position was trimmed in pre-market trading to reallocate capital into other opportunities.",
+        "tweets": [
+          {
+            "author": "babyfolio",
+            "author_name": "Babyfolio",
+            "tweet_id": "2061499444604928459",
+            "text": "Posted on the sub 13 hrs ago\nI'll post here too.\nI trimmed $OUST and sold $6324 to buy $NOK in the pre-market.",
+            "created_at": "2026-06-01T17:25:43+00:00"
+          }
+        ]
+      }
+    ]
   }
 }
