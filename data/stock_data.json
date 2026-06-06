@@ -5461,5 +5461,103 @@
         ]
       }
     ]
+  },
+  "2026-06-06": {
+    "buy": [
+      {
+        "ticker": "TSM",
+        "summary": "TSMC is experiencing massive demand with sales projected to grow over 30% this year, and its Arizona factory is already completely sold out through 2027.",
+        "tweets": [
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2063142882312380731",
+            "text": "$TSM \"‘It will be a long time before we can meet customer demand\" -TSMC CEO Jun 4th, 2026\n\nThe company expects sales to grow more than 30 percent this year.\n\nArizona factory is already sold out through 2027 and they are expanding fast but it is not enough. Big cloud companies",
+            "created_at": "2026-06-06T06:16:09+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "AVGO",
+        "summary": "Broadcom is identified as the premier AI-chip trade following NVIDIA, positioned to benefit heavily as hyperscalers shift focus toward custom silicon and unit economics.",
+        "tweets": [
+          {
+            "author": "yianisz",
+            "author_name": "Yiannis Zourmpanos",
+            "tweet_id": "2063138306318065716",
+            "text": "The clean AI-chip trade after $NVDA is $AVGO, not $AMD.\n\nCustom silicon matters when hyperscalers stop worshipping general-purpose GPUs and start squeezing unit economics.\n\nThe market still treats $AVGO like a networking add-on.\n\nThat misses the real setup: AI capex shifts from",
+            "created_at": "2026-06-06T05:57:58+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "MU",
+        "summary": "Micron is highly favored to capture massive demand for DRAM and HBM, catalyzed by Google's multi-billion dollar commitment to deploy 110,000 NVIDIA GPUs.",
+        "tweets": [
+          {
+            "author": "babyfolio",
+            "author_name": "Babyfolio",
+            "tweet_id": "2063186293060739480",
+            "text": "The bigger the crash, the bigger the concentration for me.\n\nI am looking at 3 companies only if this crash continues.\n\n$NBIS\n$CRDO / $ALAB(if premium is similar to Credo or close)\n$DRAM (Mostly $MU and SK Hynix)\n\nSo let's say market drops another 15%, you'll probably find me all",
+            "created_at": "2026-06-06T09:08:39+00:00"
+          },
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2063124526557474864",
+            "text": "$MU $SNDK $DRAM $NVDA Holy Shit\n\n$GOOGL just committed $11 billion per year to $SPCX @SpaceX for 110,000 NVIDIA GPUs. October 2026 through June 2029.\n\n110,000 GPUs need HBM. CPUs need DRAM. Storage needs NAND.\n\nHoarding GPU and HBM equals revenue.\n\nHouston we have liftoff https://t.co/XEyPmDHylG",
+            "created_at": "2026-06-06T05:03:12+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "NVDA",
+        "summary": "NVIDIA's growth outlook is bolstered by Google's massive commitment of $11 billion per year for 110,000 GPUs, securing its dominant position in AI hardware.",
+        "tweets": [
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2063124526557474864",
+            "text": "$MU $SNDK $DRAM $NVDA Holy Shit\n\n$GOOGL just committed $11 billion per year to $SPCX @SpaceX for 110,000 NVIDIA GPUs. October 2026 through June 2029.\n\n110,000 GPUs need HBM. CPUs need DRAM. Storage needs NAND.\n\nHoarding GPU and HBM equals revenue.\n\nHouston we have liftoff https://t.co/XEyPmDHylG",
+            "created_at": "2026-06-06T05:03:12+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "MRVL",
+        "summary": "Marvell Technology shows exceptional technical strength with its weekly candle breaking above the upper Bollinger Band, making it a strong high-beta hold.",
+        "tweets": [
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2063138436446658616",
+            "text": "RT @TradexWhisperer: $MRVL Never seen a weekly candle blow through the upper Bollinger Band like that. Not even $MU.\n\nJensen holds that kin…",
+            "created_at": "2026-06-06T05:58:29+00:00"
+          },
+          {
+            "author": "aleabitoreddit",
+            "author_name": "Serenity",
+            "tweet_id": "2063118835105014006",
+            "text": "How are all you regards on $RDDT down -99% after 2 red days? \n\nIs it that hard just to hold indiviudal stocks like $AAOI or $MRVL that are already high-beta?\n\nYou can be right directionally, but wrong on short-term timing. \n\nOne extra week or month makes a huge difference. https://t.co/UrbqiRIIta",
+            "created_at": "2026-06-06T04:40:35+00:00"
+          }
+        ]
+      }
+    ],
+    "sell": [
+      {
+        "ticker": "SLNH",
+        "summary": "The stock exhibits bearish technical momentum, trading below its Point of Control on the volume shelf and beneath key momentum bars.",
+        "tweets": [
+          {
+            "author": "dannycheng2022",
+            "author_name": "Danny cheng",
+            "tweet_id": "2063138682631303527",
+            "text": "$SLNH (June 6, 2026-daily chart)\n\nSorry for being accurate! \n\n$SLNH is currently trading below the Point of Control on the volume shelf and beneath the longest momentum bars. https://t.co/L3Y5PiEWR1 https://t.co/gS7O9SW5kM",
+            "created_at": "2026-06-06T05:59:27+00:00"
+          }
+        ]
+      }
+    ]
   }
 }
