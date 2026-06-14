@@ -3049,6 +3049,111 @@
           "finalized": true
         }
       ]
+    },
+    "2026-W24": {
+      "week_label": "Week 24 (Jun 15 - Jun 19, 2026)",
+      "friday_date": "2026-06-19",
+      "trades": [
+        {
+          "ticker": "CRDO",
+          "action": "BUY",
+          "signal_date": "2026-06-14",
+          "tweet_timestamp": "2026-06-14T06:23:16+00:00",
+          "entry_price": 0.0,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "MU",
+          "action": "BUY",
+          "signal_date": "2026-06-14",
+          "tweet_timestamp": "2026-06-14T06:54:46+00:00",
+          "entry_price": 0.0,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "DELL",
+          "action": "BUY",
+          "signal_date": "2026-06-14",
+          "tweet_timestamp": "2026-06-14T05:11:10+00:00",
+          "entry_price": 0.0,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "AMKR",
+          "action": "BUY",
+          "signal_date": "2026-06-14",
+          "tweet_timestamp": "2026-06-14T06:54:46+00:00",
+          "entry_price": 0.0,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "NVDA",
+          "action": "BUY",
+          "signal_date": "2026-06-14",
+          "tweet_timestamp": "2026-06-14T05:20:40+00:00",
+          "entry_price": 0.0,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "TSM",
+          "action": "BUY",
+          "signal_date": "2026-06-14",
+          "tweet_timestamp": "2026-06-14T06:54:46+00:00",
+          "entry_price": 0.0,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "SPCX",
+          "action": "BUY",
+          "signal_date": "2026-06-14",
+          "tweet_timestamp": "2026-06-14T09:23:00+00:00",
+          "entry_price": 0.0,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "HPE",
+          "action": "SELL",
+          "signal_date": "2026-06-14",
+          "tweet_timestamp": "2026-06-14T07:36:02+00:00",
+          "entry_price": 0.0,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        },
+        {
+          "ticker": "SNDK",
+          "action": "SELL",
+          "signal_date": "2026-06-14",
+          "tweet_timestamp": "2026-06-14T06:54:46+00:00",
+          "entry_price": 0.0,
+          "friday_close": 0.0,
+          "perf_pct": 0.0,
+          "result": "PENDING",
+          "finalized": false
+        }
+      ]
     }
   }
 }

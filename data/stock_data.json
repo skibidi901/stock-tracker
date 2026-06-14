@@ -5769,5 +5769,163 @@
       }
     ],
     "sell": []
+  },
+  "2026-06-14": {
+    "buy": [
+      {
+        "ticker": "CRDO",
+        "summary": "Highly bullish outlook on the company, with analysts identifying it as an excellent long-term holding.",
+        "tweets": [
+          {
+            "author": "babyfolio",
+            "author_name": "Babyfolio",
+            "tweet_id": "2066043779744751830",
+            "text": "$CRDO is a company I'm super bullish on, definitely an excellent company to hold for the long term.\n\nGreat article by @TheBigBerbowski https://t.co/s0i8fEaHcv",
+            "created_at": "2026-06-14T06:23:16+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "MU",
+        "summary": "Strongly bullish sentiment driven by massive price target upgrades and projections showing memory capturing nearly half of the $1.96T semiconductor market by 2030.",
+        "tweets": [
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2066051705431851210",
+            "text": "Context Trade. Z-Axis Trade. Interconnect Trade.\n\nContext Trade: $MU $DRAM $SNDK $285A (Kioxia) $005930 (Samsung) $000660 (SK Hynix)\n\nZ-Axis Trade: $TSM $ASX $AMKR $INTC $AMAT $BESI\n\nInterconnect Trade: $LITE $COHR $GLW",
+            "created_at": "2026-06-14T06:54:46+00:00"
+          },
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2066028024362160468",
+            "text": "$MU $DRAM $TSM $NVDA Bank of America Projections\n\n$1.96T semi TAM by 2030. $900B is memory.\n\nNearly half. Why half?\n\nBecause LLMs without memory are stupid. Memory is what makes AI intelligent. The market is telling you where the value lives. https://t.co/2KKTdZ4nju",
+            "created_at": "2026-06-14T05:20:40+00:00"
+          },
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2065999550519910578",
+            "text": "RT @TradexWhisperer: $MU $DRAM Not Enough.\n\nSusquehanna: $1,750 (Street-high)\nFitzgerald: $700 → $1,500. Today.\nWells Fargo: $550 → $1,220.…",
+            "created_at": "2026-06-14T03:27:31+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "DELL",
+        "summary": "Identified as a strong buying opportunity on a potential pullback to its 21-day moving average after reaching new historic highs.",
+        "tweets": [
+          {
+            "author": "tradergokux",
+            "author_name": "TraderGoku",
+            "tweet_id": "2066025634866909203",
+            "text": "$DELL 关注历史新高后的第一次21日均线回踩，可能是很好的做多机会。 https://t.co/baj97I2b0J",
+            "created_at": "2026-06-14T05:11:10+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "AMKR",
+        "summary": "Technical analysis indicates a bullish setup as a familiar bull flag pattern has re-emerged after three months.",
+        "tweets": [
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2066051705431851210",
+            "text": "Context Trade. Z-Axis Trade. Interconnect Trade.\n\nContext Trade: $MU $DRAM $SNDK $285A (Kioxia) $005930 (Samsung) $000660 (SK Hynix)\n\nZ-Axis Trade: $TSM $ASX $AMKR $INTC $AMAT $BESI\n\nInterconnect Trade: $LITE $COHR $GLW",
+            "created_at": "2026-06-14T06:54:46+00:00"
+          },
+          {
+            "author": "tradergokux",
+            "author_name": "TraderGoku",
+            "tweet_id": "2066024784249466994",
+            "text": "$AMKR 同样的牛旗形态，3个月后再次出现。 https://t.co/gIoqG0bTMV",
+            "created_at": "2026-06-14T05:07:48+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "NVDA",
+        "summary": "Bullish outlook supported by Bank of America projections highlighting the massive growth of the semiconductor and AI memory market by 2030.",
+        "tweets": [
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2066028024362160468",
+            "text": "$MU $DRAM $TSM $NVDA Bank of America Projections\n\n$1.96T semi TAM by 2030. $900B is memory.\n\nNearly half. Why half?\n\nBecause LLMs without memory are stupid. Memory is what makes AI intelligent. The market is telling you where the value lives. https://t.co/2KKTdZ4nju",
+            "created_at": "2026-06-14T05:20:40+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "TSM",
+        "summary": "Positioned favorably within the semiconductor and AI memory growth wave, supported by long-term market projections.",
+        "tweets": [
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2066051705431851210",
+            "text": "Context Trade. Z-Axis Trade. Interconnect Trade.\n\nContext Trade: $MU $DRAM $SNDK $285A (Kioxia) $005930 (Samsung) $000660 (SK Hynix)\n\nZ-Axis Trade: $TSM $ASX $AMKR $INTC $AMAT $BESI\n\nInterconnect Trade: $LITE $COHR $GLW",
+            "created_at": "2026-06-14T06:54:46+00:00"
+          },
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2066028024362160468",
+            "text": "$MU $DRAM $TSM $NVDA Bank of America Projections\n\n$1.96T semi TAM by 2030. $900B is memory.\n\nNearly half. Why half?\n\nBecause LLMs without memory are stupid. Memory is what makes AI intelligent. The market is telling you where the value lives. https://t.co/2KKTdZ4nju",
+            "created_at": "2026-06-14T05:20:40+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "SPCX",
+        "summary": "Bullish outlook driven by the rising demand for satellite PCB and CCL materials, with Starlink V3 expected to nearly double PCB dollar value.",
+        "tweets": [
+          {
+            "author": "LinQingV",
+            "author_name": "Macro_Lin ｜ 市场观察员",
+            "tweet_id": "2066089009005400284",
+            "text": "$SPCX 卫星 PCB 和 CCL 今年开始和 AI 服务器争同一批材料资源。\n\nStarlink V3 相比 V2 Mini 体积更大，带宽能力更高，网络架构也更复杂。估计 V3 卫星 PCB 美元价值量可能接近翻倍，主要原因是更大的板面积和潜在材料升级。\n\n卫星 PCB",
+            "created_at": "2026-06-14T09:23:00+00:00"
+          }
+        ]
+      }
+    ],
+    "sell": [
+      {
+        "ticker": "HPE",
+        "summary": "Bearish outlook based on data models predicting a potential 20% drawdown following a recent sharp upward move.",
+        "tweets": [
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2066062089471553646",
+            "text": "$HPE Your candles go green on a +19.5% day. Ours printed PINK. Next 6 days? -20% drawdown.\n\nThat is what happens when your model learns from data instead of reacting to price. We are Data Scientists.\n\n300+ charts daily. Try it free:\nhttps://t.co/ZQDP5HCFyq https://t.co/xyn8CiiVHP https://t.co/9mcE4SHAQR",
+            "created_at": "2026-06-14T07:36:02+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "SNDK",
+        "summary": "Anticipating a healthy short-term pullback of around 10% to retest key support levels after hitting the $2,000 milestone.",
+        "tweets": [
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2066051705431851210",
+            "text": "Context Trade. Z-Axis Trade. Interconnect Trade.\n\nContext Trade: $MU $DRAM $SNDK $285A (Kioxia) $005930 (Samsung) $000660 (SK Hynix)\n\nZ-Axis Trade: $TSM $ASX $AMKR $INTC $AMAT $BESI\n\nInterconnect Trade: $LITE $COHR $GLW",
+            "created_at": "2026-06-14T06:54:46+00:00"
+          },
+          {
+            "author": "Mr_Derivatives",
+            "author_name": "Heisenberg",
+            "tweet_id": "2066021524763775207",
+            "text": "$SNDK A little pullback here after hitting the big $2,000 mark would be healthy.\n\nNot saying full on crash mode, but 10% ish down to retest that notable blue support line. https://t.co/7R22p5uWgX",
+            "created_at": "2026-06-14T04:54:50+00:00"
+          }
+        ]
+      }
+    ]
   }
 }
