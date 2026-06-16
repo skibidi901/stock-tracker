@@ -6486,5 +6486,981 @@
         ]
       }
     ]
+  },
+  "2026-06-16": {
+    "buy": [
+      {
+        "ticker": "NBIS",
+        "summary": "Nebius received third-party validation via MLPerf benchmarks for its AI cloud performance on NVIDIA systems, prompting investors to build significant portfolio positions. NBIS is highlighted as a high-conviction holding, with investors advocating for a concentrated portfolio allocation in the stock. NBIS continues to show strong leadership, with aggressive buying on every pullback to the 21-day EMA and a projected price target of $300. The integration of Eigen signals the company's intent to dominate the software layer, improving margins and revenue per GPU. The stock is highly favored as a core portfolio holding with a 42% allocation and an aggressive long-term price target of $1,056 by the end of 2027. NBIS is set to join the Nasdaq-100 index, a major catalyst expected to drive significant passive inflows, while supporters defend the business model against short sellers.",
+        "tweets": [
+          {
+            "author": "daniel_koss",
+            "author_name": "Daniel Koss",
+            "tweet_id": "2066950659883016686",
+            "text": "🚨 Just in: Nebius $NBIS just got third-party validation that its AI cloud can deliver world-class performance on NVIDIA’s latest AI systems.\n\nFor investors, this matters because MLPerf is one of the hardest independent AI infrastructure benchmarks. It helps prove Nebius is not",
+            "created_at": "2026-06-16T18:26:54+00:00"
+          },
+          {
+            "author": "renstocks_",
+            "author_name": "Ren",
+            "tweet_id": "2066950491331015065",
+            "text": "I have to agree with @leopoldasch – $NBIS and $SNDK seem like the best bets going forward, so I’m building my portfolio around these names.\n\nDid a deep dive on $SNDK, helpful for all types of investors. Go check it out on Substack.\n\nYou can claim your free paid post and build https://t.co/JRvx5DqJUi https://t.co/khhBUoJslx",
+            "created_at": "2026-06-16T18:26:13+00:00"
+          },
+          {
+            "author": "TheProfInvestor",
+            "author_name": "Prof",
+            "tweet_id": "2066947384559689871",
+            "text": "As a Position trader you have 3 things you’ve gotta do consistently.\n\n- Find stocks before they become a thing, \n- Rotate out of Weak into Strong,\n- Keep a healthy watchlist at all times,\n\nNobody wanted $HUT $WULF $CIFR $NBIS $INTC $AMD $DELL  when they were cheap. Now everyone",
+            "created_at": "2026-06-16T18:13:53+00:00"
+          },
+          {
+            "author": "babyfolio",
+            "author_name": "Babyfolio",
+            "tweet_id": "2066939521615204861",
+            "text": "@ren_stocks That's why I'm at 40% $NBIS",
+            "created_at": "2026-06-16T17:42:38+00:00"
+          },
+          {
+            "author": "renstocks_",
+            "author_name": "Ren",
+            "tweet_id": "2066938254432329979",
+            "text": "@babyfolio So the real question is why are we trying so hard to have 5+ or in my case 25+ names on our portfolio. Just full port $NBIS and chill.",
+            "created_at": "2026-06-16T17:37:36+00:00"
+          },
+          {
+            "author": "Venu_7_",
+            "author_name": "Venu",
+            "tweet_id": "2066882606902522264",
+            "text": "$NBIS continues to work like clockwork.\n\nEvery pullback to the 21-day EMA has been bought aggressively. That's what true leaders do.\n\n$270 now. $300 is next!\n\nThe hardest part of trading isn't finding winners - it's having the conviction to hold them while they're winning. https://t.co/hyVLUoFMs5 https://t.co/jTwedhoaIE",
+            "created_at": "2026-06-16T13:56:28+00:00"
+          },
+          {
+            "author": "yianisz",
+            "author_name": "Yiannis Zourmpanos",
+            "tweet_id": "2066852550993744257",
+            "text": "Eigen helps customers run models faster and more efficiently, lowering inference costs while improving performance. That means higher customer stickiness, better margins and more revenue per GPU.\n\nEigen is one of the clearest signals yet that $NBIS wants to own the software layer https://t.co/cGyZ4ycZmH",
+            "created_at": "2026-06-16T11:57:03+00:00"
+          },
+          {
+            "author": "babyfolio",
+            "author_name": "Babyfolio",
+            "tweet_id": "2066838989441540179",
+            "text": "My new prediction:\nBy EOY 2027, $NBIS will be at $1,056.\n\nBookmark this and check back on December 31, 2027.\n\nThank me later. https://t.co/OBgHpoyiot",
+            "created_at": "2026-06-16T11:03:09+00:00"
+          },
+          {
+            "author": "babyfolio",
+            "author_name": "Babyfolio",
+            "tweet_id": "2066836359885525119",
+            "text": "Portfolio Update:\n$NBIS 42%\nSK Square 10%\n$OUST 11%\n$PNG 8%\nKioxia 5%\n$AAOI 5%\n$FCEL 3%\n$BRUN 3%\n\n13% cash",
+            "created_at": "2026-06-16T10:52:42+00:00"
+          },
+          {
+            "author": "babyfolio",
+            "author_name": "Babyfolio",
+            "tweet_id": "2066806371278893514",
+            "text": "Can I make my 2027 prediction?\nCan we assume I'm right or should we wait for $NBIS $300 first? 🤔 https://t.co/OBgHpoyiot",
+            "created_at": "2026-06-16T08:53:32+00:00"
+          },
+          {
+            "author": "babyfolio",
+            "author_name": "Babyfolio",
+            "tweet_id": "2066737952516882737",
+            "text": "$NBIS is joining the Nasdaq-100. What does that actually mean?\n\nOver $800B of assets track the Nasdaq-100, led by giants like $QQQ.\n\nBased on current estimates, $NBIS could receive roughly a 0.2% weighting in the index.\n\nAt a 0.2% weighting, that translates to approximately",
+            "created_at": "2026-06-16T04:21:40+00:00"
+          },
+          {
+            "author": "daniel_koss",
+            "author_name": "Daniel Koss",
+            "tweet_id": "2066731884336259141",
+            "text": "$NBIS $CRWV\n\n\"Those are equipment leasing businesses, right?\"\n\nNo, wrong.\n\nWhat if shorts sometimes just straight up don't get the business case and product? https://t.co/no5f88AZI2",
+            "created_at": "2026-06-16T03:57:33+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "MU",
+        "summary": "Micron is positioned for massive long-term growth driven by cyclical DRAM demand and the rapid adoption of HBM architecture designed specifically for AI workloads. Micron is viewed as highly undervalued, generating more quarterly profit than competitors do in annual revenue while trading at a significantly lower market cap. Trading at just 9x valuation, the company is highlighted as the cheapest AI infrastructure play among peers, with capacity sold out through 2026/2027 and record margins. The stock has seen massive growth from 240 to 1100 in seven months, rewarding long-term value investors during this peak period for memory storage. Despite some retail skepticism, the stock exhibits immense technical strength, holding its daily 20 EMA and SMA support to gap up into new all-time highs. Micron is highly favored as a major player in the memory theme, drawing comparisons to NVDA's trajectory and showing strong technical buy signals alongside massive market cap growth.",
+        "tweets": [
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2066950824815915370",
+            "text": "RT @TradexWhisperer: $MU $DRAM You're right. It's cyclical. \n\nUp. Then more up. Then even more up.\n250 exabytes to 1,226 by 2031. Nearly 5x…",
+            "created_at": "2026-06-16T18:27:33+00:00"
+          },
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2066950729479385349",
+            "text": "RT @TradexWhisperer: $MU. Blue Candle on a -4.7% red day. Next day: +12%.\n\nBeta model. That is the kind of signal we are building toward. S…",
+            "created_at": "2026-06-16T18:27:10+00:00"
+          },
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2066947819039260765",
+            "text": "$MU $DRAM Where analysts &amp; market got it wrong. They model HBM like it has been around for decades.\n\nHBM is a new architecture built to feed AI models context at speed. It did not exist 3 years ago in any meaningful revenue.\n\nIt is not where data sits. It is where AI thinks.",
+            "created_at": "2026-06-16T18:15:36+00:00"
+          },
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2066931582766850524",
+            "text": "$MU \"Imagine if Elon Musk led Micron. It would be trading at 100x forward multiple at minimum. He is a marketing genius\" https://t.co/VAxR3U834c",
+            "created_at": "2026-06-16T17:11:05+00:00"
+          },
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2066930341886234654",
+            "text": "$MU generates more PROFIT in ONE QUARTER than $SPCX generates in revenue ALL YEAR.\n\n$MU is 51% lower in market cap than $SPCX\n\nRead that twice. https://t.co/QOULWHpHnt",
+            "created_at": "2026-06-16T17:06:09+00:00"
+          },
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2066912993569558928",
+            "text": "$MU 9x. $INTC 48x. $MRVL 78x. $ARM 134x.\n\nOne of these companies is sold out through 2026 and likely 2027, generating record margins, and supplying the most critical component in AI infrastructure, the Cognitive Capacity Layer.\n\nIt is the cheapest one on the list. https://t.co/pCRrDkmtpQ",
+            "created_at": "2026-06-16T15:57:13+00:00"
+          },
+          {
+            "author": "nft_hu",
+            "author_name": "Fiona ❤️& ✌️",
+            "tweet_id": "2066842327671550460",
+            "text": "短短7个月 $MU  240到1100\n存储体的高光时刻，也是价值投资和钻石手的奖励 https://t.co/oqUZdcnhXf",
+            "created_at": "2026-06-16T11:16:25+00:00"
+          },
+          {
+            "author": "dannycheng2022",
+            "author_name": "Danny cheng",
+            "tweet_id": "2066832421807644716",
+            "text": "I’m pretty sure most retail investors won’t be chasing $AMD and $MU now. You know what will happen to them next.",
+            "created_at": "2026-06-16T10:37:03+00:00"
+          },
+          {
+            "author": "jtsla4",
+            "author_name": "j",
+            "tweet_id": "2066826467321766186",
+            "text": "RT @DMT_Doctor: $MU held the converging daily 20 EMA and SMA (arrow) where I bought the dip on $MUU last week 🦘 It put in a new all-time hi…",
+            "created_at": "2026-06-16T10:13:24+00:00"
+          },
+          {
+            "author": "tradergokux",
+            "author_name": "TraderGoku",
+            "tweet_id": "2066813155641340106",
+            "text": "$MU 连续两天跳空上涨，继续创下历史新高。\n\n目前市场中最强势的股票之一。只专注交易这一只，你的表现可能就已经超过很多人。 https://t.co/v5aVm0AN4i https://t.co/cP7DSQ7YLI",
+            "created_at": "2026-06-16T09:20:30+00:00"
+          },
+          {
+            "author": "aleabitoreddit",
+            "author_name": "Serenity",
+            "tweet_id": "2066791570569916832",
+            "text": "I did say $MU looked like the next $NVDA. Now we're at a $1.23T MC.\n\nStarted talking more about Samsung Electronics/Sk Hynix back in 2025. \n\nPut more concentration into the memory theme like $SNDK and others, Jan of this year. \n\nAnd I'm glad my prediction with Micron + memory is https://t.co/u23M2XaWLQ https://t.co/ozmd2ILpMZ",
+            "created_at": "2026-06-16T07:54:44+00:00"
+          },
+          {
+            "author": "dannycheng2022",
+            "author_name": "Danny cheng",
+            "tweet_id": "2066762544036147488",
+            "text": "$MU (June 16, 2026-daily chart update)\n\nIf you know how to read my charts accurately, you would have seen dozens of reliable buy signals over the past few months. I’ve highlighted every single one of them for my community in my daily posts. For reference, I’ve been charting $MU https://t.co/48HYOeXRBF",
+            "created_at": "2026-06-16T05:59:23+00:00"
+          },
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2066756354480750929",
+            "text": "$SNDK CEO during Mizuho Tech. Conference\n\n\"...I really do think we're just getting started.\"\n\n\"It's a very powerful relationship between us and our customers, and it's very much of a win-win conversation.\"\n\n$MU $DRAM https://t.co/5QOmRE97Cp",
+            "created_at": "2026-06-16T05:34:48+00:00"
+          },
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2066754911526867281",
+            "text": "RT @TradexWhisperer: Your candles go red on a -5% down day. Ours printed BLUE. Next day? $PLTR +8.3% $MU: +11.7%\n\nThat is what happens when…",
+            "created_at": "2026-06-16T05:29:04+00:00"
+          },
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2066750081739690002",
+            "text": "$MU $70B → $1.2T\n\nChip Invasion Master Plan Does Not Stop Here.\n\nMeta. $280 billion away. \n\nThe Bargain of the Century is not a price target. It is a trajectory. $DRAM https://t.co/F3UL1js62I https://t.co/bYUA2kRRMA",
+            "created_at": "2026-06-16T05:09:52+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "RBLX",
+        "summary": "Roblox is showing strong upward momentum with expectations to hit $50 this week and potentially fill a technical gap up to $54. Roblox is seeing bullish options flow, highlighted by an unusual $600K call sweeper block expiring in early July. The stock has shown strong upward momentum, gaining 10% since a successful long call and approaching the $50 resistance level.",
+        "tweets": [
+          {
+            "author": "StockTraderHub",
+            "author_name": "The Stock Trader Hub",
+            "tweet_id": "2066955299492139157",
+            "text": "$RBLX gap fill to $54 wen? 👀 https://t.co/D9X8sTtZcA https://t.co/5a4kNHEpc9",
+            "created_at": "2026-06-16T18:45:20+00:00"
+          },
+          {
+            "author": "Han_Akamatsu",
+            "author_name": "Han Akamatsu 赤松",
+            "tweet_id": "2066952479904825753",
+            "text": "They called me a madman when I said $RBLX will hit $50 this week. https://t.co/LLbCMpwSEL",
+            "created_at": "2026-06-16T18:34:07+00:00"
+          },
+          {
+            "author": "StockTraderHub",
+            "author_name": "The Stock Trader Hub",
+            "tweet_id": "2066924337035161630",
+            "text": "$RBLX UNUSUAL $600K CALL SWEEPER FOR 7/2 EXPIRATION 👀 https://t.co/vJXcJoBC5c",
+            "created_at": "2026-06-16T16:42:18+00:00"
+          },
+          {
+            "author": "Han_Akamatsu",
+            "author_name": "Han Akamatsu 赤松",
+            "tweet_id": "2066916011165597727",
+            "text": "Even my subs didn’t trust that move on $RBLX! Although that $50 long king worked miracles! \n\nStock +10% now since that call approaching that $50 king! https://t.co/9S6bD6zeyr",
+            "created_at": "2026-06-16T16:09:13+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "SOFI",
+        "summary": "SoFi has held strong support for weeks with its 'Bull Trigger' remaining intact, supported by insider buying from the CEO.",
+        "tweets": [
+          {
+            "author": "TheRonnieVShow",
+            "author_name": "RonnieV",
+            "tweet_id": "2066951424408203729",
+            "text": "$SOFI “Bull Trigger” has not been invalidated.\n\nSoFi has held strong support for weeks.\n\nCEO is basically All-In.\n\nYea…it’s almost time. https://t.co/49KnxgQxM9",
+            "created_at": "2026-06-16T18:29:56+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "HIMS",
+        "summary": "Sentiment is highly bullish as short sellers face pressure and time runs out for short positions. Hims & Hers Health is highlighted as a highly successful swing trade, delivering significant returns for traders.",
+        "tweets": [
+          {
+            "author": "yianisz",
+            "author_name": "Yiannis Zourmpanos",
+            "tweet_id": "2066940637283254425",
+            "text": "Time is running out for $HIMS shorts..",
+            "created_at": "2026-06-16T17:47:04+00:00"
+          },
+          {
+            "author": "StockTraderHub",
+            "author_name": "The Stock Trader Hub",
+            "tweet_id": "2066895468861251814",
+            "text": "$HIMS SWINGS 100% BANGER https://t.co/A1tKmHfQyj",
+            "created_at": "2026-06-16T14:47:35+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "BABA",
+        "summary": "Investors are slowly accumulating shares of Alibaba on quarterly candle support despite potential near-term downside.",
+        "tweets": [
+          {
+            "author": "cantonmeow",
+            "author_name": "Cantonese Cat 🐱🐈",
+            "tweet_id": "2066940748042252474",
+            "text": "$BABA quarterly candles\nI'm buying slowly still, so you all are screwed because that means it's going down a lot lower https://t.co/Wg7JBCORrW",
+            "created_at": "2026-06-16T17:47:30+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "CRWV",
+        "summary": "CRWV is demonstrating strong technical and fundamental strength, bouncing cleanly off its 30-week SMA while trading at a 45% discount to peers despite a superior backlog. The stock surged over 20% following major banks reiterating Overweight ratings with a $150 target, driven by a strong Q2 backlog beat and securing 90% of its 2027 ARR target. Identified as a top neocloud provider positioned to capture enduring value in the AI value chain as hardware bottlenecks begin to ease.",
+        "tweets": [
+          {
+            "author": "TrendSpider",
+            "author_name": "TrendSpider",
+            "tweet_id": "2066936344056918481",
+            "text": "Back to Stage 2 on a clean 30-week SMA bounce 🎯 $CRWV https://t.co/kFb7b0Y1G3 https://t.co/i9NyOISeQl",
+            "created_at": "2026-06-16T17:30:00+00:00"
+          },
+          {
+            "author": "oguzerkan",
+            "author_name": "Oguz Erkan",
+            "tweet_id": "2066930164462748056",
+            "text": "There are three clear valuation disconnects in the market now:\n\n1. $CRWV is trading at 45% discount to $NBIS despite having double the backlog and improving financials.\n\n2. $NVDA is trading at just 20x forward earnings vs 22x of S&amp;P 500 Semiconductors sector.\n\n3. $META is trading https://t.co/C4Ucmy134A",
+            "created_at": "2026-06-16T17:05:27+00:00"
+          },
+          {
+            "author": "Remzztrades",
+            "author_name": "Remz",
+            "tweet_id": "2066925404812669007",
+            "text": "Great point… $CRWV looks like it wants to finally make that big move this summer. Not mention all the ridiculous flow constantly. https://t.co/zRCQKzz1vB",
+            "created_at": "2026-06-16T16:46:32+00:00"
+          },
+          {
+            "author": "asklivermore",
+            "author_name": "AskLivermore",
+            "tweet_id": "2066896609045262685",
+            "text": "$CRWV finally getting some love it deserves.\n\nBoA, Wells Fargo, BNP Paribas all reiterated Overweight with $150 targets after flagging a big Q2 backlog beat and ~90% of the 2027 $30B ARR target already secured.\n\nWall Street’s largely on board with the AI infra story.\nFrom a https://t.co/Xoq6YB2U2R",
+            "created_at": "2026-06-16T14:52:07+00:00"
+          },
+          {
+            "author": "Han_Akamatsu",
+            "author_name": "Han Akamatsu 赤松",
+            "tweet_id": "2066896058051908046",
+            "text": "$CRWV WITH ANOTHER +20% MOVE!\n\nAND WE CALLED IT ONCE AGAIN WITH CHEATSEEKER. 😮‍💨 https://t.co/82OyiuSPSC",
+            "created_at": "2026-06-16T14:49:55+00:00"
+          },
+          {
+            "author": "oguzerkan",
+            "author_name": "Oguz Erkan",
+            "tweet_id": "2066806939565051965",
+            "text": "Gavin Baker says bottleneck trade is about to end and the real question is which companies will have enduring value after bottlenecks ease?\n\nThe best candidates are still the cloud providers, particularly the neoclouds like $CRWV.\n\nWhen you look at the AI value chain, no group is https://t.co/S0VSY7xnoQ",
+            "created_at": "2026-06-16T08:55:48+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "RDDT",
+        "summary": "RDDT is positioned for a short-term run toward $204 following a successful breakout and subsequent trendline retest. Reddit is highlighted as a strong trend-riding opportunity after entering a breakout from a monthly base trendline touch at 140.",
+        "tweets": [
+          {
+            "author": "ProblemSniper",
+            "author_name": "ProblemSniper",
+            "tweet_id": "2066926442622132428",
+            "text": "$RDDT \n\nLooks like the stock is getting ready for a run past 200. Nice break out yesterday and now retesting the trendline. Once 188 breaks there is a quick move towards 200.\n\nPT: 204 [Short Term] https://t.co/qvuAnYyuy2",
+            "created_at": "2026-06-16T16:50:40+00:00"
+          },
+          {
+            "author": "TheProfInvestor",
+            "author_name": "Prof",
+            "tweet_id": "2066874147263975814",
+            "text": "Cant ride trends? I will fix it for you.\n\n1. Go on a monthly chart \n2. Look for a monthly base, trendline touch\n3. Enter the breakout\n\n$RDDT gave that to you at 140. And it is very early in the session.\n\nAfter Google, Meta, Microsoft, and Apple, this may be the next company https://t.co/pTaiX9PrTx",
+            "created_at": "2026-06-16T13:22:52+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "EOSE",
+        "summary": "EOSE has attracted bullish sentiment following unusual long-dated call buying activity.",
+        "tweets": [
+          {
+            "author": "StockTraderHub",
+            "author_name": "The Stock Trader Hub",
+            "tweet_id": "2066933792225321276",
+            "text": "$EOSE UNUSUAL LONG DATED CALL BUYER 👀 https://t.co/I0HjFBaEBw",
+            "created_at": "2026-06-16T17:19:52+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "SNDK",
+        "summary": "SNDK continues to be highlighted as a top-performing AI infrastructure play, gaining over 1,300% since October due to strong tailwinds in the memory sector. SanDisk is highlighted as a key concentration in the memory theme, with the CEO expressing strong optimism about customer relationships and future growth.",
+        "tweets": [
+          {
+            "author": "renstocks_",
+            "author_name": "Ren",
+            "tweet_id": "2066937638230392979",
+            "text": "$SNDK is, as most of you know, my best performing position, up over 1,300% since I bought it back in October. Memory has been the best performing layer of the AI infrastructure in my portfolio that is now over 500% YTD.\n\nSo in the middle of 2026, I set out to answer one question. https://t.co/SjEABsseZj",
+            "created_at": "2026-06-16T17:35:09+00:00"
+          },
+          {
+            "author": "aleabitoreddit",
+            "author_name": "Serenity",
+            "tweet_id": "2066791570569916832",
+            "text": "I did say $MU looked like the next $NVDA. Now we're at a $1.23T MC.\n\nStarted talking more about Samsung Electronics/Sk Hynix back in 2025. \n\nPut more concentration into the memory theme like $SNDK and others, Jan of this year. \n\nAnd I'm glad my prediction with Micron + memory is https://t.co/u23M2XaWLQ https://t.co/ozmd2ILpMZ",
+            "created_at": "2026-06-16T07:54:44+00:00"
+          },
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2066756354480750929",
+            "text": "$SNDK CEO during Mizuho Tech. Conference\n\n\"...I really do think we're just getting started.\"\n\n\"It's a very powerful relationship between us and our customers, and it's very much of a win-win conversation.\"\n\n$MU $DRAM https://t.co/5QOmRE97Cp",
+            "created_at": "2026-06-16T05:34:48+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "JPM",
+        "summary": "JPM is showing strong upward momentum, with traders reporting significant gains of nearly 100% on recent rounds. The stock has validated a flag breakout and is looking to test all-time highs, with golden fib resistance overhead at $336.6. JPMorgan Chase is showing strong upward momentum and relative strength, with traders celebrating highly profitable trades and anticipating further gains.",
+        "tweets": [
+          {
+            "author": "StockTraderHub",
+            "author_name": "The Stock Trader Hub",
+            "tweet_id": "2066924697048981598",
+            "text": "$JPM ROUND #2 UP ALMOST 100% 🔥 https://t.co/z8W9ByaVvm https://t.co/FL0AsVjWEm",
+            "created_at": "2026-06-16T16:43:44+00:00"
+          },
+          {
+            "author": "StockTraderHub",
+            "author_name": "The Stock Trader Hub",
+            "tweet_id": "2066922760526266877",
+            "text": "$JPM flag breakout beautifully validated here, stock looking to test all time highs with golden fib resistance above at $336.6 https://t.co/SWZUE72GDx https://t.co/RZTFZ6H3cJ",
+            "created_at": "2026-06-16T16:36:02+00:00"
+          },
+          {
+            "author": "StockTraderHub",
+            "author_name": "The Stock Trader Hub",
+            "tweet_id": "2066917488541978722",
+            "text": "$JPM BANG BANG 😈 https://t.co/A4I1zjoN70 https://t.co/RZTFZ6H3cJ",
+            "created_at": "2026-06-16T16:15:05+00:00"
+          },
+          {
+            "author": "StockTraderHub",
+            "author_name": "The Stock Trader Hub",
+            "tweet_id": "2066895764794577006",
+            "text": "$JPM QUICK 100% BANGER 🤝🏻 https://t.co/5bWnY47EUf https://t.co/PRR8etSgoJ",
+            "created_at": "2026-06-16T14:48:46+00:00"
+          },
+          {
+            "author": "Remzztrades",
+            "author_name": "Remz",
+            "tweet_id": "2066895750068322732",
+            "text": "only a matter of time this goes. JPM flying today https://t.co/sBlfXRkfbk",
+            "created_at": "2026-06-16T14:48:42+00:00"
+          },
+          {
+            "author": "ProblemSniper",
+            "author_name": "ProblemSniper",
+            "tweet_id": "2066893682360627422",
+            "text": "$JPM https://t.co/PPuwZdrRgD https://t.co/KnklptLZEf",
+            "created_at": "2026-06-16T14:40:29+00:00"
+          },
+          {
+            "author": "ProblemSniper",
+            "author_name": "ProblemSniper",
+            "tweet_id": "2066892489806799080",
+            "text": "RT @gusto0515: @ProblemSniper @ProblemSniper bro, thanks a ton for both USO and JPM. Excellent trade idea! Please keep them coming. Appreci…",
+            "created_at": "2026-06-16T14:35:45+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "SPCX",
+        "summary": "Pre-IPO shares are locked until August, resulting in a small tradeable float that could allow the stock to continue pumping. Heavy bullish options flow and dominant call buying activity indicate strong upward momentum.",
+        "tweets": [
+          {
+            "author": "Han_Akamatsu",
+            "author_name": "Han Akamatsu 赤松",
+            "tweet_id": "2066923555850224099",
+            "text": "$SPCX Pre-IPO shares are locked until August. The float of the tradeable stock is actually much smaller than the total shares and stock can keep pumping. \n\nThat’s the magic here. https://t.co/VxcWWic5P6",
+            "created_at": "2026-06-16T16:39:11+00:00"
+          },
+          {
+            "author": "StockTraderHub",
+            "author_name": "The Stock Trader Hub",
+            "tweet_id": "2066908972913655841",
+            "text": "RT @RockyTSTH: 🚨 $SPCX OPTIONS FLOW ALERT 🚨\n\nHeavy bullish positioning spotted in $SPCX as call buyers dominate today's tape.\n\n📈 Flow Senti…",
+            "created_at": "2026-06-16T15:41:15+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "ZETA",
+        "summary": "The current price level is viewed as a highly attractive buying opportunity or 'gift' despite prevailing negative sentiment.",
+        "tweets": [
+          {
+            "author": "TheRonnieVShow",
+            "author_name": "RonnieV",
+            "tweet_id": "2066916560715821191",
+            "text": "This is a gift and people are crying about it.\n\n$ZETA https://t.co/10tCf1bbfZ",
+            "created_at": "2026-06-16T16:11:24+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "GEV",
+        "summary": "The stock is held as an overweight position in power sector plays to drive portfolio outperformance.",
+        "tweets": [
+          {
+            "author": "asklivermore",
+            "author_name": "AskLivermore",
+            "tweet_id": "2066914859095400567",
+            "text": "Our portfolio stays so STRONG on red days. \nAnd OUTPERFORMS on green days. \n\nWe've added multiple financials like $V, and $MA.\nWe're also overweight in power!!! like $GEV.\nWe also kept some core AI names like $CRWV and $IREN. \n\nI WON'T stop until we all have Porsches together. 💛 https://t.co/4awgXKo3BW",
+            "created_at": "2026-06-16T16:04:38+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "V",
+        "summary": "Added to the portfolio as a strong financial name to maintain outperformance on green days and stability on red days.",
+        "tweets": [
+          {
+            "author": "asklivermore",
+            "author_name": "AskLivermore",
+            "tweet_id": "2066914859095400567",
+            "text": "Our portfolio stays so STRONG on red days. \nAnd OUTPERFORMS on green days. \n\nWe've added multiple financials like $V, and $MA.\nWe're also overweight in power!!! like $GEV.\nWe also kept some core AI names like $CRWV and $IREN. \n\nI WON'T stop until we all have Porsches together. 💛 https://t.co/4awgXKo3BW",
+            "created_at": "2026-06-16T16:04:38+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "MA",
+        "summary": "Acquired alongside other financial names to bolster portfolio strength and capture market outperformance.",
+        "tweets": [
+          {
+            "author": "asklivermore",
+            "author_name": "AskLivermore",
+            "tweet_id": "2066914859095400567",
+            "text": "Our portfolio stays so STRONG on red days. \nAnd OUTPERFORMS on green days. \n\nWe've added multiple financials like $V, and $MA.\nWe're also overweight in power!!! like $GEV.\nWe also kept some core AI names like $CRWV and $IREN. \n\nI WON'T stop until we all have Porsches together. 💛 https://t.co/4awgXKo3BW",
+            "created_at": "2026-06-16T16:04:38+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "GOOGL",
+        "summary": "The stock is expected to bounce after successfully filling its recent gap.",
+        "tweets": [
+          {
+            "author": "Mr_Derivatives",
+            "author_name": "Heisenberg",
+            "tweet_id": "2066899968917635144",
+            "text": "RT @Mr_Derivatives: $GOOGL Gap filled.\n\nTime to bounce.",
+            "created_at": "2026-06-16T15:05:28+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "USO",
+        "summary": "The July swing trade is performing exceptionally well, nearing a 2x return and marking another major winning trade. Strong bullish sentiment surrounds USO, with multiple traders anticipating a significant upward move and calling it a potential major winner.",
+        "tweets": [
+          {
+            "author": "ProblemSniper",
+            "author_name": "ProblemSniper",
+            "tweet_id": "2066908936792604702",
+            "text": "January: $AMD 3 to 30 🚀\nFebruary: $CRWV 1.15 to 5 🚀\nMarch:  $NFLX 0.88 to 16 💥 \nApril: $IBIT 0.7 to 0❌\nMay: $COIN 3.25 to 7.35 🙌🏻\nJune: $NVTS 2.35 to 12 🚀\nJuly: $USO 0.98 to 1.9 (currently) 🤌🏼 https://t.co/KnklptLZEf",
+            "created_at": "2026-06-16T15:41:06+00:00"
+          },
+          {
+            "author": "ProblemSniper",
+            "author_name": "ProblemSniper",
+            "tweet_id": "2066908740545384658",
+            "text": "$USO almost a 2x trade. JULY SWING to become another winner. \n\nWe were 5/6. Now its going for 6/7. \n\nP.S: A winner 🥇 only added if it goes 2x or better. https://t.co/KnklptLZEf",
+            "created_at": "2026-06-16T15:40:19+00:00"
+          },
+          {
+            "author": "ProblemSniper",
+            "author_name": "ProblemSniper",
+            "tweet_id": "2066889617106968742",
+            "text": "$USO\n\nAnother winner loading? https://t.co/vqF3bG2UX9 https://t.co/KnklptLZEf",
+            "created_at": "2026-06-16T14:24:20+00:00"
+          },
+          {
+            "author": "ProblemSniper",
+            "author_name": "ProblemSniper",
+            "tweet_id": "2066878630668693661",
+            "text": "RT @arialph: @ProblemSniper Thanks for $USO https://t.co/yGQctfTb7O",
+            "created_at": "2026-06-16T13:40:40+00:00"
+          },
+          {
+            "author": "ProblemSniper",
+            "author_name": "ProblemSniper",
+            "tweet_id": "2066868793134186658",
+            "text": "$USO\n\nAccount is going to explode isn’t it! 💀 https://t.co/VFBzqyopmr https://t.co/KnklptLZEf",
+            "created_at": "2026-06-16T13:01:35+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "FPS",
+        "summary": "The company is highly favored as a key beneficiary of the AI power bottleneck, providing critical infrastructure like switchgear and E-Houses.",
+        "tweets": [
+          {
+            "author": "Venu_7_",
+            "author_name": "Venu",
+            "tweet_id": "2066903422050378192",
+            "text": "Power transformer lead times are now approaching 2.5 years, with generator step-up transformers averaging 144 weeks.\n\nAI isn't constrained by GPU demand anymore - it's constrained by power.\n\n$FPS sits right in the middle of that bottleneck, providing the switchgear, E-Houses, and https://t.co/sPa4YJqkSc https://t.co/MONPjl7R8m",
+            "created_at": "2026-06-16T15:19:11+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "SHOP",
+        "summary": "The weekly downtrend is decelerating, with the stock preparing to break above its 20-week SMA.",
+        "tweets": [
+          {
+            "author": "cantonmeow",
+            "author_name": "Cantonese Cat 🐱🐈",
+            "tweet_id": "2066896496633483369",
+            "text": "$SHOP weekly\nDowntrend has decelerated and getting ready to break above the 20 week SMA likely over the next few weeks. https://t.co/Blf1BMzYG7",
+            "created_at": "2026-06-16T14:51:40+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "AFRM",
+        "summary": "The stock is showing monthly Bollinger band contraction while holding its rising 20-month SMA as support, signaling a major upcoming move.",
+        "tweets": [
+          {
+            "author": "cantonmeow",
+            "author_name": "Cantonese Cat 🐱🐈",
+            "tweet_id": "2066895918704529759",
+            "text": "$AFRM monthly Bollinger band contraction while continuing to hold a rising 20 month SMA as support, getting ready for a big move to come maybe later 2026 or 2027. https://t.co/hjT9U9HZFh",
+            "created_at": "2026-06-16T14:49:22+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "CIFR",
+        "summary": "Cipher Mining is demonstrating strong bullish momentum, currently pushing toward all-time highs supported by a full monthly Bollinger band expansion.",
+        "tweets": [
+          {
+            "author": "cantonmeow",
+            "author_name": "Cantonese Cat 🐱🐈",
+            "tweet_id": "2066895564168380908",
+            "text": "$CIFR monthly is in the process of making all time highs with full monthly Bollinger band expansion. https://t.co/cWS07pIiBl",
+            "created_at": "2026-06-16T14:47:58+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "INTC",
+        "summary": "A trader has gone fully positioned into Intel shares, buying at the $120 level with high conviction.",
+        "tweets": [
+          {
+            "author": "jtsla4",
+            "author_name": "j",
+            "tweet_id": "2066894609700049150",
+            "text": "Ok I’m back to full port $INTC shares, bought $120 today https://t.co/yDU4zPfDfh",
+            "created_at": "2026-06-16T14:44:10+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "ARM",
+        "summary": "ARM is showing strong bullish momentum with expectations of gearing up to reach a $500 price target.",
+        "tweets": [
+          {
+            "author": "Remzztrades",
+            "author_name": "Remz",
+            "tweet_id": "2066890588549439532",
+            "text": "$ARM gearing for $500",
+            "created_at": "2026-06-16T14:28:11+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "INOD",
+        "summary": "Innodata is positioned for a second leg up after breaking out of an 8-month base with a PEG candle on 10x volume, acting as a key enabler in AI training.",
+        "tweets": [
+          {
+            "author": "Venu_7_",
+            "author_name": "Venu",
+            "tweet_id": "2066881340952506746",
+            "text": "$INOD - Innodata looks ready for round 2.\n\nPEG candle with 10x volume + broke out of an 8-month base + multiple flags back to back.\n\nWhile everyone focuses on building AI models, Innodata is helping train them. Sometimes the quiet enablers become the biggest winners. https://t.co/GQkrLRMHqt https://t.co/owhSNf8q3F",
+            "created_at": "2026-06-16T13:51:27+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "ALMU",
+        "summary": "Alumia is being valued on the potential adoption of its SWIR under-display sensor technology by a major player like Apple by 2027-2028.",
+        "tweets": [
+          {
+            "author": "yianisz",
+            "author_name": "Yiannis Zourmpanos",
+            "tweet_id": "2066871532488433782",
+            "text": "$ALMU is not being valued on today’s revenue. It is being valued on the chance that one mega-player adopts its tech.\n\nThe cleanest path is SWIR sensors for mobile, where Apple $AAPL or a Tier 1 Android OEM could need under-display sensing by 2027–2028.\n\nThe second path is AI https://t.co/3HfX0f0ZJD",
+            "created_at": "2026-06-16T13:12:28+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "SHMD",
+        "summary": "The company announced over €26M in new orders tied to AI infrastructure, optical communication, and advanced packaging, proving strong H2 demand.",
+        "tweets": [
+          {
+            "author": "yianisz",
+            "author_name": "Yiannis Zourmpanos",
+            "tweet_id": "2066860203228746088",
+            "text": "$SHMD just announced €26M+ of new orders.\n\nA month ago, bears argued the H2 demand ramp might never arrive. Today, SCHMID has reported roughly €43M of YTD order intake, with the latest orders tied to AI infrastructure, optical communication modules and advanced packaging. https://t.co/6U9WCi6dyi",
+            "created_at": "2026-06-16T12:27:27+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "DRAM",
+        "summary": "The stock is making new 52-week highs and is expected to have plenty of upside remaining.",
+        "tweets": [
+          {
+            "author": "TheProfInvestor",
+            "author_name": "Prof",
+            "tweet_id": "2066859759777755345",
+            "text": "$DRAM Has a plenty more upside. \nStocks making new 52 week highs will make more 52 week highs\n\nBut $MRAM is small cap that can do leaps to 40s.\n\nI own both.",
+            "created_at": "2026-06-16T12:25:41+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "MRAM",
+        "summary": "This small-cap stock is owned by the author and has the potential to make leaps to the $40s.",
+        "tweets": [
+          {
+            "author": "TheProfInvestor",
+            "author_name": "Prof",
+            "tweet_id": "2066859759777755345",
+            "text": "$DRAM Has a plenty more upside. \nStocks making new 52 week highs will make more 52 week highs\n\nBut $MRAM is small cap that can do leaps to 40s.\n\nI own both.",
+            "created_at": "2026-06-16T12:25:41+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "SIVE",
+        "summary": "The stock looks strong as long as it maintains support at $85, with potential to run toward $160-$180 if it breaks above $95-$100.",
+        "tweets": [
+          {
+            "author": "Han_Akamatsu",
+            "author_name": "Han Akamatsu 赤松",
+            "tweet_id": "2066859649618395290",
+            "text": "$SIVE Looks good as long as it keeps that $85 support here. There’s this bearish divergence here, but if stock can manage to break above that $95/100 levels it can keep running inside this channel and try reach that upper trendline again near these $160/180 levels. https://t.co/EN2T6bpCLM https://t.co/IzyzOdRzYx",
+            "created_at": "2026-06-16T12:25:15+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "GME",
+        "summary": "The stock is considered in a good position as long as it holds above the $21 support level and its 1D HMA.",
+        "tweets": [
+          {
+            "author": "Han_Akamatsu",
+            "author_name": "Han Akamatsu 赤松",
+            "tweet_id": "2066855135037284474",
+            "text": "Never told you when to buy or to sell $GME\nAlways told you when the trend was about to change though. \n\nAnything above that $21 level support now is good to go. Because above that 1D HMA, $GME always produced something good.\n\nNFA https://t.co/hSPM0BulsQ",
+            "created_at": "2026-06-16T12:07:19+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "ONDS",
+        "summary": "The stock is highlighted as a swing trade candidate as its 1H HMA turns green, with potential for good returns if it breaks the $10 resistance.",
+        "tweets": [
+          {
+            "author": "Han_Akamatsu",
+            "author_name": "Han Akamatsu 赤松",
+            "tweet_id": "2066847569179820375",
+            "text": "Keep an eye on $ONDS here if you’d like to swing the stock across next week.\nThe 1H HMA now green and starting its upside trajectory. \n\nWe see $ONDS break that $10 resistance level and can bring some good returns couple next weeks.\n\nSupport levels for the stock here as usual, https://t.co/SNnjYSf7m0",
+            "created_at": "2026-06-16T11:37:15+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "HITI",
+        "summary": "The stock has broken above crucial resistance at $2.45, driven by a bullish 1W HMA crossover.",
+        "tweets": [
+          {
+            "author": "Han_Akamatsu",
+            "author_name": "Han Akamatsu 赤松",
+            "tweet_id": "2066841321864569016",
+            "text": "$HITI Oooof! 😮‍💨\n\nNow above the crucial resistance of $2.45, told you all to not sleep on these 1W HMA bullish crossovers. 👀 https://t.co/NqsmMTqY3M https://t.co/gdL0uTdGLr",
+            "created_at": "2026-06-16T11:12:25+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "QCOM",
+        "summary": "The stock is expected to experience a strong upward rally following highly positive news catalysts.",
+        "tweets": [
+          {
+            "author": "LinQingV",
+            "author_name": "Macro_Lin ｜ 市场观察员",
+            "tweet_id": "2066813041052959060",
+            "text": "$QCOM 肯定要涨一波！LFG https://t.co/mE3R5zoJeh",
+            "created_at": "2026-06-16T09:20:03+00:00"
+          },
+          {
+            "author": "LinQingV",
+            "author_name": "Macro_Lin ｜ 市场观察员",
+            "tweet_id": "2066812812798902481",
+            "text": "Great news for $QCOM https://t.co/kLpUkPpH7y",
+            "created_at": "2026-06-16T09:19:08+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "AXTI",
+        "summary": "Shares are being held long-term based on a detailed supply chain analysis of the Indium Phosphide substrate market.",
+        "tweets": [
+          {
+            "author": "aleabitoreddit",
+            "author_name": "Serenity",
+            "tweet_id": "2066823176785457323",
+            "text": "Yeah... I'm not quite sure why everyone likes just throwing personal accusations.\n\nLike \"scam\" or  \"memestock\" every time I post a thesis. \n\nLike when I bought $AXTI (still holding shares btw):\n\n- spent the time mapping the InP substrate supply chain\n- found analyst sources https://t.co/N4NcgUPhuP",
+            "created_at": "2026-06-16T10:00:19+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "RKLB",
+        "summary": "Considered a prime buy-on-the-dip candidate due to heavy, non-discretionary government and military spending on space launch and communications infrastructure.",
+        "tweets": [
+          {
+            "author": "asklivermore",
+            "author_name": "AskLivermore",
+            "tweet_id": "2066810331587031383",
+            "text": "Space stocks like $RKLB, $ASTS, $RDW, and $PL are always a buy for me when it dips.\n\nRemember this, US Space Force, DoD, and allies are all spending HEAVILY on resilient comms, and launch capacities. \n\nThis is NATIONAL security and forever will be. \nLaunches, satellites, https://t.co/9OSHXf9PnT",
+            "created_at": "2026-06-16T09:09:17+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "ASTS",
+        "summary": "Viewed as a strong buy on dips, supported by secular tailwinds in national security and defense spending for resilient satellite communications.",
+        "tweets": [
+          {
+            "author": "asklivermore",
+            "author_name": "AskLivermore",
+            "tweet_id": "2066810331587031383",
+            "text": "Space stocks like $RKLB, $ASTS, $RDW, and $PL are always a buy for me when it dips.\n\nRemember this, US Space Force, DoD, and allies are all spending HEAVILY on resilient comms, and launch capacities. \n\nThis is NATIONAL security and forever will be. \nLaunches, satellites, https://t.co/9OSHXf9PnT",
+            "created_at": "2026-06-16T09:09:17+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "POET",
+        "summary": "POET delivered a bullish daily candle, with technical analysis pointing to a potential breakout if it closes above $15.08.",
+        "tweets": [
+          {
+            "author": "dannycheng2022",
+            "author_name": "Danny cheng",
+            "tweet_id": "2066783524632342897",
+            "text": "$POET (June 16, 2026-daily chart free update)\n\n$POET delivered a bullish red candle today. For the bullish signal to fully play out, POET needs to close above $15.08. A close below $12.84 would invalidate the thesis.\n\nThe momentum bars are currently sitting at $13.9 and $15.3, https://t.co/SD74V5B4ye",
+            "created_at": "2026-06-16T07:22:45+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "META",
+        "summary": "Meta is highlighted as a high-quality business trading at a lower forward earnings multiple of 18x compared to the broader S&P 500.",
+        "tweets": [
+          {
+            "author": "oguzerkan",
+            "author_name": "Oguz Erkan",
+            "tweet_id": "2066768880970682734",
+            "text": "Bill Ackman: “The market is heavily distracted by momentum and a lot of high-quality names are ignored.”\n\nS&amp;P 500 is currently at 21x forward earnings while all these high-quality businesses are trading at lower forward earning multiples:\n\n- $META, 18x\n- $UBER, 19x\n- $BKNG, 15x\n- https://t.co/qux1lTkHsD",
+            "created_at": "2026-06-16T06:24:34+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "PLTR",
+        "summary": "Palantir is noted for strong upward momentum, printing a blue candle and gaining 8.3% the following day.",
+        "tweets": [
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2066754911526867281",
+            "text": "RT @TradexWhisperer: Your candles go red on a -5% down day. Ours printed BLUE. Next day? $PLTR +8.3% $MU: +11.7%\n\nThat is what happens when…",
+            "created_at": "2026-06-16T05:29:04+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "SATS",
+        "summary": "SATS is viewed as highly undervalued, trading at $120 despite a projected post-deal NAV of approximately $208, presenting a potential short squeeze opportunity.",
+        "tweets": [
+          {
+            "author": "labubu_trader",
+            "author_name": "3X Long Labubu",
+            "tweet_id": "2066735248910766096",
+            "text": "RT @BruceCMaster: $SATS NAV is projected at ~$208 post-closing of the ATT &amp; SpaceX deal, yet it currently trades at $120. \n\nShorts—includin…",
+            "created_at": "2026-06-16T04:10:56+00:00"
+          }
+        ]
+      }
+    ],
+    "sell": [
+      {
+        "ticker": "BB",
+        "summary": "The stock is facing resistance at the 0.382 level and remains well outside its monthly upper Bollinger band, suggesting a cool down period is likely.",
+        "tweets": [
+          {
+            "author": "cantonmeow",
+            "author_name": "Cantonese Cat 🐱🐈",
+            "tweet_id": "2066917655156490499",
+            "text": "$BB 0.382 resistance, still way outside monthly upper Bollinger band, can use some cool down through time and price. https://t.co/hwQEV0RJ7M",
+            "created_at": "2026-06-16T16:15:45+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "NVDA",
+        "summary": "Bearish sentiment is rising as aggressive whale puts are printing, indicating a downward trend and potential short opportunities on pops.",
+        "tweets": [
+          {
+            "author": "sparkle6193920",
+            "author_name": "💎 Diamond Trades 💎",
+            "tweet_id": "2066905988167340502",
+            "text": "$spx $qqq $spy $smh $nvda whales 🐋 know best https://t.co/YV7ne6Rdbp",
+            "created_at": "2026-06-16T15:29:23+00:00"
+          },
+          {
+            "author": "sparkle6193920",
+            "author_name": "💎 Diamond Trades 💎",
+            "tweet_id": "2066901772866584685",
+            "text": "After the aggressive whale 🐋 puts that came in, tape is 🐻 leaning \n\nShort pops today unless $nvda $smh $spx $qqq $spy $spx \n\nHave a great day 😘💎❤️❤️❤️❤️",
+            "created_at": "2026-06-16T15:12:38+00:00"
+          },
+          {
+            "author": "sparkle6193920",
+            "author_name": "💎 Diamond Trades 💎",
+            "tweet_id": "2066899106987983125",
+            "text": "Puts are printing 💰🔥 $smh $nvda were the tell all  😘💎❤️❤️❤️ \n\n$733 $730 next 🎯 below if $738 isn’t reclaimed https://t.co/5TIjVY6wYF",
+            "created_at": "2026-06-16T15:02:02+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "LLY",
+        "summary": "Eli Lilly was sold by the Claude Portfolio, indicating a decision to exit the position and realize profits or reallocate capital. Eli Lilly was completely sold off to lock in a 15% gain, despite the company being recognized as fundamentally strong.",
+        "tweets": [
+          {
+            "author": "theaiportfolios",
+            "author_name": "The Claude Portfolio",
+            "tweet_id": "2066894004571062529",
+            "text": "RT @joinautopilot: New Trade alert ✍️\n\nDr. Lira Lopez's @theaiportfolios Claude Portfolio just sold Eli Lilly $LLY\n\nHere's the thesis on wh…",
+            "created_at": "2026-06-16T14:41:46+00:00"
+          },
+          {
+            "author": "theaiportfolios",
+            "author_name": "The Claude Portfolio",
+            "tweet_id": "2066888970265415691",
+            "text": "Breaking: Claude just sold one of it's top holdings\n\nEarlier this morning it sold out of Eli Lilly $LLY for around a 15% gain\n\nHere's why it sold:\n\n\"I sold my entire Eli Lilly position today, closing it out up about 15% since I bought it.\n\nLilly is a genuinely great company, and https://t.co/4TbuC1XHUP",
+            "created_at": "2026-06-16T14:21:46+00:00"
+          }
+        ]
+      },
+      {
+        "ticker": "MRVL",
+        "summary": "Marvell Technology faced immediate selling pressure upon hitting a key level, indicating strong resistance and potential short-term weakness. Marvell Technology is showing a daily flag breakout pattern with significant call option flow coming in. Marvell is showing strong weekly momentum, climbing through its upper Bollinger Band, alongside a key leadership transition appointing Dan Durn as the new CFO.",
+        "tweets": [
+          {
+            "author": "ProblemSniper",
+            "author_name": "ProblemSniper",
+            "tweet_id": "2066892858825810011",
+            "text": "$MRVL hit it and immediately sellers pulled in. https://t.co/Go86bN4Uxg",
+            "created_at": "2026-06-16T14:37:13+00:00"
+          },
+          {
+            "author": "StockTraderHub",
+            "author_name": "The Stock Trader Hub",
+            "tweet_id": "2066872859696259276",
+            "text": "RT @RockyTSTH: $MRVL - Stock having a flag breakout pattern on the daily.  multiple call flow coming in today. looking for calls as long as…",
+            "created_at": "2026-06-16T13:17:45+00:00"
+          },
+          {
+            "author": "TradexWhisperer",
+            "author_name": "Trade Whisperer",
+            "tweet_id": "2066747500896383169",
+            "text": "$MRVL Daily is volatile. Weekly Blue-Green candles do not care. Climbing straight through the upper Bollinger Band. \n\nJensen momentum activated.\n\n300+ charts daily. Try it free:\nhttps://t.co/ZQDP5HCFyq https://t.co/Q0nNzvay6w https://t.co/TK9qHTpzVo",
+            "created_at": "2026-06-16T04:59:37+00:00"
+          },
+          {
+            "author": "nft_hu",
+            "author_name": "Fiona ❤️& ✌️",
+            "tweet_id": "2066741118340059328",
+            "text": "$MRVL CFO卖出手头大量股票的同时的另一个新闻是: \n$MRVL 的CFO换人，新任：Dan Durn，原本是 Adob​​e 的 CFO，之前也在 Marvell 董事会待了大约两年。\n\n生效时间：CFO 任命自 2026 年 6 月 15 日起生效。 https://t.co/VcVY51IzIP",
+            "created_at": "2026-06-16T04:34:15+00:00"
+          }
+        ]
+      }
+    ]
   }
 }
